@@ -27,7 +27,7 @@
       "generator": "secret"
     },
     "STAFF": {
-      "description": "Comma separated emails listed here will have access to /admin"
+      "description": "Email of the Administrator of the App, this user will be able to do the first setup."
     },
     "ORGANIZATION_NAME": {
       "description": "Title of the app to be shown on the right side of the header"
@@ -36,7 +36,19 @@
       "description": "Link to take the user when clicks on organizationName"
     },
     "HOST": {
-      "description": "Public accessible URL to your app. For example: foo-democracyos.herokuapp.com"
+      "description": "Public accessible URL to your app. For example: 'heroku-app-name.herokuapp.com'."
+    },
+    "PROTOCOL": {
+      "value": "https",
+      "description": "Set protocol to https:. Heroku supports this by default. Normally you shouldn't change it."
+    },
+    "HTTPS_REDIRECT": {
+      "value": "reverse-proxy",
+      "description": "This option forces the redirection from http: to https:. Normally you shouldn't change it."
+    },
+    "DEBUG": {
+      "value": "democracyos*",
+      "description": "Recommended default value for server logging, to see it run `heroku logs --tail` on your terminal."
     }
   }
 }

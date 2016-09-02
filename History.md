@@ -1,4 +1,22 @@
 
+1.4.0 / 2016-08-05
+==================
+
+  * Add Let's Ecnrypt tool for free certificates generation #1278
+  * Remove jQuery from site and settings modules :D
+
+1.3.0 / 2016-08-01
+==================
+
+  * Add multiple bundles for different sections #1264
+  * Reorganize all the folders in submodules
+
+1.2.0 / 2016-06-22
+==================
+
+  * Add Docker for development #1078
+  * Add per-forum permission model #1169
+
 1.1.5 / 2016-05-18
 ==================
 

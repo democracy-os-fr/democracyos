@@ -31,6 +31,10 @@
     "port": 443,
     "redirect": "normal"
   },
+  "certbot": {
+    "key": "",
+    "token": ""
+  },
   "notifications": {
     "url": "",
     "token": "",
@@ -95,7 +99,7 @@
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
   "rssEnabled": true,
-  "commentsPerPage": 0,
+  "commentsPerPage": 100,
   "spamLimit": 5,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
@@ -109,6 +113,7 @@
   "visibility": "visible",
   "usersWhitelist": false,
   "multiForum": false,
+  "defaultForum": "",
   "tweetText": "",
   "forceSafeImageURLs": true,
   "segmentKey": "",
@@ -132,5 +137,6 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false
+  "enforceLocale": false,
+  "restrictForumCreation" : false
 }
