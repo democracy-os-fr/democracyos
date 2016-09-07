@@ -292,7 +292,7 @@
   "signup.retype-password": "Kirjoita salasana uudestaan",
   "signup.user-already-validated": "Tämä kansalainen jo validoitu sähköpostiosoite",
   "signup.validation-email-resent": "Vahvistusviesti on nyt lähetetty.",
-  "signup.welcome": "Tervetuloa, {name}!",
+  "signup.welcome": "Tervetuloa,<br/>{name}!",
   "signup.whitelist.email": "Sähköposti {email} ei sallita ylläpitäjä",
   "signup.with-email": "Kirjaudu sähköpostilla",
   "signup.your-firstname": "Etunimesi",

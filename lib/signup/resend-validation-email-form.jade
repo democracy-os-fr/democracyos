@@ -1,10 +1,10 @@
-.resend-container.inner-container.small-container
+.resend-container.inner-container
   #resend-form
     .title-page
       .circle
         i.icon-user
       h1= t('signup.resend-validation-email')
-    form.form(action='/signup/resend-validation-email', method='post', role='form', autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form.small-container(action='/signup/resend-validation-email', method='post', role='form', autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-errors
       .form-group
         label= t('signup.email')

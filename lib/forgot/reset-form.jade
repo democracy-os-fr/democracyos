@@ -1,10 +1,10 @@
-.forgot-container.small-container
+.forgot-container.inner-container
   #forgot-form.reset
     .title-page
       .circle
         i.icon-signin
       h1= t('forgot.reset')
-    form.form(action="/forgot/reset", method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form.small-container(action="/forgot/reset", method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
       input(type='hidden', name='token', value=token)
       ul.form-messages
       .form-group

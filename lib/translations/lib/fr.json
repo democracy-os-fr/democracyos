@@ -292,7 +292,7 @@
   "signup.retype-password": "Retapez votre mot de passe",
   "signup.user-already-validated": "Ce citoyen déjà validé l'adresse de courriel",
   "signup.validation-email-resent": "Le courriel de validation a été renvoyé",
-  "signup.welcome": "Bienvenue, {name} !",
+  "signup.welcome": "Bienvenue,<br/>{name} !",
   "signup.whitelist.email": "L'adresse de courriel {email} n'est pas autorisée par l'administrateur",
   "signup.with-email": "Inscription avec courriel",
   "signup.your-firstname": "Votre prénom",

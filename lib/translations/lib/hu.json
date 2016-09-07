@@ -294,7 +294,7 @@
   "signup.retype-password": "Add meg újra a jelszavad",
   "signup.user-already-validated": "Ez a polgár már érvényesítette az e-mail címét",
   "signup.validation-email-resent": "Az érvényesítő e-mailt újra küldtük",
-  "signup.welcome": "Üdvözlünk, {name}!",
+  "signup.welcome": "Üdvözlünk,<br/>{name}!",
   "signup.whitelist.email": "A {email} e-mail cím nincs engedélyezve.",
   "signup.with-email": "Regisztrálj az e-maileddel",
   "signup.your-firstname": "Keresztnév",

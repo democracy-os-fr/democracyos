@@ -327,7 +327,7 @@
   "signup.retype-password": "Reingresa la contraseña",
   "signup.user-already-validated": "Este usuario ya validó la dirección de correo electrónico",
   "signup.validation-email-resent": "El correo electrónico de validación ha sido reenviado.",
-  "signup.welcome": "¡Felicitaciones, {name}!",
+  "signup.welcome": "¡Felicitaciones,<br/>{name}!",
   "signup.whitelist.email": "Este correo electrónico {email} no está permitido por el administrador",
   "signup.with-email": "Registración con correo electrónico",
   "signup.your-firstname": "Tu nombre",

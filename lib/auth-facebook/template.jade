@@ -1,9 +1,9 @@
-.facebook-auth-form.inner-container.small-container
+.facebook-auth-form.inner-container
   .title-page
     .circle
       i.icon-signin
     h1= t('signin.login-to') + ' ' + t('common.app-name')
-  form(action="/auth/facebook", method="get", role="form")
+  form.small-container(action="/auth/facebook", method="get", role="form")
     button.btn-facebook(type="submit")
       span.flaticon.social.facebook
       = t('signin.login-with-facebook')

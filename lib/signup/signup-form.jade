@@ -1,10 +1,10 @@
-.signup-container.inner-container.small-container
+.signup-container.inner-container
   #signup-form
     .title-page
       .circle
         i.icon-user
       h1= t('signup.with-email')
-    form.form(action='/signup', method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form.small-container(action='/signup', method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
       - if (reference)
         input(type='hidden', name='reference', value=reference)
       ul.form-errors

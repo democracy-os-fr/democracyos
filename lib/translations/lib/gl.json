@@ -292,7 +292,7 @@
   "signup.retype-password": "Reingresa o contrasinal",
   "signup.user-already-validated": "Ese cidadán xa validou o enderezo de correo electrónico",
   "signup.validation-email-resent": "O correo electrónico de validación foi reenviado.",
-  "signup.welcome": "Benvida, benvido, {name}!",
+  "signup.welcome": "Benvida, benvido,<br/>{name}!",
   "signup.whitelist.email": "Email {email} non está permitido polo administrador",
   "signup.with-email": "Rexistro con correo electrónico",
   "signup.your-firstname": "O teu nome",

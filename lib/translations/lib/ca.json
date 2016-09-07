@@ -292,7 +292,7 @@
   "signup.retype-password": "Torna a introduiïr la contrasenya",
   "signup.user-already-validated": "Aquest ciutadà ja va validar l'adreça de correu electrònic",
   "signup.validation-email-resent": "El correu electrònico de validació ha estat reenviat.",
-  "signup.welcome": "¡Felicitats, {name}!",
+  "signup.welcome": "¡Felicitats,<br/>{name}!",
   "signup.whitelist.email": "Correu electrònic {email} no està permès per l'administrador",
   "signup.with-email": "Registrar-se amb el correu electrònic",
   "signup.your-firstname": "El teu nom",
