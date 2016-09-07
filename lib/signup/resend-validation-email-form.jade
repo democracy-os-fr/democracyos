@@ -1,10 +1,12 @@
-.resend-container.inner-container.small-container
+.resend-container.inner-container
   #resend-form
     .title-page
       .circle
         i.fa.fa-user
       h1= t('signup.resend-validation-email')
-    form.form(action='#{config.subPath}/signup/resend-validation-email', method='post', role='form', autovalidate='autovalidate', autosubmit='autosubmit')
+      br
+      p.lead.text-left!= t('resend-validation-email-form.error.email-not-valid.no-link')
+    form.form.small-container(action='#{config.subPath}/signup/resend-validation-email', method='post', role='form', autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-errors
       .form-group
         label= t('signup.email')

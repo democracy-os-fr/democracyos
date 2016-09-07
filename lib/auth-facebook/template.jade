@@ -1,14 +1,13 @@
-.facebook-auth-form.inner-container.small-container
+.facebook-auth-form.inner-container
   .title-page
     .circle
       i.fa.fa-sign-in
     //- + ' ' + t('common.app-name')
     h1= t('signin.login-to')
-  form(action="#{config.subPath}/auth/facebook", method="get", role="form")
+  form.small-container(action="#{config.subPath}/auth/facebook", method="get", role="form")
     button.btn.btn-block.btn-labeled.btn-default.btn-facebook(type="submit")
       span.btn-label.pull-left: i.fa.fa-facebook
       span= t('signin.login-with-facebook')
-
     - if (config.termsOfService)
       p: a(href="#{config.subPath}/help/terms-of-service")= t('help.tos.title')
     - if (config.privacyPolicy)

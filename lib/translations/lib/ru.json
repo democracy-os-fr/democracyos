@@ -292,7 +292,7 @@
   "signup.retype-password": "Повторите пароль",
   "signup.user-already-validated": "Этот гражданин уже подтвердил адрес электронной почты",
   "signup.validation-email-resent": "Электронное письмо проверки было отправлено.",
-  "signup.welcome": "Добро пожаловать, {name}!",
+  "signup.welcome": "Добро пожаловать,<br/>{name}!",
   "signup.whitelist.email": "Email {email} не разрешено администратором",
   "signup.with-email": "Регистрация с электронной почтой",
   "signup.your-firstname": "Ваше имя",

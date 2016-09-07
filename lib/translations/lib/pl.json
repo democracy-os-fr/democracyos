@@ -238,7 +238,7 @@
   "signup.retype-password": "Napisz ponownie hasło",
   "signup.user-already-validated": "Ten wyborca powterdził swój adres e-mail.",
   "signup.validation-email-resent": "Email potwierdzający zsoatł ponownie wysłany.",
-  "signup.welcome": "Witaj, {name}!",
+  "signup.welcome": "Witaj,<br/>{name}!",
   "signup.whitelist.email": "Ten adres został zablokowony przez administratora.",
   "signup.with-email": "Zarejestruj się używając adresu e-mail",
   "signup.your-firstname": "Twoje imię",

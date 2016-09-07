@@ -322,7 +322,7 @@
   "signup.retype-password": "Retipărește parola",
   "signup.user-already-validated": "Acest utilizator a validat deja adresa de email.",
   "signup.validation-email-resent": "Emailul de validare a fost retrimis.",
-  "signup.welcome": "Bine ai venit, {name}!",
+  "signup.welcome": "Bine ai venit,<br/>{name}!",
   "signup.whitelist.email": "Emailul {email} nu este permis de către administrator",
   "signup.with-email": "Înregistreaza-te cu emailul",
   "signup.your-firstname": "Prenume",

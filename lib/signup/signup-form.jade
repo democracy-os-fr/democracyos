@@ -1,12 +1,12 @@
 - var tabindex = 1
 
-.signup-container.inner-container.small-container
+.signup-container.inner-container
   #signup-form
     .title-page
       .circle
         i.fa.fa-user
       h1= t('signup.with-email')
-    form.form(action='#{config.subPath}/signup', method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form.small-container(action='#{config.subPath}/signup', method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
       - if (reference)
         input(type='hidden', name='reference', value=reference)
       ul.form-errors

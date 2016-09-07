@@ -13,7 +13,10 @@
         li: a(href="#{config.subPath}/settings/sessions", style="display: none;")
           i.fa.fa-history
           span= t('settings.sessions')
+        li: a(href="/settings/sessions", style="display: none;")= t('settings.sessions')
         li: a(href="#{config.subPath}/settings/notifications")
           i.fa.fa-bell-o
           span= t('settings.notifications')
+        //- - if (config.multiForum)
+        //-   li: a(href="/settings/forums")= t('settings.sidebar.forums')
     .settings-content

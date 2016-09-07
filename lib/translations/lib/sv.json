@@ -292,7 +292,7 @@
   "signup.retype-password": "Upprepa lösenord",
   "signup.user-already-validated": "Denna medborgaren redan validerats e-postadressen",
   "signup.validation-email-resent": "Bekräftelse-mailet har skickats igen.",
-  "signup.welcome": "Välkommen, {name}!",
+  "signup.welcome": "Välkommen,<br/>{name}!",
   "signup.whitelist.email": "E {email} är inte tillåtet av administratören",
   "signup.with-email": "Registrera med email-adress",
   "signup.your-firstname": "Ditt förnamn",

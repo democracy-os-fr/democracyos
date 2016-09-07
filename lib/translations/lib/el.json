@@ -295,7 +295,7 @@
   "signup.retype-password": "Πληκτρολογήστε ξανά τον κωδικό πρόσβασης",
   "signup.user-already-validated": "Αυτό πολίτης έχει ήδη επικυρωθεί η διεύθυνση ηλεκτρονικού ταχυδρομείου",
   "signup.validation-email-resent": "Το e-mail επικύρωσης ήταν δυσανασχετούν.",
-  "signup.welcome": "Καλώς, {name}!",
+  "signup.welcome": "Καλώς,<br/>{name}!",
   "signup.whitelist.email": "Email {e-mail} δεν επιτρέπεται από το admin",
   "signup.with-email": "Εγγραφή με e-mail",
   "signup.your-firstname": "Το όνομά σας",

@@ -292,7 +292,7 @@
   "signup.retype-password": "Herhaal je wachtwoord",
   "signup.user-already-validated": "Deze burger al het e-mailadres gevalideerd",
   "signup.validation-email-resent": "De bevestigingsmail is nog een keer verstuurd.",
-  "signup.welcome": "Welkom, {name}!",
+  "signup.welcome": "Welkom,<br/>{name}!",
   "signup.whitelist.email": "E-mail {e} is niet toegestaan door de beheerder",
   "signup.with-email": "Meld je aan met je e-mailadres",
   "signup.your-firstname": "Je voornaam",

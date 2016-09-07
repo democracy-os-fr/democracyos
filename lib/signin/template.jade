@@ -1,4 +1,4 @@
-.signin-container.inner-container.small-container
+.signin-container.inner-container
   #signin-form
     .title-page
       .circle
@@ -14,7 +14,7 @@
             each d in domains
               li= '@' + d
     
-    form.form(action="#{config.subPath}/signin", method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
+    form.form.small-container(action="#{config.subPath}/signin", method="post", role="form", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-errors
       .form-group
         label= t('signup.email')
