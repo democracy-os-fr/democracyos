@@ -14,10 +14,12 @@ module.exports = {
   commands: [
     {
       clickOnSignin: function() {
+
         return this
           .waitForElementVisible("@loginBtn", 1000 , false)
-          .waitForElementVisible("@loginSubmit", 1000 )
           .click("@loginBtn")
+
+
       }
     }
   ]
