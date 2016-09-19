@@ -1,7 +1,12 @@
+sudo: required
 language: node_js
 node_js:
   - "4"
 services:
   - mongodb
+  - docker
 before_script:
   - npm install
+scripts:
+  - npm test
+  - make docker
