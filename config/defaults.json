@@ -12,12 +12,12 @@
     "bucket": ""
   },
   "mongoUsersUrl": "",
-  "jwtSecret": "Generate a secret token and paste it here.",
+  "jwtSecret": "Generez une clé secrète et collez le ici.",
   "corsDomains": [],
   "signinUrl": "",
   "signupUrl": "",
   "settingsUrl": "",
-  "staff": ["virgile@democracyos.eu"],
+  "staff": ["nom@email.fr"],
   "domainWhiteList": [],
   "allowEmailAliases": true,
   "facebookSignin": false,
@@ -52,8 +52,8 @@
     "url": "",
     "token": "",
     "mailer": {
-      "name": "DemocracyOS",
-      "email": "no-reply@democracyos.org",
+      "name": "DemocracyOS France",
+      "email": "noreply@democracyos.eu",
       "service": "",
       "auth": {
         "user": "",
@@ -112,20 +112,20 @@
     "forumSummaryLength"
   ],
   "socialshare": {
-    "siteName": "DemocracyOS",
-    "siteDescription": "DemocracyOS voting system",
-    "image": "https://2.gravatar.com/avatar/a8b9176bd0d042db078bf38500727671?d=https%3A%2F%2Fidenticons.github.com%2F14bae9f2564556f8eb23cc263a779f59.png&s=400",
-    "domain": "democracyos.org",
+    "siteName": "DemocracyOS France",
+    "siteDescription": "Plateforme de concertation propulsée par DemocracyOS France",
+    "image": "/lib/assets/logo-dosfr-square.png",
+    "domain": "democracyos.eu",
     "twitter": {
-      "username": "@democracyos"
+      "username": "@DemocracyOS_FR"
     }
   },
   "logo": "/boot/logo.png",
   "logoMobile": "/boot/logo-mobile.png",
   "favicon": "/boot/favicon.ico",
-  "organizationName": "Consultation plateforme de l'Etat",
-  "organizationEmail": "no-reply@democracyos.org",
-  "organizationUrl": "https://democracyos",
+  "organizationName": "Titre de la consultation",
+  "organizationEmail": "email@domain.com",
+  "organizationUrl": "https://domaine.fr",
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
   "rssEnabled": true,
