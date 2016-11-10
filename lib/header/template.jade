@@ -1,20 +1,20 @@
 #header-container
   a(id='toggleButton', data-toggle="offcanvas", data-target="#sidebar" )
     i.fa.fa-bars
-    
-  a.home(href=config.homeLink || '#{config.subPath}/')
-    i.fa.fa-home.header-font-color
+
   h1#logo
-    a(href=config.organizationUrl)
+    a(href="/")
       - var mobileLogo = !!config.logoMobile
       - var classes = mobileLogo ? 'hidden-xs' : ''
       - if (config.logo)
         img(src=config.logo, class=classes).logo-image
-      - else
+      - if(config.organizationName)
         span.header-font-color(class=classes)= config.organizationName
       - if (mobileLogo)
         img(src=(config.subPath + config.logoMobile), title=config.organizationName).logo-image.visible-xs-inline-block
-        
+
+
+
   .user-nav.btn-group
     .user
     - var color = config.headerFontColor;
