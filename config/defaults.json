@@ -4,7 +4,7 @@
   "host": "localhost",
   "publicPort": 3000,
   "subPath": "",
-  "mongoUrl": "mongodb://heroku_q9csgn80:nuv7jhv53gtr602dcda4ej1fb2@ds055855.mongolab.com:55855/heroku_q9csgn80",
+  "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
   "uploader": "",
   "amazon": {
     "username": "",
@@ -121,7 +121,7 @@
     }
   },
   "logo": "/boot/logo.png",
-  "logoMobile": "/boot/logo.png",
+  "logoMobile": "/boot/logo-mobile.png",
   "favicon": "/boot/favicon.ico",
   "organizationName": "Consultation plateforme de l'Etat",
   "organizationEmail": "no-reply@democracyos.org",
