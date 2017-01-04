@@ -2,10 +2,8 @@
   a(id='toggleButton', data-toggle="offcanvas", data-target="#sidebar" )
     i.fa.fa-bars
     
-  a.home(href=config.homeLink || '#{config.subPath}/')
-    i.fa.fa-home.header-font-color
   h1#logo
-    a(href=config.organizationUrl)
+    a(href="/")
       - var mobileLogo = !!config.logoMobile
       - var classes = mobileLogo ? 'hidden-xs' : ''
       - if (config.logo)
