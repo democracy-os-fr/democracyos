@@ -45,6 +45,9 @@ We support real browsers and IE10+
 ## Acknowledgements
 Tag icons made by Yannick from [flaticon.com](http://www.flaticon.com) licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
+Browser testing is provided with kind support from [Browserstack](https://www.browserstack.com)  
+![BrowserStack](http://web124.free.fr/i/logo-browserstack-small.png)
+
 ## License
 
 DemocracyOS is open source software under the GPL v3.0 license. Please see full terms in the [LICENSE.txt](LICENSE.txt) file.
