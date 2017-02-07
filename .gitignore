@@ -21,3 +21,5 @@ pids
 public
 results
 ssl
+
+lib/boot/assets/custom-*
