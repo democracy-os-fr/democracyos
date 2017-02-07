@@ -7,7 +7,7 @@
 
 - var closed = proposal.closingAt && +new Date(proposal.closingAt) < Date.now()
 - var voted = user && ~census.indexOf(user.id)
-- var credentials = user && user.roles && user.roles.includes('member');
+- var credentials = user && user.roles && (user.roles.indexOf("?") >= 0);
 
 .inner-container.commentable-container(class=proposal.votable ? '' : 'hide')
 
