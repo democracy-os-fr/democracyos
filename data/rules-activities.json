@@ -8,7 +8,7 @@
             "en" : "I fight barehands"
         },
         "icon" : {
-            "class" : "fa fa-hand-rock-o",
+            "class" : "fa fa-fw fa-lg fa-hand-rock-o",
             "color" : "inherit"
         }
     },
@@ -23,7 +23,7 @@
             "en" : "I fight with weapons"
         },
         "icon" : {
-            "class" : "fa fa-cutlery",
+            "class" : "fa fa-fw fa-lg fa-cutlery",
             "color" : "inherit"
         }
     },

@@ -94,12 +94,9 @@ mixin activity(key)
                         i.fa.fa-map-marker
                         span=o[0].label
                   - if(config.rules && (config.rules.indexOf('activity') >= 0))
-                    - if (user.activities.live)
-                      +activity('live')
-                    - if (user.activities.work)
-                      +activity('work') 
-                    - if (user.activities.study)
-                      +activity('study') 
+                    - each v, k in user.activities
+                      - if(v)
+                        +activity(k)
             - if (currentUser.staff)
               .cols-xs-12.col-md-4
                 .list-group.actions

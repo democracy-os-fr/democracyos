@@ -48,8 +48,13 @@
         - each activity in activities
           - var fieldName = 'activity' + activity.name.charAt(0).toUpperCase() + activity.name.slice(1);
           .form-group
-            input(type='checkbox', id=fieldName, name=fieldName, tabindex=tabindex++)
-            label.inline= activity.label
+            - var isChecked = user.activities[activity.name]
+            input(type='checkbox', id=fieldName, name=fieldName, tabindex=tabindex++, checked=isChecked)
+            label.inline
+              - if(activity.value.icon)
+                i(class=activity.value.icon.class,style="color: #{activity.value.icon.color}")
+                | &nbsp;
+              = activity.label
       .form-group.row.actions
         .col-xs-12.col-md-6.col-md-offset-3
           button.btn.btn-block.btn-labeled.btn-success(tabindex=tabindex++)
