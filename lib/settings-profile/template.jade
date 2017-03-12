@@ -24,7 +24,7 @@
         input.form-control(type='text', id="firstName", name='firstName',tabindex=tabindex++, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='required firstname')
       .form-group
         label #{t('settings.last-name')}
-        input.form-control(type='text', id="lastName", name='lastName',tabindex=tabindex++, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='required lastname')
+        input.form-control(type='text', id="lastName", name='lastName',tabindex=tabindex++, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='lastname')
       .form-group
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled' name='email',tabindex=tabindex++, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
