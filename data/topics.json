@@ -1,0 +1,89 @@
+[{
+  "topicId": "ID Nº 00086",
+  "tag": "Internet",
+  "officialTitle" : "",
+  "mediaTitle" : "So long and thanks for all the fish",
+  "source" : "http://democracyos.eu",
+  "publishedAt": "2011-04-25T15:00:00.001Z",
+  "clauses": [{
+      "markup": "<div style=\"text-align: justify;\"><br></div>",
+      "position": 0,
+      "empty": true
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><br></div>",
+      "position": 1,
+      "empty": true
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><img src=\"https://i.giphy.com/zthJViY229AMU.gif\"></div>",
+      "position": 2,
+      "empty": false
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><br></div>",
+      "position": 3,
+      "empty": true
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><span style=\"font-size: 24px;\"><b>Leverage agile frameworks&nbsp;</b></span></div>",
+      "position": 4,
+      "empty": false
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><br></div>",
+      "position": 8,
+      "empty": true
+    },
+    {
+      "markup": "<ol><li data-section-id=\"58c37a01cead428e6e1d7f54\" style=\"text-align: justify;\">Bring to the table win-win survival strategies to ensure proactive domination. </li><li data-section-id=\"58c37a01cead428e6e1d7f54\" style=\"text-align: justify;\">At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. </li><li data-section-id=\"58c37a01cead428e6e1d7f54\" style=\"text-align: justify;\">User generated content in real-time will have multiple touchpoints for offshoring.</li></ol>",
+      "position": 9,
+      "empty": false
+    },
+    {
+      "position": 10,
+      "markup": "<div style=\"text-align: justify;\"><br></div>",
+      "empty": true
+    },
+    {
+      "markup": "<div>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. </div>",
+      "position": 11,
+      "empty": false
+    },
+    {
+      "markup": "<div><br></div>",
+      "position": 12,
+      "empty": true
+    },
+    {
+      "markup": "<div>Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</div>",
+      "position": 13,
+      "empty": false
+    },
+    {
+      "markup": "<div><br></div>",
+      "position": 14,
+      "empty": true
+    },
+    {
+      "markup": "<div><br></div>",
+      "position": 15,
+      "empty": true
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><b>to provide a robust synopsis for high level overviews.</b>&nbsp;</div>",
+      "position": 5,
+      "empty": false
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\"><br></div>",
+      "position": 6,
+      "empty": true
+    },
+    {
+      "markup": "<div style=\"text-align: justify;\">Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>",
+      "position": 7,
+      "empty": false
+    }
+  ]
+}]

@@ -24,7 +24,7 @@
         input.form-control(type='text', id="firstName", name='firstName',tabindex=tabindex++, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='required firstname')
       .form-group
         label #{t('settings.last-name')}
-        input.form-control(type='text', id="lastName", name='lastName',tabindex=tabindex++, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='required lastname')
+        input.form-control(type='text', id="lastName", name='lastName',tabindex=tabindex++, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='lastname')
       .form-group
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled' name='email',tabindex=tabindex++, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
@@ -48,8 +48,13 @@
         - each activity in activities
           - var fieldName = 'activity' + activity.name.charAt(0).toUpperCase() + activity.name.slice(1);
           .form-group
-            input(type='checkbox', id=fieldName, name=fieldName, tabindex=tabindex++)
-            label.inline= activity.label
+            - var isChecked = user.activities[activity.name]
+            input(type='checkbox', id=fieldName, name=fieldName, tabindex=tabindex++, checked=isChecked)
+            label.inline
+              - if(activity.value.icon)
+                i(class=activity.value.icon.class,style="color: #{activity.value.icon.color}")
+                | &nbsp;
+              = activity.label
       .form-group.row.actions
         .col-xs-12.col-md-6.col-md-offset-3
           button.btn.btn-block.btn-labeled.btn-success(tabindex=tabindex++)

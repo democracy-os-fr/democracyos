@@ -56,6 +56,12 @@ mixin activity(key)
                 a.filter.role(data-filter=role.label)
                   i.fa.fa-circle(class=role.name,style='color:#{role.value.color.background};')
                   span=role.label
+        .col-xs-12
+          hr/
+          a.btn.btn-default.btn-sm(href='#{config.subPath}/csv/all-users', target='_self', title='export-all-users')
+            span.fa.fa-download
+            &nbsp;
+            span=t('admin-users.export.all-users')
     .list.list-group
       - each user in users
         .list-group-item.user-item(data-id=user.id)
@@ -76,7 +82,7 @@ mixin activity(key)
                         +badge(role)
                   p.info
                     i.fa.fa-envelope-o
-                    span.email=user.email 
+                    span.email=user.email
                   p.info
                     i.fa.fa-calendar-check-o
                     span.createdAt.hide=user.createdAt
@@ -94,12 +100,9 @@ mixin activity(key)
                         i.fa.fa-map-marker
                         span=o[0].label
                   - if(config.rules && (config.rules.indexOf('activity') >= 0))
-                    - if (user.activities.live)
-                      +activity('live')
-                    - if (user.activities.work)
-                      +activity('work') 
-                    - if (user.activities.study)
-                      +activity('study') 
+                    - each v, k in user.activities
+                      - if(v)
+                        +activity(k)
             - if (currentUser.staff)
               .cols-xs-12.col-md-4
                 .list-group.actions
