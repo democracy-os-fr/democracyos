@@ -29,6 +29,9 @@
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled' name='email',tabindex=tabindex++, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
       .form-group
+        label #{t('common.custom')}
+        input.form-control(type='text', id="custom", name='custom',tabindex=tabindex++, value='#{user.custom}', validate='max-length:255')
+      .form-group
         label #{t('settings.locale')}
         select.form-control(id='locale', name='locale',tabindex=tabindex++)
       - if (config.userAge)
