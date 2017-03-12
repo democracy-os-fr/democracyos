@@ -74,6 +74,9 @@ mixin activity(key)
                     - if(user.roles)
                       each role in user.roles
                         +badge(role)
+                  - if(user.custom)
+                    p.info
+                      span.custom=user.custom
                   p.info
                     i.fa.fa-envelope-o
                     span.email=user.email 

@@ -467,5 +467,6 @@
   "validators.min-length.singular": "1 caractère au minimum",
   "validators.not.match": "Aucun résultat",
   "validators.password.not.match": "Les mots de passe ne correspondent pas",
-  "validators.required": "requis"
+  "validators.required": "requis",
+  "common.custom": "Organisation"
 }

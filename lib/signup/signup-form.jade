@@ -20,6 +20,9 @@
         label #{t('signup.your-lastname')}
         input.form-control(type='text', id='lastName', name='lastName', tabindex=tabindex++, placeholder=t('signup.lastname'), validate='required lastname')
       .form-group
+        label #{t('common.custom')}
+        input.form-control(type='text', id='custom', name='custom', tabindex=tabindex++, placeholder=t('common.custom'), validate='max-length:255')
+      .form-group
         label= t('password')
         input.form-control(type='password', name='password', tabindex=tabindex++, placeholder=t('password'), validate='required min-length:6')
       .form-group
