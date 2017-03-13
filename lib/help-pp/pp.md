@@ -1,7 +1,7 @@
 Traitement des données à caractère personnel
 ============================================
 
-Dans le cadre de l’élaboration du Plan d’action national 2017-2019 de la France pour son appartenance au Partenariat pour un gouvernement ouvert (PGO), une consultation en ligne est organisée à l’adresse suivante [democracyos.consultation.etalab.gouv.fr](//democracyos.consultation.etalab.gouv.fr).
+Dans le cadre de l’élaboration du Plan d’action national 2017-2019 de la France pour son appartenance au Partenariat pour un gouvernement ouvert (PGO), une consultation en ligne est organisée à l’adresse suivante [gouvernement-ouvert.etalab.gouv.fr](https://gouvernement-ouvert.etalab.gouv.fr).
 
 Cette dernière a fait l’objet d’une déclaration à la Commission Nationale de l’Informatique et des Libertés (CNIL) sous le n°
 > 2039825 v 0.  
