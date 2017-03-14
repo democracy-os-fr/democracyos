@@ -51,7 +51,7 @@
         - each activity in activities
           - var fieldName = 'activity' + activity.name.charAt(0).toUpperCase() + activity.name.slice(1);
           .form-group
-            - var isChecked = user.activities[activity.name]
+            - var isChecked = user.hasOwnProperty('activities') && user.activities[activity.name]
             input(type='checkbox', id=fieldName, name=fieldName, tabindex=tabindex++, checked=isChecked)
             label.inline
               - if(activity.value.icon)
