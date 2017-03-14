@@ -59,7 +59,7 @@
     "batch": "~0.5.2",
     "binaryjs": "^0.2.1",
     "body-parser": "*",
-    "bowser": "0.7.2",
+    "bowser": "^1.6.0",
     "brfs": "1.4.0",
     "browserify": "^9.0.8",
     "bufferutil": "^1.2.1",
