@@ -1,4 +1,5 @@
 #!/bin/bash
+
 export NODE_PATH=.
 yes | ./bin/dos-db $* drop
 ./bin/dos-db $* load rules data/rules-roles.json
