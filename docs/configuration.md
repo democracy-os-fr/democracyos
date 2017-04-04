@@ -29,7 +29,7 @@ Environment Variables also can be used to override options (recommended for `pro
 * Var names should be `CONSTANT_CASE`.
   * e.g.: `mongoUrl` => `MONGO_URL`
   * Scoped variables e.g.: `notifications.url` => `NOTIFICATIONS_URL`
-* `Arrays`s should be strings separated by commas.
+* `Arrays` should be strings separated by commas.
   * e.g.: `"staff": ["mail@eg.com", "a@c.m"]` => `STAFF="mail@eg.com,a@c.m"`
 * `Boolean` values should be `true` or `false`.
   * e.g.: `"rssEnabled": false` => `RSS_ENABLED="false"`
@@ -48,7 +48,7 @@ Default language. The app will be in this language for the user, unless it has a
 * env: `AVAILABLE_LOCALES`
 * default: `[ ... ]`
 
-Enabled languages. This are all the languages the user can select on the `/settings` page.
+Enabled languages. These are all the languages the user can select on the `/settings` page.
 
 #### **protocol**
 * env: `PROTOCOL`
@@ -95,7 +95,7 @@ Users with emails listed here will have access to `/admin`, and will be able to 
 * env: `ALLOW_EMAIL_ALIASES`
 * default: `true`
 
-When this is `true`, the user will be able to register several times with the same email using alias like the [ones from Gmail](https://support.google.com/mail/answer/12096). Uses [Verigy](https://www.npmjs.com/package/verigy) module.
+When this is `true`, the user will be able to register several times with the same email using alias like the [ones from Gmail](https://support.google.com/mail/answer/22370). Uses [Verigy](https://www.npmjs.com/package/verigy) module.
 
 #### **visibility**
 * env: `VISIBILITY`
@@ -118,11 +118,17 @@ If this option is set to `true`, the application will be in a "hub" state and an
 
 _**DISCLAIMER:** This option is in ALPHA state, expect a lot a changes not far away._
 
+#### **defaultForum**
+* env: `DEFAULT_FORUM`
+* default: `""`
+
+Optional value for setting an existent forum's name of a multiforum database for using it as a singleForum.
+
 #### **client**
 * env: `CLIENT`
 * default: `[ ... ]`
 
-Config options to be sended to the client, and usable from `/lib/config/config.js`. In most cases, this shouldn't be edited.
+Config options to be sended to the client, and usable from `/lib/config.js`. In most cases, this shouldn't be edited.
 
 #### **forceSafeImageURLs**
 * env: `FORCE_SAFE_IMAGE_URLS`
@@ -171,6 +177,19 @@ Proxy redirection type to be used when redirecting the user from `HTTP` to `HTTP
 * `azure`: Redirection to HTTPS compatible with Windows Azure. Do NOT use outside Windows Azure; this can be easily spoofed outside their environment.
 * `no-redirect`: The redirection is not handled. Meant to be used on development only.
 
+### Let's Encrypt
+
+Values needed to be able to validate a certificate generated using Let's Encrypt's Certbot service. To use it, setup the following configuration options and follow [this](https://github.com/DemocracyOS/express-certbot-endpoint) instructions.
+
+#### **cerbot.key**
+* env: `CERTBOT_KEY`
+
+Certbot key needed when manually generating the certificate, should be something like `hvBj5jK2o3B6IpFhdrc8Q1OR6UeIl63_xXxXxXxXxXx`
+
+#### **cerbot.token**
+* env: `CERTBOT_TOKEN`
+
+Certbot token needed when manually generating the certificate, should be something like `msbwzok5NNPLg2BjLBIGVali8utyXrc95xXxXxXxXxX`
 
 ### Embebed Notifier Server
 
@@ -191,6 +210,11 @@ User for the [notifier](https://github.com/DemocracyOS/notifier) transport.
 
 Password for the [notifier](https://github.com/DemocracyOS/notifier) transport.
 
+#### **notifications.nodemailer**
+* env: `NOTIFICATIONS_NODEMAILER`
+
+Optional object that will override any nodemailer options for creating a mailerTransport.
+
 
 ### External Notifier Server
 
@@ -209,14 +233,14 @@ Token of the Notifier server.
 
 ### Facebook Login
 
-Values needed to setup facebook login. For a complete guide on how to setup facebook login go to [Facebook Setup]().
+Values needed to setup facebook login. For a complete guide on how to setup facebook login go to [Facebook Setup](https://github.com/DemocracyOS/democracyos/wiki/Facebook-Signin-Signup).
 
-#### **auth.facebook.username**
+#### **auth.facebook.clientID**
 * env: `AUTH_FACEBOOK_CLIENT_ID`
 
 App ID of your facebook app.
 
-#### **auth.facebook.password**
+#### **auth.facebook.clientSecret**
 * env: `AUTH_FACEBOOK_CLIENT_SECRET`
 
 App Secret of your facebook app.

@@ -1,3 +1,5 @@
+@import './user-badge/styles'
+
 /* Vars
 -------------------------------------------------- */
 header_height = 60px
@@ -5,49 +7,29 @@ spacing = 20px
 
 /* Header
 -------------------------------------------------- */
-header.app-header, aside.nav-proposal, .site-content, .site-content.loading-lock
-  position fixed
-
-.site-content.content-pinned
-aside.nav-proposal.content-pinned
-  transition transform 200ms linear
-  padding-top 0
-
-.site-content
-  z-index 1
-  overflow-y scroll
-  background white
-
-#content.site-content
-  overflow-y auto
-
 header.app-header
+  position fixed
   z-index 20
   top 0
   left 0
   right 0
   height header_height
+  padding-left spacing
   background #64476e
   color white
-  padding-left spacing
   font-weight bold
   text-transform uppercase
   font-size 12px
 
+  .ssl-warning
+    position fixed
+    bottom 0
+    padding spacing
+    background-color #c0392b
+    width 100%
+
   &.with-contrast
     box-shadow 0 2px 2px #d5d5d5
-
-  #toggleButton
-    width 26px
-    height 44px
-    position absolute
-    left spacing
-    padding 10px 0
-    display none
-    .bar-icon
-      height 3px
-      margin-bottom 5px
-      display block
 
   a
      color white
@@ -93,6 +75,31 @@ header.app-header
         font-size 20px
       &:hover
         text-decoration none
+
+  @media screen and (max-width: 700px)
+    padding-left: 0
+    h1#logo
+      text-align: center
+      width: auto
+      display: block
+    img.logo
+      margin: auto
+      margin-top: -2px
+    .logo-link
+      display: none
+    .user-nav
+      .caret
+        display: none
+      .btn
+        border: 0
+      .profile span.name
+        display: none
+      .login
+        margin-left: 10px
+        span
+          display: none
+        i
+          display: inline-block
 
 vendors(prop, args, fn = null)
   val = fn == null ? args : fn + '(' + args + ')'

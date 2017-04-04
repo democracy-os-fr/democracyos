@@ -1,4 +1,135 @@
 
+2.1.0 / 2017-04-03
+==================
+
+  * Add Polls as an alternative to voting #1382
+  * Add Topic PUT and POST on APIv2
+  * Fix cmd+click on user badge items
+  * Fix unknown closing date message
+  * Fix moment config on admin and settings
+
+2.0.4 / 2017-03-27
+==================
+
+  * Fix js build when minifying
+
+2.0.3 / 2017-03-27
+==================
+
+  * Fix tag form #1381
+  * Fix admin link on firefox
+
+2.0.2 / 2017-03-24
+==================
+
+  * Fix empty value on topic.action.method
+
+2.0.1 / 2017-03-23
+==================
+
+  * Fix migrate-mongoose on production
+
+2.0.0 / 2017-03-23
+==================
+
+  * Update ALL dependencies
+  * Add node and npm version checker on startup
+  * Add DB migrations
+  * Add Api v2 and progressively deprecate /lib/api
+  * Add React + React Router on /lib/site ✨
+  * Add Topic privileges by user
+  * Update Comments forms UI
+  * Add multi-auth (FB + Email)
+  * Add user-badge editable by Staff members
+  * Add Bootstrap v4 #1268
+  * Add /ext folder functionality
+
+1.6.0 / 2017-03-23
+==================
+
+  * Add snyk.io service
+  * Clarify installation steps order
+  * Update Express to v4
+  * Update Dockerfile location to root folder
+
+1.5.2 / 2016-10-24
+==================
+
+  * Fix democracyos-notifier crash updating it to 1.1.2
+
+1.5.1 / 2016-10-19
+==================
+
+  * Update democracyos-notifier version
+
+1.5.0 / 2016-10-18
+==================
+
+  * Add config.notifications.nodemailer config option
+  * Update democracyos-notifier version
+  * Update version of democracyos-config
+  * Add availableLocales on embedded notifier config
+
+1.4.5 / 2016-09-29
+==================
+
+  * Fix export on validate
+  * Update jwtSecret clarification for production on docs
+
+1.4.4 / 2016-09-21
+==================
+
+  * Add a random jwtSecret when not configured
+  * Sanitize HTML from comments #1304
+
+1.4.3 / 2016-09-20
+==================
+
+  * Fix header user badge not showing
+
+1.4.2 / 2016-09-19
+==================
+
+  * Add insecure warning message to pages, Thanks @dkaoster! #1285
+
+1.4.1 / 2016-09-14
+==================
+
+  * Fix Italian translations, thanks to @GillesChamp #1289
+  * Fix build command - validate default export was duplicated
+
+1.4.0 / 2016-08-05
+==================
+
+  * Add Let's Ecnrypt tool for free certificates generation #1278
+  * Remove jQuery from site and settings modules :D
+
+1.3.0 / 2016-08-01
+==================
+
+  * Add multiple bundles for different sections #1264
+  * Reorganize all the folders in submodules
+
+1.2.0 / 2016-06-22
+==================
+
+  * Add Docker for development #1078
+  * Add per-forum permission model #1169
+
+1.1.5 / 2016-05-18
+==================
+
+  * Fix forum delete modal#1210
+  * Fixed polish translations
+  * fix social links #1199
+  * Fix facebook authentication #1204
+
+1.1.4 / 2016-04-13
+==================
+
+  * Update mLab MongoDB Env var (#1203)
+  * Update README.md (#1201)
+
 1.1.3 / 2016-03-30
 ==================
 

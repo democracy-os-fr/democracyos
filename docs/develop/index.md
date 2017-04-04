@@ -7,28 +7,38 @@ DemocracyOS development guide
 
 We'll be using version `^1.0.0` of DemocracyOS.
 
+There are several ways for developing DemocracyOS. The most straightforward way is by leveraging [`Docker`](https://www.docker.com), since this will save you the need for configuring your environment for running and building natively. For more on running our dockerised development environment jump to the [Running the app](http://docs.democracyos.org/develop/#running-the-app) section.
+
+Alternatively, configure your local environment as follows:
+
 # Stack
 
-#### Node.js and NPM
-You need [Node.js v4.0.0](https://nodejs.org/en/blog/release/v4.0.0/) or greater to run DemocracyOS.
+#### Node.js and npm
+You need [Node.js v4.0.0](https://nodejs.org/en/blog/release/v4.0.0/) or greater to run DemocracyOS, but we always try to keep up with their latest release, so feel free to try newer `node` versions.
 
 There are many options out there to get it installed:
 
-* [Official site](https://nodejs.org/en/download/): both Node.js and NPM come bundled with this installation.
+* [Official site](https://nodejs.org/en/download/): both Node.js and npm come bundled with this installation.
 
-* [NVM](https://github.com/creationix/nvm): Node Version Manager - Simple bash script to manage multiple active node.js versions
+* [nvm](https://github.com/creationix/nvm): Node Version Manager - Simple bash script to manage multiple active node.js versions
 
 * [tj/n](https://github.com/tj/n): another -yet simpler- node version manager
 
 
 #### MongoDB
 
-We also support the [latest version](http://blog.mongodb.org/post/130823293808/mongodb-319-is-released) of [MongoDB](https://www.mongodb.org/).
+We support the [latest supported version](https://www.mongodb.com/support-policy) of [`MongoDB`](https://www.mongodb.org/).
 
-So [download](https://www.mongodb.org/downloads) the version for your system and follow the installation instructions to get it running.
+So [download](https://www.mongodb.com/download-center) the version for your system and follow the installation instructions to get it running.
+
+Alternatively, you may want to run `MongoDB` in a `Docker` container. If so, just do:
+
+`docker run -p 27017:27017 --name mongodb mongo`
+
+After your container is up and running, [update your configuration](http://docs.democracyos.org/develop/#configuration) so your can access the container properly.
 
 ```
-Note: we are planning on using Docker for both development and production so start developing on a new machine is easy as pie and we can run the app with the same environment that in production.
+Note: this manual usage of a MongoDB container if using docker-compose.
 ```
 
 #### Browserify
@@ -37,7 +47,8 @@ We use [Browserify](http://browserify.org) to bundle all our client side code, b
 
 #### Operating System
 
-We currently don't support Windows, so if you're running it please install VirtualBox with a Linux distribution. We prefer Ubuntu as we know DemocracyOS runs on it.
+DemocracyOS runs properly on `OS/X` and plenty of `Linux` distros, especially `Debian`-based ones.
+We currently don't support `Windows` for running natively, so if you're running `Windows` please rely on `Docker` as described in the [Running the app section](http://docs.democracyos.org/develop/#running-the-app), or use another form of virtualisation (e.g.: `Vagrant`, `VirtualBox`, etc.).
 
 # Configuration
 
@@ -73,13 +84,39 @@ As you can see, we match camelCase and nested objects with underscores, and we i
 
 # Running the app
 
-DemocracyOS can be run in many ways, but we prefer just using `make` on the project root folder.
+DemocracyOS can be run in many ways, but we prefer either of these two approaches:
 
-Another way can be running `gulp bws` for development, that will wait for changes on the project files to rebuild every time. For that, we must have `gulp` installed:
+#### Native
+
+Just use `make` on the project root folder; that will run the app.
+
+For more intensive development, you might want to use `gulp bws` for development, that will wait for changes on the project files to rebuild every time. For that, we must have `gulp` installed:
 
 ```
 npm install -g gulp
 ```
+
+#### Docker containers
+
+You can run your development environment inside a [`Docker`](https://www.docker.com) container pretty easily, and it will save you from installing anything on your development machine besides `Docker` itself.
+
+First, you must have the latest version of [`Docker Engine`](https://www.docker.com/products/docker-engine) and [Docker Compose](https://www.docker.com/products/docker-compose) available in your machine.
+If you're either a `Windows` or `OS/X` user, using the [`Docker Toolbox`](https://www.docker.com/products/overview#/docker_toolbox) is recommended as you may have to rely on [`Docker Machine`](https://www.docker.com/products/docker-machine) unless you get the [native `docker` apps currently on open beta](https://beta.docker.com/).
+
+Regardless of how you got `Docker`, running the app is completely straightforward:
+
+`$ make docker`
+
+And that's it. If you don't have `make` available, this also works:
+
+`$ docker-compose up app`
+
+Every change to the files you make on your local files will get mirrored inside your development container. If you're wondering how it is that this works, see this ✨[thorough explanation](http://giphy.com/gifs/VHngktboAlxHW/fullscreen)✨.
+
+# Folders structure
+
+We group the code that belongs to specific parts of the app in three folders (site, admin and settings) that will generate specific front end bundle for each part, the respective folders are `/lib/site`, `/lib/admin` and `/lib/settings`
+The rest of the code that are generic or are not specific of a bundle are located directly in `/lib`
 
 # Models
 
@@ -107,12 +144,12 @@ You can take a look at the current `db-api`s we have under that directory to see
 
 # Web API
 
-We expose those calls from the database api via a restful api. Each `model` have a different file that follows the convention `lib/${modelName}-api/index.js`, for example: `lib/topic-api/index.js`.
+We expose those calls from the database api via a restful api. Each `model` have a different file that follows the convention `lib/api/${modelName}/index.js`, for example: `lib/api/topic/index.js`.
 
-These modules are added to the app on `lib/boot/index.js` and you should add them like:
+These modules are added to the app on `lib/api/boot/index.js` and you should add them like:
 
 ```
-app.use('/api', require('lib/${modelName}-api'));
+app.use('/api', require('lib/api/${modelName}'));
 ```
 
 So it can be accessed on the client on the URL: `/api/modelName`.
@@ -121,9 +158,9 @@ So it can be accessed on the client on the URL: `/api/modelName`.
 
 ### Server Side
 
-If you want to add a new route to DemocracyOS, first thing to do is to create a new module under `lib` for it and expose an `app` (an `express` instance) that requires `lib/layout`. For example:
+If you want to add a new route to DemocracyOS, first thing to do is to create a new module under the corresponding bundle folder (for example: `lib/site`) for it and expose an `app` (an `express` instance) that requires `lib/site/layout`. For example:
 
-In `lib/mypage/index.js`
+In `lib/site/mypage/index.js`
 ```
 /**
  * Module dependencies.
@@ -132,19 +169,74 @@ In `lib/mypage/index.js`
 var express = require('express');
 var app = module.exports = express();
 
-app.get('/mypage', require('lib/layout'));
+app.get('/mypage', require('lib/site/layout'));
 ```
 
-And at the bottom of `lib/boot/index.js`
+And at the bottom of `lib/site/boot/index.js`
 ```
-app.use(require('lib/mypage'));
+app.use(require('lib/site/mypage'));
 ```
 
 ### Client Side
 
+This applies to `/lib/site` only because we are currently migrating the other bundles to React, if you are working on `lib/admin` or `lib/settings` check for the [DEPRECATED](#DEPRECATED) section below.
+
+For client side routing, we use [react-router 2.6.1](https://reacttraining.com/react-router/), a client-side router that integrates with react's composability.
+
+You should create a new route on `lib/site/boot/router.js` and include the following lines:
+
+```
+<Route path='my-route' component={MyComponent} />
+```
+
+If you are creating a page for displaying content (and not topics) you should create a react component like so:
+
+```
+import React, { Component } from 'react'
+
+export default class YourPage extends Component {
+  render () {
+    return <div>Your page here</div>
+  }
+}
+```
+
+# Stores
+
+Stores are the responsible for communicating with the server side API to get the needed data. A store must have a `name` function defined returning the name of the model that's related to, because it is used to build up the API URL.
+
+For making requests to the server we recoment [fetch](https://github.com/github/fetch).
+
+If you create a new store you should extend `lib/stores/store/store.js`.
+
+```
+import Store from lib/stores/store/store';
+
+class MyModelStore extends Store {
+  name() {
+    return 'myModel'; // calls will be made to '/api/myModel'
+  }
+}
+```
+
+That store comes already bundled with methods like:
+
+* findOne
+* findAll
+* destroy
+
+Store uses [Promises](http://babeljs.io/docs/learn-es2015/) to make async calls, caching the promises on a private variable called `_fetches`.
+
+To see a full example of a customized store, you can see `lib/stores/topic-store/topic-store.js`.
+
+
+# DEPRECATED
+
+### Client Side routing
+
 For client side routing, we use [page.js](https://github.com/visionmedia/page.js), a micro client-side router inspired by the Express router.
 
-You should create a new file on `lib/mypage/mypage.js` and include the following lines:
+You should create a new file on the corresponding bundle folder (eg.: `lib/admin/mypage/mypage.js`) and include the following lines:
 
 ```
 import page from 'page';
@@ -171,9 +263,9 @@ page('/mypage', (ctx, next) => {
 
 Which leads us to... views.
 
-# Views
+### Views
 
-To create new views (the HTML that you will show to the end user) start by creating a new file inside `lib/mypage` called `view.js`. This is if you also have a route called that way, but if you don't you can just create it under `lib/my-view/view.js`.
+To create new views (the HTML that you will show to the end user) start by creating a new file inside `lib/admin/mypage` called `view.js`.
 
 We have our own `View` library under `lib/view/view.js` which provides you with methods for:
 
@@ -198,7 +290,7 @@ export default class MyView extends View {
 }
 ```
 
-# Templates
+### Templates
 
 On the previous example, we used a template. This file is written in [jade](http://jade-lang.com/) format and it should have one and only one container element. If you write something like:
 
@@ -213,39 +305,11 @@ On the previous example, we used a template. This file is written in [jade](http
 
 You have two root containers (`topic-container` and `.comments`) and you will run into problems with that. Templates can be passed in data on the `locals` objects: on the view when you call `super(template, locals)`.
 
-# Stores
-
-Stores are the responsible for communicating with the server side API to get the needed data. A store must have a `name` function defined returning the name of the model that's related to, because it is used to build up the API URL.
-
-For making requests to the server we use our own mode on `lib/request/request.js` which uses [superagent](https://github.com/visionmedia/superagent).
-
-As with the Views, if you create a new store you should extend `lib/store/store.js`.
-
-```
-import Store from '../store/store';
-
-class MyModelStore extends Store {
-  name() {
-    return 'myModel'; // calls will be made to '/api/myModel'
-  }
-}
-```
-
-That store comes already bundled with methods like:
-
-* findOne
-* findAll
-* destroy
-
-Store uses [Promises](http://babeljs.io/docs/learn-es2015/) to make async calls, caching the promises on a private variable called `_fetches`.
-
-To see a full example of a customized store, you can see `lib/topic-store/topic-store.js`.
-
-# Middlewares
+### Middlewares
 
 You will probably need the data on your pages, for that you can create a custom [middleware](https://github.com/visionmedia/page.js#routing) function.
 
-To keep things organized we have created some modules like `lib/topic-middlewares/topic-middlewares.js`.
+To keep things organized we have created some modules like `lib/middlewares/topic-middlewares/topic-middlewares.js`.
 
 Under the routes that need data, you should include these middlewares and probably you will be using a store for making those calls.
 

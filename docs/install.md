@@ -27,7 +27,7 @@ To get started with DemocracyOS, you will need to have installed:
 
 ### Notes
 
-Running on **Windows** environment is not currently supported. If you happen to be familiar with [Docker](https://www.docker.io/) or [Vagrant](http://www.vagrantup.com/), please lend us a hand and submit a [PR](http://help.github.com/articles/using-pull-requests) so we can collaborate on a solution for this.
+To run it on **Windows** you must use [Docker](https://www.docker.io/). In the [develop](http://docs.democracyos.org/develop/#docker-containers) section there's a tutorial on how to use it.
 
 ## Install
 
@@ -35,6 +35,8 @@ Running on **Windows** environment is not currently supported. If you happen to 
 
 - [Fork](http://help.github.com/articles/fork-a-repo) or download this repository.
 - `cd` to the project's location
+- Run `make packages`
+- Set up your [configuration](configuration.md), and add your email as [staff](configuration.md#-staff-) to be able to initialize your app.
 - Make sure MongoDB is running and reachable as configured in `config/development.json`. (Default values should work)
 - Run `make`
 - Boom! DemocracyOS should be running on port 3000.
@@ -85,9 +87,10 @@ To solve it without being root (that is always a bad idea), you can change the `
 ### Running in production environment
 
 1. Configure your [environment variables](https://github.com/DemocracyOS/app/wiki/Environment-variables) for production; specifically, set `NODE_ENV` to `production`
-2. Set your MongoDB instance to run as a service.
-3. Make sure to correctly configure the [Notifier](configuration.md#embebed-notifier-server) for production environments.
-4. From the project's root path, you need to run `make` or:
+2. Set your `JWT_SECRET` environment variable to something random. e.g.: Any of [this](https://www.random.org/strings/?num=10&len=20&digits=on&upperalpha=on&loweralpha=on&unique=off&format=plain&rnd=new).
+3. Set your MongoDB instance to run as a service.
+4. Make sure to correctly configure the [Notifier](configuration.md#embebed-notifier-server) for production environments.
+5. From the project's root path, you need to run `make` or:
   1. `npm install` to install node dependencies.
   2. `npm run build && npm run start` to build assets and run the app. _Don't run as `sudo`._
 
@@ -98,6 +101,19 @@ If something goes wrong you can always go back to a clean slate running `make cl
 * Check [this very detailed guide](https://github.com/okfn-brasil/democracyos/wiki/Install) if you're on Ubuntu 10 LTS.
 * On Ubuntu 14/13/lower, install the package `node-legacy` for NodeJS.
 * Check [this guide](https://github.com/DemocracyOS/app/wiki/Running-as-a-service) on how to run DemocracyOS as a service.
+
+## Running unit tests
+
+To run unit tests simply run
+```
+npm test
+```
+
+A running MongoDB instance is required to perform tests. By default, the `DemocracyOS-test` database is used and all its data is wiped on each run. If you want to override the database, just run the above command prefixing `MONGO_URL=<database uri>`. For example:
+
+```
+MONGO_URL=mongodb://localhost/other-db npm test
+```
 
 ## Loading sample data
 

@@ -1,0 +1,23 @@
+extends ../../layout/index.jade
+
+block styles
+  //- Boostrap Complete
+  link(
+    rel='stylesheet',
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+  link(
+    rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css')
+
+  //- Application Styles
+  link(rel='stylesheet', href='/admin.css')
+  
+block content
+  //- Start of `Page Content`
+  - var color = config.headerBackgroundColor;
+  - var headerClassName = config.headerContrast ? 'with-contrast' : '';
+  header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
+  section#content.site-content
+  
+block scripts
+  script(src='/admin.js')

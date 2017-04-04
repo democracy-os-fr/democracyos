@@ -1,6 +1,7 @@
 {
   "locale": "en",
   "protocol": "http",
+  "warnHTTP": true,
   "host": "localhost",
   "publicPort": 3000,
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
@@ -14,6 +15,8 @@
   "allowEmailAliases": true,
   "facebookSignin": false,
   "publicEmails": false,
+  "moderatorEnabled": false,
+  "checkNodeVersion": true,
   "auth": {
     "basic": {
       "username": "",
@@ -31,6 +34,10 @@
     "port": 443,
     "redirect": "normal"
   },
+  "certbot": {
+    "key": "",
+    "token": ""
+  },
   "notifications": {
     "url": "",
     "token": "",
@@ -42,7 +49,8 @@
         "user": "",
         "pass": ""
       }
-    }
+    },
+    "nodemailer": {}
   },
   "client": [
     "protocol",
@@ -60,22 +68,26 @@
     "commentsPerPage",
     "frequentlyAskedQuestions",
     "termsOfService",
+    "moderatorEnabled",
     "privacyPolicy",
     "glossary",
     "signinUrl",
     "signupUrl",
     "settingsUrl",
     "homeLink",
+    "headerContrast",
     "headerBackgroundColor",
     "headerFontColor",
     "facebookSignin",
     "visibility",
     "usersWhitelist",
     "multiForum",
+    "restrictForumCreation",
     "tweetText",
     "segmentKey",
     "spamLimit",
-    "availableLocales"
+    "availableLocales",
+    "warnHTTP"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -86,29 +98,31 @@
       "username": "@democracyos"
     }
   },
-  "logo": "/boot/logo.png",
-  "logoMobile": "/boot/logo-mobile.png",
-  "favicon": "/boot/favicon.ico",
+  "logo": "/lib/boot/logo.png",
+  "logoMobile": "/lib/boot/logo-mobile.png",
+  "favicon": "/lib/boot/favicon.ico",
   "organizationName": "DemocracyOS on GitHub",
   "organizationEmail": "no-reply@democracyos.org",
   "organizationUrl": "https://github.com/DemocracyOS/app",
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
   "rssEnabled": true,
-  "commentsPerPage": 0,
+  "commentsPerPage": 100,
   "spamLimit": 5,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,
   "glossary": false,
   "homeLink": "/",
-  "headerBackgroundColor": "",
-  "headerFontColor": "",
+  "headerBackgroundColor": "#64476e",
+  "headerFontColor": "#fff",
   "headerContrast": false,
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
   "multiForum": false,
+  "restrictForumCreation": false,
+  "defaultForum": "",
   "tweetText": "",
   "forceSafeImageURLs": true,
   "segmentKey": "",
