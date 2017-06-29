@@ -1,8 +1,19 @@
 #topic-wrapper
+  @import './tag-autocomplete/styles'
+  @import './attrs/styles'
+  &.collaborative
+    max-width: 750px
+    margin: 0 auto
+    position: absolute
+
   .alert-danger
     color #d95e59
     a
       color #952722
+
+  .remove-button
+    color: #D9534F
+
   .create-tag
     text-transform none
     padding-top 0.8em
@@ -10,6 +21,14 @@
     border-radius 3px
     font-size 1em
   form
+    position: relative
+    .block-overlay
+      width: 100%
+      height: 100%
+      opacity: 0.5
+      position: absolute
+      z-index: 9
+      background: white
     .form-group
       span.error
         top 40px
@@ -18,6 +37,8 @@
       span.error
         top 40px
         right 20px
+    .forum-tag
+      margin-right: 5px
 
   .publish-status
     p
@@ -35,19 +56,6 @@
 
   .topic-admin
     form
-      .form-group.closingAt
-        overflow hidden
-
-        .input-group
-          margin-bottom inherit
-          margin-left 0
-
-          &:last-child
-            width unquote("calc(50% - 6px)")
-
-        span.error
-          top 10px
-
       .form-group
         input[readonly]
           background-color #fff
@@ -56,42 +64,24 @@
       textarea
         min-height 180px
 
-      a.add-link
-        background #16a085
-
       .add-link-forbidden
         display block
         width 100%
         color #F00
         text-align center
 
-    .topic-links
-      overflow hidden
+  .topic-link
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    margin-bottom .5em
 
-    .topic-link
-      display block
-      position relative
-      float left
-      width 100%
+    .link-text,
+    .link-url
+      flex-grow: 2
 
-      .link-row
-        position relative
-        width 100%
-        margin 0
-        padding 0 0 20px
-
-        .link-group
-          display inline-block
-          position relative
-          width 49%
-          margin 0
-          padding 0
-
-          & + .link-group
-            margin-left: 2%
-
-      h4
-        margin-top 0
+    .link-text
+      margin-right: .5em
 
   .commands
     margin-top 30px
@@ -110,9 +100,18 @@
 
   td
     padding 2px
-.tags-input, .tags-input input
-  width 100%!important
+
+.tags-input,
+.tags-input input
+  width: 100%!important
+
 .poll-options
   position: relative
+
+.help-text
+  display: block
+  font-size: .8em
+  color: #666
+  margin: 0 0 .3em
 
 @import '../../node_modules/tags-input/tags-input.css'

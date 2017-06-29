@@ -1,4 +1,106 @@
 
+2.6.0 / 2017-06-09
+==================
+
+  * Fix mongoIdString comparison
+  * Add tags fuzzy search autocomplete
+  * Fix arrow function messing up virtuals scope on Topic Model
+  * Update topic support icon
+  * Add topic tag navigation
+
+2.5.2 / 2017-06-02
+==================
+
+  * Update democracyos-notifier to 1.5.0
+  * Remove topic-voted job calls
+  * Remove unused rssEnabled and commentsPerPage configs
+  * Remove feedsLimit from docs
+  * Fix topic closed flag
+
+2.5.1 / 2017-05-25
+==================
+
+  * Update democracy-notifier to 1.4.0
+
+2.5.0 / 2017-05-25
+==================
+
+  * Fix error when DemocracyOS is not initialized
+  * Add ONBUILD commands for /ext on Docker image
+  * Fix logout on settings and admin
+  * Fix links text on topic form
+  * Fix topic closingAt admin form
+  * Add description fields on Topic form
+  * Remove flaticons
+  * Add /notifications route to urlBuilder
+  * Add /settings routes to urlBuilder
+  * Add Topic.participantsCount to DB #1417
+  * Add Topic Support Action
+  * Add Topic Preview on admin
+  * Add Collaborative Forum
+
+2.4.0 / 2017-05-04
+==================
+
+  * fix admin whitelists view export #1394
+  * Fix package.json & .snyk to reduce vulnerabilities #1390
+  * Update polls styles and UI #1408
+  * Update topic api find and findAll endpoints to api-v2
+  * Add custom attributes for Topics #1406
+
+2.3.2 / 2017-04-26
+==================
+
+  * Fix radix-trie dep
+
+2.3.1 / 2017-04-26
+==================
+
+  * Fix empty tag value
+  * Fix visibility wildcard for admin Close #1392
+  * Fix visibility middleware on /api
+  * Remove legacy comments api and db-api
+
+2.3.0 / 2017-04-26
+==================
+
+  * Add Tags on Topics #1396
+  * Fix coverUrl svg error on topic edit
+  * Update es translations for privileges
+  * Fix homeLink on header
+  * Fix facebook-card share
+  * Fix card cover url
+  * Add react header everywhere
+
+2.2.3 / 2017-04-21
+==================
+
+  * Update notifier to 1.3.1
+
+2.2.2 / 2017-04-07
+==================
+
+  * Update password digest algorithm from sha1 to sha256
+  * Update Passport.js to 0.3.2
+
+2.2.1 / 2017-04-05
+==================
+
+  * Fix Topic.participants population
+
+2.2.0 / 2017-04-05
+==================
+
+  * Add Forum search for multiForum #1386
+
+2.1.1 / 2017-04-05
+==================
+
+  * Fix topic update with polls
+  * Fix poll ownVote rendering
+  * Remove topicStore restriction to vote and poll on unlaoded items
+  * Update react routes definition without JSX
+
 2.1.0 / 2017-04-03
 ==================
 
