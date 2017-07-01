@@ -136,6 +136,7 @@
     "locale": "~0.1.0",
     "location-origin": "^1.1.4",
     "lodash.memoize": "~4.1.2",
+    "lorem-ipsum": "^1.0.4",
     "markdownify": "0.1.0",
     "marked": "^0.3.5",
     "merge": "^1.2.0",
@@ -194,6 +195,8 @@
     "gulp-pleeease": "^2.0.2",
     "json-file-plus": "^3.0.0",
     "nomnom": "^1.8.1",
+    "pug-lint": "^2.4.0",
+    "pug-lint-config-clock": "^2.0.0",
     "supertest": "~3.0.0"
   },
   "main": "index.js",
