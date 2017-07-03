@@ -1,0 +1,6 @@
+div.list-group-item
+  a(href=forum.url).forum-title= forum.name
+  div.action.pull-right
+    - if (forum.privileges.canDelete)
+      button.btn.btn-warning(type='button',name='forum-delete',data-forum-id=forum.id)
+        i.glyphicon.glyphicon-trash
