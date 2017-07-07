@@ -93,7 +93,7 @@
     "democracyos-headroom.js": "^0.7.0",
     "democracyos-list.js": "^1.1.4",
     "democracyos-loading-lock": "^0.1.0",
-    "democracyos-notifier": "git+https://gitlab.com/open-source-politics/democracyos-notifier.git#alt/agora",
+    "democracyos-notifier": "git+https://gitlab.com/open-source-politics/democracyos-notifier.git#alt/agora-2.x",
     "democracyos-quill": "^0.19.12",
     "democracyos-timeago": "^0.0.1",
     "democracyos-tip": "^2.4.1",
