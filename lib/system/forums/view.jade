@@ -1,12 +1,12 @@
 #forums-wrapper.content-wrapper
-  form(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
+  form(action=form.action, method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
     .form-group
       .input-group
         span.input-group-addon
           i.glyphicon.glyphicon-search
-        input.form-control.search(type='text', maxlength='50' placeholder='#{t("system.list.search.placeholder")}', autofocus)
+        input.form-control.search(type='text', maxlength='50' placeholder=t('forum.list.search.placeholder'), autofocus)
         span.input-group-btn
-          a.btn.btn-success(href=urlBuilder.for('system.forums.create'),title=t('system.list.add'))
+          a.btn.btn-success(href=urlBuilder.for('system.forums.create'), title=t('system.list.add'))
             i.glyphicon.glyphicon-plus
           button.btn.btn-info(type='submit',name='ipsum')
             i.glyphicon.glyphicon-flash

@@ -1,6 +1,35 @@
-div.list-group-item
-  a(href=forum.url).forum-title= forum.name
+div.list-group-item.clearfix
   div.action.pull-right
+    a.btn.btn-link(href=forum.url)
+      i.glyphicon.glyphicon-eye-open
+    - if (forum.privileges.canChangeTopics)
+      a.btn.btn-link(href='#{forum.url}/admin')
+        i.fa.fa-lg.fa-cog
     - if (forum.privileges.canDelete)
-      button.btn.btn-warning(type='button',name='forum-delete',data-forum-id=forum.id)
-        i.glyphicon.glyphicon-trash
+      button.btn.btn-link(type='button',data-toggle='modal',data-target='#forum-delete-modal-#{forum.id}')
+        i.fa.fa-lg.fa-trash.text-danger
+  h4.list-group-item-heading
+     a(href=forum.url).forum-title #{forum.title}
+  p.small
+    a(href=forum.url)
+      | &nbsp;
+      code.forum-name /#{forum.name}
+  .modal.fade(id='forum-delete-modal-#{forum.id}', tabindex='-1', role='dialog', aria-labelledby='forum-delete-modal-title-#{forum.id}')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title(id='forum-delete-modal-title-#{forum.id}')
+            =t('settings-forums.delete.confirmation.title')
+        .modal-body
+          p= t('settings-forums.delete.confirmation.body')
+          p!= t('settings-forums.delete.confirmation.instructions', {domain: forum.name})
+          .form-group
+            input.forum-name.form-control(type='text', name='forum-delete-input', data-forum=forum, validate='equals:'+forum.name)
+            input(type='hidden',name='forum-delete-name',value=forum.name)
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal')
+            =t('common.cancel')
+          button.btn.btn-danger(type='button',name='forum-delete',data-forum-id=forum.id,disabled=true, data-dismiss='modal')
+            =t('settings-forums.delete.confirmation.button-confirm')
