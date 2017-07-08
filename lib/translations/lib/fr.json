@@ -324,9 +324,10 @@
   "settings-forums.delete.confirmation.title": "Etes-vous VRAIMENT sûr ?",
   "settings-notifications.no": "Non",
   "settings-notifications.yes": "Oui",
-  "settings.badge": "Badge utilisateur",
+  "settings.badge": "Badge",
   "settings.badge.not-empty": "Le champ badge ne peut pas être vide",
   "settings.badge.success": "Le badge a été affecté correctement",
+  "settings.badge.placeholder": "Le nom de votre badge",
   "settings.change-at-gravatar": "Changez votre photo de profil sur gravatar.com",
   "settings.change-password": "Changer le mot de passe",
   "settings.confirm-password": "Confirmer le nouveau mot de passe",
@@ -364,10 +365,12 @@
   "settings.profile": "Profil",
   "settings.profile-picture": "Photo de profil",
   "settings.save": "Sauvegarder",
+  "settings.add": "Ajouter",
   "settings.sidebar.forums": "Consultation",
   "settings.successfuly-updated": "Votre profil a été actualisé avec succès",
   "settings.title": "Paramètres",
-  "settings.user-badges": "Badges utilisateurs",
+  "system.user-badges": "Badges",
+  "system.user-badges.title": "Badges",
   "sidebar.closed": "Clos",
   "sidebar.hide-voted": "Cacher mes votes",
   "sidebar.open": "En cours",
@@ -439,5 +442,6 @@
   "validators.min-length.singular": "1 caractère au minimum",
   "validators.not.match": "Aucun résultat",
   "validators.password.not.match": "Les mots de passe ne correspondent pas",
-  "validators.required": "Requis"
+  "validators.required": "Requis",
+  "validators.color.hex": "Format hexadecimal invalide (ex: #337ab7)"
 }

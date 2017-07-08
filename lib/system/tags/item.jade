@@ -1,0 +1,5 @@
+a.list-group-item(style='color: #{tag.color}',href=urlBuilder.for('system.tags.id', {id: tag.id}))
+  - if (tag.icon)
+    i(class=tag.icon)
+    | &nbsp;
+  span.tag-title= tag.name

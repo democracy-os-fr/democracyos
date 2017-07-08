@@ -8,7 +8,8 @@
       //-   li: a(href=urlBuilder.for('system.users'))
       //-     = t('system.sidebar.users')
       - if (user.staff)
-        li: a(href=urlBuilder.for('system.user-badges'))
-          = t('system.user-badges')
+        li: a(href=urlBuilder.for('system.tags')) #{t('admin-sidebar.tags.title')}
+      - if (user.staff)
+        li: a(href=urlBuilder.for('system.user-badges')) #{t('system.user-badges')}
   .content.col-md-10
     .content-wrapper
