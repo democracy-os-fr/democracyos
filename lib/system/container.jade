@@ -2,14 +2,12 @@
   .sidebar.col-md-2
     ul.system-menu.nav.nav-pills.nav-stacked(role="navigation")
       - if (config.multiForum && user.privileges && user.privileges.canManage)
-        li: a(href=urlBuilder.for('system.forums'))
-          = t('system.sidebar.forums')
-      //- - if (user.staff)
-      //-   li: a(href=urlBuilder.for('system.users'))
-      //-     = t('system.sidebar.users')
+        li: a(href=urlBuilder.for('system.forums')) #{t('system.sidebar.forums')}
+      - if (user.staff)
+        li: a(href=urlBuilder.for('system.users')) #{t('system.sidebar.users')}
       - if (user.staff)
         li: a(href=urlBuilder.for('system.tags')) #{t('admin-sidebar.tags.title')}
       - if (user.staff)
-        li: a(href=urlBuilder.for('system.user-badges')) #{t('system.user-badges')}
+      li: a(href=urlBuilder.for('system.user-badges')) #{t('system.user-badges')}
   .content.col-md-10
     .content-wrapper

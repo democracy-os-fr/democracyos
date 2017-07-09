@@ -443,5 +443,8 @@
   "validators.not.match": "No match",
   "validators.password.not.match": "Passwords do not match",
   "validators.required": "Required",
-  "validators.color.hex": "Invalid Hex value (ex: #337ab7)"
+  "validators.color.hex": "Invalid Hex value (ex: #337ab7)",
+  "system.users.message.onsuccess": "User saved successfully",
+  "system.users.title.edit": "Edit user",
+  "system.users.title.create": "Add user"
 }

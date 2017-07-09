@@ -443,5 +443,8 @@
   "validators.not.match": "Aucun résultat",
   "validators.password.not.match": "Les mots de passe ne correspondent pas",
   "validators.required": "Requis",
-  "validators.color.hex": "Format hexadecimal invalide (ex: #337ab7)"
+  "validators.color.hex": "Format hexadecimal invalide (ex: #337ab7)",
+  "system.users.message.onsuccess": "Utilisateur sauvegardé avec succès",
+  "system.users.title.edit": "Modifier un utilisateur",
+  "system.users.title.create": "Créer un utilisateur"
 }
