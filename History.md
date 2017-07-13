@@ -1,4 +1,36 @@
 
+2.8.0 / 2017-07-10
+==================
+
+  * Add slack errors
+  * update notifier to 2.1.0
+  * Add new-comment notification
+
+2.7.3 / 2017-07-09
+==================
+
+  * Update notifier to 2.0.3
+
+2.7.1 / 2017-07-09
+==================
+
+  * Update notifier to 2.0.2
+
+2.6.2 / 2017-07-03
+==================
+
+  * Fix timeago component
+  * Fix TopicConnector
+
+2.6.1 / 2017-07-03
+==================
+
+  * Fix reset password
+  * Add ignore docker-compose override
+  * Set docker mongo version & add dev debug config
+  * Fix forum store import
+  * Update topic tags autocomplete select
+
 2.6.0 / 2017-06-09
 ==================
 
