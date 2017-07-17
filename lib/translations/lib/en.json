@@ -5,6 +5,7 @@
   "add-user-input.placeholder": "Add a person",
   "admin-comments.dowload-as-csv": "Download all as .csv",
   "admin-general.form.title": "General properties",
+  "admin-general.message.onsuccess": "Properties successfully saved",
   "admin-permissions.revoke": "Revoke",
   "admin-permissions.revoke.confirm.text": "Are you sure you want to rovoke '{role}' permissions to '{user}'?",
   "admin-permissions.roles.admin.description": "Administrators can give permissions to other users, edit forum settings, and manage the content (create and edit topics, etc).",
