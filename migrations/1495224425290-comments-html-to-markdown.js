@@ -25,7 +25,7 @@ exports.up = function up (done) {
   dbReady()
     .then(() => Comment.collection.find({}).toArray())
     .then(mapPromises(function (comment) {
-      console.dir(comment)
+      // console.dir(comment)
       if (comment.text) {
         comment.replies = comment.replies.map((reply, i) => {
           reply.text = toMarkdown(reply.text, {

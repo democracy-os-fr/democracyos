@@ -102,7 +102,7 @@
     }
   },
   "logo": "/lib/boot/logo.png",
-  "logoMobile": "/lib/boot/logo-mobile.png",
+  "logoMobile": "/lib/boot/logo.png",
   "favicon": "/lib/boot/favicon.ico",
   "organizationName": "Titre de la consultation",
   "organizationEmail": "email@domain.com",
