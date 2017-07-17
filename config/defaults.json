@@ -42,8 +42,8 @@
     "url": "",
     "token": "",
     "mailer": {
-      "name": "The DemocracyOS Team",
-      "email": "no-reply@democracyos.org",
+      "name": "",
+      "email": "",
       "service": "",
       "auth": {
         "user": "",
