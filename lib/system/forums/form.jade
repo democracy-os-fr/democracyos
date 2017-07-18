@@ -1,0 +1,32 @@
+#forum-wrapper.content-wrapper
+  .forum-admin
+    h3=t('forum.form.title')
+    form.form-horizontal(action=form.action, method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
+      ul.form-messages
+      .form-group
+        label.col-sm-2.control-label(for='title') #{t('forum.form.title.label')}
+        div.col-sm-10
+          input.form-control(type='text', validate='required', id='title', name='title', placeholder=t('forum.form.title.placeholder'))
+      .form-group
+        label.col-sm-2.control-label(for='name') #{t('forum.form.url.label')}
+        div.col-sm-10
+          .input-group.subdomain
+            div.input-group-addon
+              span.desktop #{config.protocol}://#{config.host}/
+              span.mobile /
+            input.form-control(type='text', name='name', validate='required forum', autofocus, id='name', autocorrect='off', autocapitalize='off')
+          span.error.name-unavailable.hide=t('forum.form.url.unavailable')
+      .form-group
+        label.col-sm-2.control-label(for='summary') #{t('forum.form.summary.label')}
+        div.col-sm-10
+          input.form-control(type='text', id='summary', name='summary',maxlength=300, validate='max-length:300', placeholder=t('forum.form.summary.placeholder'))
+      .form-group
+        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
+        div.col-sm-10
+          input.form-control(type='text', id='cover', name='cover', validate='url', placeholder=t('admin-topics-form.placeholder.cover'))
+      .form-group
+        div.col-sm-offset-2.col-sm-10
+          button.btn.btn-success
+            i.glyphicon.glyphicon-plus
+            | &emsp;
+            = t('forum.form.create.submit')
