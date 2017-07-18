@@ -1,4 +1,4 @@
 Title
 ======
 
-This is a sample for FAQ section
+This is a sample for FAQ section (mod)
