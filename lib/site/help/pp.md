@@ -1,7 +1,7 @@
 Traitement des données à caractère personnel
 ============================================
 
-Dans le cadre de l’élaboration du Plan d’action national 2017-2019 de la France pour son appartenance au Partenariat pour un gouvernement ouvert (PGO), une consultation en ligne est organisée à l’adresse suivante [gouvernement-ouvert.etalab.gouv.fr](https://gouvernement-ouvert.etalab.gouv.fr).
+Dans le cadre de l’élaboration du Plan d’action national 2017-2019 de la France pour son appartenance au Partenariat pour un gouvernement ouvert (PGO), une consultation en ligne est organisée à l’adresse suivante [democracyos.consultation.etalab.gouv.fr](https://democracyos.consultation.etalab.gouv.fr).
 
 Cette dernière a fait l’objet d’une déclaration à la Commission Nationale de l’Informatique et des Libertés (CNIL) sous le n°
 > 2039825 v 0.  
@@ -20,7 +20,7 @@ Les données à caractère personnel sont conservées jusqu’au 30/09/2019 au p
 Conformément aux dispositions de la loi n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, vous disposez d’un droit d’accès, de modification, de rectification et de suppression des données qui vous concernent.
 
 
-Pour demander l’accès, la rectification ou la suppression des données vous concernant, il vous suffit d’exercer vos droits, en justifiant de votre identité, par courriel [gouvernement-ouvert@etalab.gouv.fr](mailto:gouvernement-ouvert@etalab.gouv.fr) ou par voie postale à l’adresse suivante :
+Pour demander l’accès, la rectification ou la suppression des données vous concernant, il vous suffit d’exercer vos droits, en justifiant de votre identité, par courriel [support.consultation@etalab.gouv.fr](mailto:support.consultation@etalab.gouv.fr) ou par voie postale à l’adresse suivante :
 
 > Mission Etalab, Tour Mirabeau, 39-43 quai André-Citroën 75015 Paris.
 
