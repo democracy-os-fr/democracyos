@@ -1,6 +1,6 @@
 {
   "name": "democracyos",
-  "version": "2.8.2",
+  "version": "2.9.3",
   "description": "An online space for deliberation and voting on political proposals. The software aims to stimulate better arguments and come to better rulings.",
   "homepage": "http://www.democracyos.org/",
   "license": "GPL-3.0",
@@ -145,8 +145,7 @@
     "migrate-mongoose": "^3.2.2",
     "mkdirp": "^0.5.0",
     "moment": "~2.18.1",
-    "mongodb": "~2.2.25",
-    "mongoose": "4.10.2",
+    "mongoose": "~4.10.8",
     "mongoose-connection-ready": "^1.0.1",
     "mongoose-gravatar": "0.3.0",
     "mongoose-validators": "^0.1.0",
@@ -161,7 +160,9 @@
     "passport-local-mongoose": "~4.0.0",
     "prop-types": "~15.5.10",
     "react": "^15.3.0",
+    "react-async-script": "^0.9.1",
     "react-dom": "^15.3.0",
+    "react-google-recaptcha": "^0.9.7",
     "react-outside-event": "~1.2.4",
     "react-refetch": "^1.0.0-beta.10",
     "react-remarkable": "^1.1.1",
@@ -205,8 +206,8 @@
   },
   "main": "index.js",
   "engines": {
-    "node": "6.x.x",
-    "npm": ">=3.0.0 <5.0.0"
+    "node": "6",
+    "npm": ">=3 <5"
   },
   "scripts": {
     "preinstall": "bin/dos-ext-install",

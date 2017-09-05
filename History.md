@@ -1,4 +1,50 @@
 
+2.9.2 / 2017-08-29
+==================
+
+  * execute captcha on submit
+  * update analytics
+  * dont migrate results on closed topics
+  * fix registry empty body response
+
+2.9.1 / 2017-08-28
+==================
+
+  * fix res.json in client
+  * add optional recaptcha
+  * add blacklist migration
+  * add blacklist emails
+  * add recaptcha on user registration
+  * update topic.voted
+  * update topic publish api to v2
+  * decouple votes from topic schema
+  * Fix express deprecated warning
+  * Add new operator for ObjectId
+  * fix lint no-undef
+  * fix most of lint errors
+  * use mongoose objectId
+  * simplify engines semver
+
+2.9.0 / 2017-08-17
+==================
+
+  * expose forum.extra & update pollOptions validation
+  * add empty options poll validation
+  * jade map es5 fix
+  * results init to db-api & fixes
+  * update topic action migration
+  * add topic action migration
+  * fix topic actions
+  * fix voting front components
+  * update topic get api
+  * refactor voting creation
+
+2.8.5 / 2017-07-27
+==================
+
+  * Update democracyos-notifier to 2.1.2
+  * Fix error logging on startup
+
 2.8.0 / 2017-07-10
 ==================
 
