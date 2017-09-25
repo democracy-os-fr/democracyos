@@ -8,8 +8,9 @@
         span.input-group-btn
           a.btn.btn-success(href=urlBuilder.for('system.users.create'),title=t('system.add'))
             i.glyphicon.glyphicon-plus
-          button.btn.btn-info(type='submit',name='ipsum')
-            i.glyphicon.glyphicon-flash
+          - if (config.generatorEnabled)
+            button.btn.btn-info(type='submit',name='ipsum')
+              i.glyphicon.glyphicon-flash
     ul.form-messages
   .list.list-group
     - each user in users
