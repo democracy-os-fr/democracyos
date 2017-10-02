@@ -105,7 +105,8 @@
     "spamLimit",
     "availableLocales",
     "warnHTTP",
-    "recaptchaSite"
+    "recaptchaSite",
+    "extra"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -147,5 +148,12 @@
   "forceSafeImageURLs": true,
   "segmentKey": "",
   "availableLocales": ["en","fr"],
-  "enforceLocale": true
+  "enforceLocale": true,
+  "extra": {
+    "user" : {
+      "age" : false,
+      "job" : false,
+      "postal": false
+    }
+  }
 }
