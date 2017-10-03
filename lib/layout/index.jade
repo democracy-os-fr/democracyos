@@ -56,7 +56,7 @@ html(lang=locale)
       
     - if (config.env !== 'development' && config.warnHTTP && config.protocol !== 'https')
       include includes/ssl-warning
-    
+
     //-
     //-   Scripts
     //-   ==================================================
@@ -67,3 +67,8 @@ html(lang=locale)
     //-   ==================================================
     block fonts
       include includes/fonts
+
+    
+    - if (config.euCookieCompliance)
+      include includes/eu-cookie-compliance
+      
