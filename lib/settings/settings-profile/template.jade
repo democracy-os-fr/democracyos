@@ -37,7 +37,8 @@
         .form-group
           label= t('user.extra.postal.label')
           //value='#{user.extra.postal}'
-          input.form-control(type='text', id='postal', name='postal', maxlength=5, value='#{user.extra.postal}', validate='postalFR')
+          - var postal = user.extra ? user.extra.postal : ''
+          input.form-control(type='text', id='postal', name='postal', maxlength=5, value='#{postal}', validate='postalFR')
       - if (config.extra.user.job)
         .form-group
           label= t('user.extra.job.label')
