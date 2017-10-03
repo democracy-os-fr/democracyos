@@ -23,5 +23,4 @@ pids
 public
 results
 ssl
-.nvmrc
 yarn.lock

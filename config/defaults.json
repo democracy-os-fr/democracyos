@@ -106,7 +106,8 @@
     "availableLocales",
     "warnHTTP",
     "recaptchaSite",
-    "extra"
+    "extra",
+    "euCookieCompliance"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -155,5 +156,6 @@
       "job" : false,
       "postal": false
     }
-  }
+  },
+  "euCookieCompliance": false
 }
