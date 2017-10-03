@@ -13,7 +13,7 @@
       .form-group
         label.col-sm-2.control-label(for='color')= t('admin-tags-form.label.color')
         div.col-sm-10
-          input.form-control(type='text', maxlength='7', id='color', name='color', placeholder='#337ab7', value=tag.color, validate='')
+          input.form-control(type='text', maxlength='7', id='color', name='color', placeholder='#337ab7', value=tag.color, validate='hexColor')
       .form-group
         label.col-sm-2.control-label(for='icon')= t('admin-tags-form.label.icon')
         div.col-sm-10
