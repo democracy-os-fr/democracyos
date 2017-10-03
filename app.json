@@ -15,7 +15,7 @@
   ],
   "author": "Democracia en Red <speak@democracyos.org>",
   "website": "https://democracyos.org/",
-  "repository": "https://github.com/democracy-os-fr/app",
+  "repository": "https://github.com/democracy-os-fr/democracyos",
   "logo": "https://cldup.com/guAAqPM85t.png",
   "addons": [
     "mongolab:sandbox",
