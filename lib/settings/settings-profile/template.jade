@@ -24,9 +24,25 @@
           .image-container
             img(src=user.profilePicture(), width=65)
           .controls
-            a(href='https://gravatar.com', target='_blank')
-              = t('settings.change-at-gravatar') + ' '
-              i.icon-share-alt
-            input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
+            //- a(href='https://gravatar.com', target='_blank')
+            //-   = t('settings.change-at-gravatar') + ' '
+            //-   i.icon-share-alt
+            input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url')
+      hr
+      - if (config.extra.user.age)
+        .form-group
+          label= t('user.extra.age.label')
+          select.form-control(id='age', name='age')
+      - if (config.extra.user.postal)
+        .form-group
+          label= t('user.extra.postal.label')
+          //value='#{user.extra.postal}'
+          - var postal = user.extra ? user.extra.postal : ''
+          input.form-control(type='text', id='postal', name='postal', maxlength=5, value='#{postal}', validate='postalFR')
+      - if (config.extra.user.job)
+        .form-group
+          label= t('user.extra.job.label')
+          select.form-control(id='job', name='job')
+      hr
       .form-group: button.btn.btn-success.btn-block.btn-lg
         =t('settings.save')

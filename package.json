@@ -1,6 +1,6 @@
 {
   "name": "democracyos",
-  "version": "2.9.4",
+  "version": "2.9.5",
   "description": "An online space for deliberation and voting on political proposals. The software aims to stimulate better arguments and come to better rulings.",
   "homepage": "http://www.democracyos.org/",
   "license": "GPL-3.0",
@@ -145,6 +145,7 @@
     "migrate-mongoose": "^3.2.2",
     "mkdirp": "^0.5.0",
     "moment": "~2.18.1",
+    "mongodb": "^2.2.31",
     "mongoose": "~4.10.8",
     "mongoose-connection-ready": "^1.0.1",
     "mongoose-gravatar": "0.3.0",
