@@ -408,6 +408,7 @@
   "signup.email": "Email",
   "signup.email-sent": "Email sent",
   "signup.email-validated": "Your email has been validated and now you are logged in",
+  "signup.email-exist": "This email is already registered",
   "signup.firstname": "Firstname",
   "signup.go-to": "Go to",
   "signup.lastname": "Lastname",
@@ -488,6 +489,7 @@
   "user.extra.job.5": "Retired",
   "user.extra.job.5": "Unemployed",
   "user.extra.job.5": "Other",
+  "user.extra.org.label": "Organization",
   "user.extra.postal.label": "Postal code",
   "user.extra.postal.validator": "Invalid postal code (FR)"
 }
