@@ -107,7 +107,8 @@
     "warnHTTP",
     "recaptchaSite",
     "extra",
-    "euCookieCompliance"
+    "euCookieCompliance",
+    "sorts"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -158,5 +159,27 @@
       "postal": false
     }
   },
-  "euCookieCompliance": false
+  "euCookieCompliance": false,
+  "sorts": {
+    "home": {
+      "default": "by-title-asc",
+      "random": false
+    },
+    "multi": {
+      "default": "newest-first",
+      "random": false
+    },
+    "sidebar": {
+      "default": "closing-soon",
+      "random": false
+    },
+    "comment": {
+      "default": "score",
+      "random": false
+    },
+    "admin": {
+      "default": "recently-updated",
+      "random": false
+    }
+  }
 }
