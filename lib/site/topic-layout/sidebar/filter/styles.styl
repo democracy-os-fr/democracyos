@@ -70,12 +70,6 @@
       background-color #fff
 
       li
-        &.active span,
-        &:active span
-          color #fff
-          background-color #337ab7
-
-      span
         display block
         padding 7px 14px 4px
         white-space normal
@@ -87,7 +81,12 @@
         text-decoration none
         cursor pointer
 
+        &.active
+          color #fff
+          background-color #337ab7
+
         &:hover
+          color #333
           background-color rgba(#f1f1f1, .7)
 
   .sidebar-filter-hide-voted
