@@ -108,7 +108,8 @@
     "recaptchaSite",
     "extra",
     "euCookieCompliance",
-    "sorts"
+    "sorts",
+    "piwik"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -181,5 +182,9 @@
       "default": "recently-updated",
       "random": false
     }
+  },
+  "piwik": {
+    "url": "",
+    "id": ""
   }
 }
