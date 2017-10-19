@@ -4,7 +4,7 @@ div.list-group-item.clearfix
       i.glyphicon.glyphicon-eye-open
     - if (forum.privileges.canChangeTopics)
       a.btn.btn-link(href='#{forum.url}/admin')
-        i.fa.fa-lg.fa-cog
+        i.fa.fa-lg.fa-wrench
     - if (forum.privileges.canDelete)
       button.btn.btn-link(type='button',data-toggle='modal',data-target='#forum-delete-modal-#{forum.id}')
         i.fa.fa-lg.fa-trash.text-danger

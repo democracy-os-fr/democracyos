@@ -10,6 +10,6 @@
         li: a(href=urlBuilder.for('settings.notifications'))
           = t('settings.notifications')
         - if (config.multiForum && user.privileges && user.privileges.canManage)
-          li: a(href=urlBuilder.for('settings.forums'))
-            = t('settings.sidebar.forums')
+          li: a(href=urlBuilder.for('system'))
+            i=t('settings.sidebar.forums')
     .settings-content

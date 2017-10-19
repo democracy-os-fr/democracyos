@@ -1,11 +1,12 @@
+forum_card_font_color = #fff
+forum_card_border = 1px solid rgba(255, 255, 255, 0.5)
+
 .forum-card
   margin-bottom 20px
   font-size 14px
   overflow hidden
-  color #fff
-  padding 20px
+  color forum_card_font_color
   cursor pointer
-  min-height 200px
   display flex
   flex-direction column
 
@@ -18,7 +19,31 @@
       height 35px
       border-radius 100%
       margin-left 10px
-  h1
-    margin 50px 0 10px 0
-  p.desc
-    margin 0
+
+  header
+    color forum_card_font_color
+    padding 20px 20px 10px
+    h1
+      margin 20px 0 10px 0
+    p.desc
+      margin 0
+
+  .info-bar
+    margin 10px 10px 5px
+    table
+      width 100%
+      color forum_card_font_color
+
+      thead
+        // border-top forum_card_border
+
+      th, td
+        font-size 16px
+        text-transform lowercase
+        padding 10px 15px
+        // border-right forum_card_border
+        &:last-child
+          border none
+
+      i.fa
+        font-size 18px
