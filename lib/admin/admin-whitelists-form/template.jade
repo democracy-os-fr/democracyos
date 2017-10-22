@@ -1,26 +1,19 @@
 #whitelist-wrapper
   .whitelist-admin
-    h2= t(form.title)
     form.form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
-      input(type='hidden',name='forum',value=forum.id)
       .form-group
-        label.col-sm-2.control-label=t('admin-whitelist.type')
-        div.col-sm-10
+        label=t('admin-whitelist.type')
+        select.form-control(name='type', validate='required')
           - each type in [ 'email' ]
-            label.radio-inline
-              input(type='radio',name='type',value='email',checked=(whitelist.new || (whitelist.type == type)))
-              span=type
+            option(selected=(whitelist.type == type) value=type)=type
       .form-group
-        label.col-sm-2.control-label=t('admin-whitelist.value')
-        div.col-sm-10
-          - if (whitelist.id)
-            input.form-control(type='text', name='value', value=whitelist.value, validate='required email')
-          - else
-            textarea.form-control(type='text', name='value', validate='required emails' placeholder=t('admin-whitelists-form.value.placeholder'))
+        label=t('admin-whitelist.value')
+        - if (whitelist.id)
+          input.form-control(type='text', name='value', value=whitelist.value, validate='required email')
+        - else
+          textarea.form-control(type='text', name='value', validate='required emails' placeholder=t('admin-whitelists-form.value.placeholder'))
       .form-group
-        div.col-sm-offset-2.col-sm-10
-          button.btn.btn-success=t('admin-whitelists-form.button.submit')
-          - if (whitelist.id)
-            | &nbsp;
-            a.btn.btn-danger.btn-delete(href='#')=t('admin-whitelists-form.button.delete')
+        button.btn.btn-success.btn-block.btn-lg=t('admin-whitelists-form.button.submit')
+        - if (whitelist.id)
+          a.btn.btn-danger.btn-block.btn-lg.btn-delete(href='#')=t('admin-whitelists-form.button.delete')
