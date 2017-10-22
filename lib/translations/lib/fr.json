@@ -406,7 +406,6 @@
   "signup.email": "Email",
   "signup.email-sent": "Email envoyé",
   "signup.email-validated": "Votre adresse email a été validée et vous êtes maintenant connecté",
-  "signup.email-exist": "Cette adresse email est déjà utlisée",
   "signup.firstname": "Prénom",
   "signup.go-to": "Aller sur",
   "signup.lastname": "Nom",
@@ -485,7 +484,6 @@
   "user.extra.job.6": "Retraité-e",
   "user.extra.job.7": "Sans activité",
   "user.extra.job.8": "Autres",
-  "user.extra.org.label": "Organisation",
   "user.extra.postal.label": "Code postal",
   "user.extra.postal.validator": "Code postal invalide"
 }

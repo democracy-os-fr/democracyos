@@ -28,15 +28,7 @@
             //-   = t('settings.change-at-gravatar') + ' '
             //-   i.icon-share-alt
             input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url')
-
-      - if (config.extra.user.org || config.extra.user.age || config.extra.user.job || config.extra.user.postal)
-        hr
-
-      - if (config.extra.user.org)
-        .form-group
-          label= t('user.extra.org.label')
-          - var org = user.extra ? user.extra.org : ''
-          input.form-control(type='text', id='org', name='org', maxlength=300, value='#{org}', validate='max-length:300')
+      hr
       - if (config.extra.user.age)
         .form-group
           label= t('user.extra.age.label')
@@ -51,9 +43,6 @@
         .form-group
           label= t('user.extra.job.label')
           select.form-control(id='job', name='job')
-
-      - if (config.extra.user.org || config.extra.user.age || config.extra.user.job || config.extra.user.postal)
-        hr
-
+      hr
       .form-group: button.btn.btn-success.btn-block.btn-lg
         =t('settings.save')

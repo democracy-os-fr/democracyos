@@ -154,7 +154,6 @@
     "user" : {
       "age" : false,
       "job" : false,
-      "org": false,
       "postal": false
     }
   },
