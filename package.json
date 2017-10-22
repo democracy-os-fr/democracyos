@@ -56,6 +56,7 @@
     "url": "git://github.com/DemocracyOS/app.git"
   },
   "dependencies": {
+    "anchorate": "^1.1.0",
     "array.prototype.find": "~2.0.0",
     "assert": "~1.4.1",
     "babel-plugin-syntax-class-properties": "~6.13.0",
@@ -163,6 +164,8 @@
     "prop-types": "~15.5.10",
     "react": "^15.3.0",
     "react-async-script": "^0.9.1",
+    "react-bootstrap": "^0.31.3",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^15.3.0",
     "react-google-recaptcha": "^0.9.7",
     "react-outside-event": "~1.2.4",
