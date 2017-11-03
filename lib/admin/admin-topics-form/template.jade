@@ -52,9 +52,8 @@
               button.btn.btn-default.btn-sm.forum-tag(data-value=tag, type='button', disabled=(topic.tags && !!~topic.tags.indexOf(tag)))= tag
 
         - if (forum.topicsAttrs.length > 0)
-          fieldset.attrs-wrapper
-            legend= t('admin-topics-form.label.attrs')
-            div(data-attrs)
+          div.attrs-wrapper(data-attrs)
+            
         .form-group
           label= t('admin-topics-form.label.topicId')
           - if (te('admin-topics-form.description.topicId'))
