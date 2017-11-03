@@ -165,6 +165,7 @@
     "react": "^15.3.0",
     "react-async-script": "^0.9.1",
     "react-bootstrap": "^0.31.3",
+    "react-chartjs": "^0.8.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^15.3.0",
     "react-google-recaptcha": "^0.9.7",
