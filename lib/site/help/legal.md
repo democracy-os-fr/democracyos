@@ -1,16 +1,48 @@
 Mentions légales
 ======
 
-Exemple de section de documentation
+[participez.nancy.fr](https://participez.nancy.fr) est une site internet de la Ville de Nancy.
 
-### Lorem ipsum dolor
+> Ville de Nancy
+> Hôtel de Ville
+> 1 place Stanislas
+> Case officielle n°1
+> 54035 Nancy Cedex
+> Tél. : 03 83 85 30 00
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper feugiat ultricies. Maecenas hendrerit arcu et ipsum semper viverra. Sed venenatis ante et luctus eleifend. Mauris semper, felis a consequat pharetra, velit enim aliquet diam, sed sodales nisi massa vitae ipsum. Maecenas semper, urna a imperdiet faucibus, sem mi aliquam metus, id tincidunt lorem risus at turpis. Fusce eu feugiat lectus. Suspendisse vulputate ante vel tempor adipiscing. Suspendisse sit amet placerat diam, nec dictum nisl. Praesent eget cursus magna. Sed nec urna non augue rutrum facilisis vel ut ipsum. Nam quis dolor convallis, suscipit mauris ut, dictum erat. Aliquam erat volutpat. Proin et lorem interdum, sodales lectus vitae, posuere ligula. Sed et nisi blandit, euismod sem ut, condimentum ligula. Duis vel tellus id ante aliquam faucibus.
 
-Nullam sit amet magna ligula. Proin eu pellentesque nunc. Fusce aliquet sollicitudin purus in consequat. Cras consectetur iaculis ante. Nullam lectus orci, placerat in massa in, dignissim aliquet urna. Donec ut dui mattis, tempor tellus non, sollicitudin augue. Mauris commodo lobortis volutpat. Cras nec convallis odio. Suspendisse tristique orci sit amet lobortis tristique. Nulla rutrum adipiscing urna vel ultricies. Nullam ut ornare augue, ut adipiscing elit. Nunc vitae dictum risus. Vivamus non nisi quis sem venenatis lacinia. Cras ipsum diam, iaculis id consequat vitae, venenatis quis est.
+**Directeur de la publication** : Laurent Hénart, Maire de Nancy
 
-### Nunc dui elit
+### Informations techniques
 
-Nunc dui elit, tempor vitae ipsum eget, blandit sodales lorem. Suspendisse potenti. Aliquam eu nisl feugiat, commodo quam consectetur, facilisis leo. Vestibulum scelerisque nec orci sit amet aliquam. Suspendisse vel dignissim lacus. Proin ultrices mi nec mi lobortis ultricies. In eget consequat lorem.
+**Editeur:**  
+[Open Source Politics](http://opensourcepolitics.eu)  
+> 32 rue des Cascades, 75020 Paris, France  
 
-Vestibulum vitae mollis augue. Donec at nulla ante. Nulla facilisi. Integer rutrum eget enim eget tincidunt. Praesent dignissim velit ut iaculis mollis. Sed tempus leo nunc, quis ultrices quam sollicitudin sit amet. In sit amet tellus suscipit, tempor lectus eu, eleifend nisi. Praesent congue elementum massa, in pharetra lacus dictum lobortis. Aenean id sodales libero.
+
+**Hébergement :**  
+Les données sont hébergées en **France** par la société [Ikoula](http://ikoula.com/fr)  
+> 175-177 rue d’Aguesseau, 92100 Boulogne Billancourt, France
+
+**Photographies :**  
+©Ville de Nancy, sauf mention contraire
+
+### Informations légales
+
+L'information communiquée sur ce site est présentée à titre indicatif. Elle ne prétend aucunement à l'exhaustivité. Malgré les mises à jour du contenu du site, la Ville de Nancy ne peut être tenue pour responsable de la modification des dispositions administratives et juridiques survenant après la publication.
+
+La Ville de Nancy ne peut être tenue pour responsable des informations diffusées sur les sites en lien et de l'utilisation qui peut en être faite. La Ville de Nancy dégage toute responsabilité concernant les liens créés par d'autres sites vers ses propres sites. L'existence de tels liens ne peut permettre d'induire que la Ville de Nancy cautionne ces sites ou qu'elle en approuve le contenu.
+
+### Droits d'utilisation et de reproduction
+
+Le droit de reproduction et/ou droit de représentation des données du site web participez.nancy.fr est exclusivement destiné à l'usage privé et/ou aux seules fins de consultation personnelle et privée des utilisateurs du réseau Internet.
+
+Toute autre utilisation est strictement interdite et susceptible de poursuites conformément aux dispositions du Code de la Propriété Intellectuelle français, des règlements nationaux et des conventions internationales en vigueur.
+
+**Logo :** Le logo de la Ville de Nancy est la propriété de la Ville de Nancy.
+
+Toute reproduction totale ou partielle de cette marque sans autorisation préalable et écrite est interdite, de même que toute modification des proportions, couleurs, éléments et constituants.
+
+### Droit applicable
+
+De convention expresse entre les parties, le droit applicable aux présentes et à leurs conséquences est exclusivement le Droit Français, tant en ce qui concerne les règles de procédure que celles du fond.

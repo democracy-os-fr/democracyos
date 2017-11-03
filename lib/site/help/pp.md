@@ -1,16 +1,16 @@
 Confidentialité
 ======
 
-Exemple de section de documentation
+Le responsable du traitement des données recueillies via le présent formulaire est **Monsieur le Maire de la Ville de Nancy**.
 
-### Lorem ipsum dolor
+Les informations ainsi recueillies font l'objet d'un traitement informatique destiné à permettre l'accès à la plate-forme [participez.nancy.fr](https://participez.nancy.fr).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper feugiat ultricies. Maecenas hendrerit arcu et ipsum semper viverra. Sed venenatis ante et luctus eleifend. Mauris semper, felis a consequat pharetra, velit enim aliquet diam, sed sodales nisi massa vitae ipsum. Maecenas semper, urna a imperdiet faucibus, sem mi aliquam metus, id tincidunt lorem risus at turpis. Fusce eu feugiat lectus. Suspendisse vulputate ante vel tempor adipiscing. Suspendisse sit amet placerat diam, nec dictum nisl. Praesent eget cursus magna. Sed nec urna non augue rutrum facilisis vel ut ipsum. Nam quis dolor convallis, suscipit mauris ut, dictum erat. Aliquam erat volutpat. Proin et lorem interdum, sodales lectus vitae, posuere ligula. Sed et nisi blandit, euismod sem ut, condimentum ligula. Duis vel tellus id ante aliquam faucibus.
+Les destinataires des informations recueillies sont les agents du service éducation de la Ville de Nancy.
 
-Nullam sit amet magna ligula. Proin eu pellentesque nunc. Fusce aliquet sollicitudin purus in consequat. Cras consectetur iaculis ante. Nullam lectus orci, placerat in massa in, dignissim aliquet urna. Donec ut dui mattis, tempor tellus non, sollicitudin augue. Mauris commodo lobortis volutpat. Cras nec convallis odio. Suspendisse tristique orci sit amet lobortis tristique. Nulla rutrum adipiscing urna vel ultricies. Nullam ut ornare augue, ut adipiscing elit. Nunc vitae dictum risus. Vivamus non nisi quis sem venenatis lacinia. Cras ipsum diam, iaculis id consequat vitae, venenatis quis est.
+Les champs signalés par un astérisque (*) doivent être obligatoirement renseignés.
 
-### Nunc dui elit
+Conformément à la loi n°78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés (articles 38 et suivants), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant. Pour exercer ces droits, vous pouvez vous adresser à
+> M. le Maire
+> Hôtel de Ville - 1 Place Stanislas - C.O. n°1 - 54 035 NANCY Cedex.
 
-Nunc dui elit, tempor vitae ipsum eget, blandit sodales lorem. Suspendisse potenti. Aliquam eu nisl feugiat, commodo quam consectetur, facilisis leo. Vestibulum scelerisque nec orci sit amet aliquam. Suspendisse vel dignissim lacus. Proin ultrices mi nec mi lobortis ultricies. In eget consequat lorem.
-
-Vestibulum vitae mollis augue. Donec at nulla ante. Nulla facilisi. Integer rutrum eget enim eget tincidunt. Praesent dignissim velit ut iaculis mollis. Sed tempus leo nunc, quis ultrices quam sollicitudin sit amet. In sit amet tellus suscipit, tempor lectus eu, eleifend nisi. Praesent congue elementum massa, in pharetra lacus dictum lobortis. Aenean id sodales libero.
+L'utilisation de ce formulaire en ligne n'est pas obligatoire; vous conservez la possibilité d'effectuer votre règlement par courrier ou en vous rendant dans les locaux de la mairie (Hôtel de Ville) aux horaires d'ouverture.
