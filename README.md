@@ -1,7 +1,10 @@
-# DemocracyOS [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+# DemocracyOS
 [![Dependencies](https://david-dm.org/DemocracyOS/democracyos.svg)](https://david-dm.org/DemocracyOS/democracyos.svg)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DemocracyOS/democracyos)
 [![Code Climate](https://codeclimate.com/github/DemocracyOS/democracyos/badges/gpa.svg)](https://codeclimate.com/github/DemocracyOS/democracyos)
+
+> **DO NOT deploy this branch on Heroku / Shared MongoDB. Please wait for the stats fix**
+> [try the `alt/heroku` branch](https://github.com/democracy-os-fr/democracyos/tree/alt/heroku)
 
 DemocracyOS is an online space for deliberation and voting on political proposals. It is a platform for a more open and participatory government.The software aims to stimulate better arguments and come to better rulings, as peers.
 
