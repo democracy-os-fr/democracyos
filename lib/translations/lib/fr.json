@@ -486,5 +486,6 @@
   "user.extra.job.7": "Sans activité",
   "user.extra.job.8": "Autres",
   "user.extra.postal.label": "Code postal",
-  "user.extra.postal.validator": "Code postal invalide"
+  "user.extra.postal.validator": "Code postal invalide",
+  "common.forum-closed" : "La consultation est désormais close. Merci."
 }
