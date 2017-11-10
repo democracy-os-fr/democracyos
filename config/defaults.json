@@ -6,6 +6,7 @@
   "publicPort": 3000,
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
   "mongoUsersUrl": "",
+  "sharedMongo": true,
   "jwtSecret": "Generate a secret token and paste it here.",
   "corsDomains": [],
   "signinUrl": "",
@@ -109,7 +110,8 @@
     "extra",
     "euCookieCompliance",
     "sorts",
-    "piwik"
+    "piwik",
+    "sharedMongo"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
