@@ -52,29 +52,13 @@
               button.btn.btn-default.btn-sm.forum-tag(data-value=tag, type='button', disabled=(topic.tags && !!~topic.tags.indexOf(tag)))= tag
 
         - if (forum.topicsAttrs.length > 0)
-          fieldset.attrs-wrapper
-            legend= t('admin-topics-form.label.attrs')
-            div(data-attrs)
-        .form-group
-          label= t('admin-topics-form.label.topicId')
-          - if (te('admin-topics-form.description.topicId'))
-            span.help-text= t('admin-topics-form.description.topicId')
-          input.form-control(type='text', maxlength='200', id='topicId', name='topicId', placeholder=t('admin-topics-form.placeholder.topicId'), value=topic.topicId)
+          div.attrs-wrapper(data-attrs)
+            
         .form-group
           label= t('admin-topics-form.label.coverUrl')
           - if (te('admin-topics-form.description.coverUrl'))
             span.help-text= t('admin-topics-form.description.coverUrl')
           input.form-control(type='text', maxlength='254', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.coverUrl'), value=topic.coverUrl, validate='url')
-        .form-group
-          label= t('admin-topics-form.label.author')
-          - if (te('admin-topics-form.description.author'))
-            span.help-text= t('admin-topics-form.description.author')
-          input.form-control(type='text', maxlength='100', id='author', name='author', placeholder=t('admin-topics-form.placeholder.author'), value=topic.author, validate='author')
-        .form-group
-          label= t('admin-topics-form.label.authorUrl')
-          - if (te('admin-topics-form.description.authorUrl'))
-            span.help-text= t('admin-topics-form.description.authorUrl')
-          input.form-control(type='text', maxlength='254', id='authorUrl', name='authorUrl', placeholder=t('admin-topics-form.placeholder.authorUrl'), value=topic.authorUrl, validate='url')
         .form-group
           - var pollOpen = !!(topic.action && topic.action.count > 0)
           label= t('admin-topics-form.label.action')
@@ -108,15 +92,11 @@
             input.form-control(type='tags', name='action.options', value=pollOptions)
 
         .form-group
-          label= t('admin-topics-form.label.source')
-          - if (te('admin-topics-form.description.source'))
-            span.help-text= t('admin-topics-form.description.source')
-          input.form-control(type='text', maxlength='200', name='source', placeholder=t('admin-topics-form.placeholder.source'), value=topic.source, validate='url')
-        .form-group
           label= t('admin-topics-form.label.summary')
           - if (te('admin-topics-form.description.summary'))
             span.help-text= t('admin-topics-form.description.summary')
           textarea.form-control(name='body')= topic.body
+        
         .form-group.closingAt
           label= t('admin-topics-form.label.closingAt')
           - if (te('admin-topics-form.description.closingAt'))

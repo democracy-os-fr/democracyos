@@ -1,6 +1,6 @@
 {
   "name": "democracyos",
-  "version": "2.9.5",
+  "version": "2.9.7",
   "description": "An online space for deliberation and voting on political proposals. The software aims to stimulate better arguments and come to better rulings.",
   "homepage": "http://www.democracyos.org/",
   "license": "GPL-3.0",
@@ -165,6 +165,7 @@
     "react": "^15.3.0",
     "react-async-script": "^0.9.1",
     "react-bootstrap": "^0.31.3",
+    "react-chartjs": "^0.8.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^15.3.0",
     "react-google-recaptcha": "^0.9.7",
