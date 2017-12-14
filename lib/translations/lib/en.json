@@ -343,6 +343,7 @@
   "proposal-options.no-votes-cast": "No votes cast",
   "proposal-options.vote": "Vote",
   "proposal-options.vote-item": "vote",
+  "proposal-options.voted": "You voted",
   "proposal-options.voted-abstained": "You abstained from voting",
   "proposal-options.voted-nay": "You voted Nay",
   "proposal-options.voted-yea": "You voted Yea",
