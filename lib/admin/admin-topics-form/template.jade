@@ -50,9 +50,6 @@
             span.help-text= t('admin-topics-form.description.forum-tags')
             - each tag in forum.initialTags
               button.btn.btn-default.btn-sm.forum-tag(data-value=tag, type='button', disabled=(topic.tags && !!~topic.tags.indexOf(tag)))= tag
-
-        - if (forum.topicsAttrs.length > 0)
-          div.attrs-wrapper(data-attrs)
             
         .form-group
           label= t('admin-topics-form.label.coverUrl')
@@ -113,7 +110,10 @@
               input.form-control(name='closingAtTime', maxlength='10', value=closingAtTime, placeholder='hh:mm', validate='time')
             button.btn.btn-link.remove-button(type='button', data-clear-closing-at)
               i.icon-trash
-
+                
+        - if (forum.topicsAttrs.length > 0)
+          div.attrs-wrapper(data-attrs)
+        
         .form-group
           label=t('admin-topics-form.label.resources')
           - if (te('admin-topics-form.description.resources'))
