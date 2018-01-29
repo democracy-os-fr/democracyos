@@ -327,7 +327,7 @@
   "password.repeat": "Retaper le mot de passe",
   "password.retype": "Retapez le nouveau mot de passe",
   "privileges-alert.not-can-view": "Ceci est consultation privée, pour pouvoir participer, le propriétaire doit vous donner l'accès.",
-  "privileges-alert.not-can-vote-and-comment": "Ceci est consultation à accès restreint, pour pouvoir participer, le propriétaire doit vous donner l'accès.",
+  "privileges-alert.not-can-vote-and-comment": "La consultation est terminée. Merci pour votre participation.",
   "proposal-article.article.alert.learn-more": "En savoir plus",
   "proposal-article.article.alert.text": "Ceci est la version publique de démonstration de DemocracyOS.",
   "proposal-article.create": "Créer un débat",
