@@ -6,7 +6,7 @@
       p.alert.alert-danger.text-center
         != t('admin-topics-form.alert.no-tags')
       p.text-center
-        a.btn.btn-lg.btn-primary.create-tag(href=urlBuilder.for('admin.tags.create', {forum: forum.name}))
+        a.btn.btn-lg.btn-primary.create-tag(href=urlBuilder.for('system.tags.create', {forum: forum.name}))
           = t('admin-tags-form.title.create')
     else
       p.alert.alert-danger.text-center
