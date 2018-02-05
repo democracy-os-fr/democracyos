@@ -19,6 +19,7 @@ logs
 mongroup.conf
 node_modules
 npm-debug.log
+package-lock.json
 pids
 public
 results
