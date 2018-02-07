@@ -1,6 +1,6 @@
 {
   "name": "democracyos",
-  "version": "2.9.8",
+  "version": "2.9.9",
   "description": "An online space for deliberation and voting on political proposals. The software aims to stimulate better arguments and come to better rulings.",
   "homepage": "http://www.democracyos.org/",
   "license": "GPL-3.0",
@@ -209,6 +209,7 @@
     "gulp-jasmine": "^2.2.1",
     "gulp-pleeease": "^2.0.2",
     "json-file-plus": "^3.0.0",
+    "nodemon": "^1.14.11",
     "nomnom": "^1.8.1",
     "pug-lint": "^2.4.0",
     "pug-lint-config-clock": "^2.0.0",
@@ -225,6 +226,7 @@
     "build": "NODE_PATH=. gulp build",
     "watch": "NODE_PATH=. gulp watch",
     "clean": "NODE_PATH=. gulp clean",
+    "serve": "NODE_PATH=. gulp serve",
     "migrate": "NODE_PATH=. bin/dos-migrate",
     "heroku-postbuild": "NODE_PATH=. gulp build --minify",
     "test": "NODE_PATH=. MONGO_URL=mongodb://localhost/DemocracyOS-test gulp test",
