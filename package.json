@@ -209,7 +209,7 @@
     "gulp-jasmine": "^2.2.1",
     "gulp-pleeease": "^2.0.2",
     "json-file-plus": "^3.0.0",
-    "nodemon": "^1.14.11",
+    "nodemon": "1.14.10",
     "nomnom": "^1.8.1",
     "pug-lint": "^2.4.0",
     "pug-lint-config-clock": "^2.0.0",
