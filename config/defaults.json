@@ -143,6 +143,7 @@
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
+  "strictWhitelist": false,
   "domainWhiteList": [],
   "multiForum": false,
   "restrictForumCreation": false,

@@ -13,7 +13,7 @@
       .col-md-3
     .row
       .list.list-group
-        - each whitelist in whitelists
+        each whitelist in whitelists
           a.list-group-item(data-id=whitelist.id, href=urlBuilder.for('admin.users.id', {forum: forum.name, id: whitelist.id}))
             - if (forum.privileges.canEdit)
               button.btn.btn-link.delete-whitelist.pull-right(type='button',data-toggle='modal')
