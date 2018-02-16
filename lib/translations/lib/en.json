@@ -278,6 +278,7 @@
   "homepage.create-debate": "Create my first topic",
   "homepage.no-topics": "There are no topics to display",
   "invalid.password": "Invalid password",
+  "ldap.error.default" : "LDAP error : ",
   "markdown.cheatsheet.title": "Formatting help",
   "markdown.comments.formatting-help": "Formatting help",
   "markdown.emphasis.example.1": "Emphasis, aka italics, with *asterisks* or _underscores_.",

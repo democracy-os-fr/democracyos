@@ -278,6 +278,7 @@
   "homepage.create-debate": "Créer mon premier débat",
   "homepage.no-topics": "Il n'y a pas de débat à afficher",
   "invalid.password": "Mot de passe invalide",
+  "ldap.error.default" : "Erreur LDAP : ",
   "markdown.cheatsheet.title": "Mise en forme des textes",
   "markdown.comments.formatting-help": "Aide à la mise en forme des textes",
   "markdown.emphasis.example.1": "Emphase faible (italique) avec des *astérisques* ou des _tirets bas_.",
