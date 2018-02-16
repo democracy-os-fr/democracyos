@@ -15,6 +15,7 @@
   "allowEmailAliases": true,
   "facebookSignin": false,
   "googleSignin": false,
+  "ldapSignin": false,
   "publicEmails": false,
   "moderatorEnabled": false,
   "generatorEnabled": false,
@@ -32,6 +33,18 @@
     "google": {
       "clientID": "",
       "clientSecret": ""
+    },
+    "ldap": {
+      "options": {
+        "server": {
+          "url": "",
+          "bindDN": "",
+          "bindCredentials": "",
+          "searchBase": "",
+          "searchFilter": ""
+        }
+      },
+      "domainWhiteList": []
     }
   },
   "https": {
