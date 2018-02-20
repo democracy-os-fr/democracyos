@@ -122,7 +122,8 @@
     "extra",
     "euCookieCompliance",
     "sorts",
-    "piwik"
+    "piwik",
+    "socialshare"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
