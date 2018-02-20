@@ -1,13 +1,19 @@
 .actions
   display: flex
   justify-content: space-between
-  padding-bottom: 5px
+  padding-bottom 5px
+  vertical-align middle
   .reply
     padding: 0
-    i
+    color #4cae4c
+    &:hover
+      color #1c8045
+    span.fa-stack
+      font-size 65%
       display: inline-block
-      transform: unquote("rotate(180deg)")
-      color: #999
+      .fa-inverse
+        color white
+
   .btn
     &.btn-xs
       padding 5px
@@ -17,6 +23,8 @@
       &:hover
         color #337ab7
 
+  .replies-score, .share-links
+    vertical-align middle
   .votes, .replies-score
     .score
       margin-right: .5em
@@ -39,7 +47,7 @@
         color: black
         padding-left: 5px
         padding-right: 5px
-        
+
         &:hover
           text-decoration: none
           color #337ab7
