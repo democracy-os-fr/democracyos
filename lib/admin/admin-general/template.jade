@@ -3,18 +3,31 @@
     form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
       .form-group
-        label.col-sm-2.control-label(for='title')= t('forum.form.title.label')
+        label.col-sm-2.control-label(for='title')
+          = t('forum.form.title.label')
         div.col-sm-10
           input.form-control(type='text', maxlength='50', id='title', name='title', placeholder=t('forum.form.title.placeholder'), value=forum.title, validate='required')
       .form-group
-        label.col-sm-2.control-label(for='summary')= t('forum.form.summary.label')
+        label.col-sm-2.control-label(for='summary')
+          = t('forum.form.summary.label')
         div.col-sm-10
           input.form-control(type='text', maxlength='300', id='summary', name='summary', placeholder=t('forum.form.summary.placeholder'), value=forum.summary, validate='max-length:300')
       .form-group
-        label.col-sm-2.control-label(for='coverUrl')= t('forum.form.cover')
+        label.col-sm-2.control-label(for='coverUrl')
+          = t('forum.form.cover')
         div.col-sm-10
           input.form-control(type='text', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.cover'), value=forum.coverUrl, validate='url')
-      .form-group
+      .form-group.topicsAttrs
+        div.col-sm-2.text-right
+          input(type='checkbox', id='disableComments', name='disableComments', checked=forum.topicsAttrs.disableComments)
+        label.col-sm-10.control-label.text-left(for='disableComments')
+          = t('forum.form.topicsAttrs.disableComments')
+      .form-group.topicsAttrs
+        div.col-sm-2.text-right
+          input(type='checkbox', id='commentsLength', name='commentsLength', checked=forum.topicsAttrs.commentsLength)
+        label.col-sm-10.control-label.text-left(for='commentsLength')
+          = t('forum.form.topicsAttrs.commentsLength')      
+      .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success
             i.glyphicon.glyphicon-save
