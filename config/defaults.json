@@ -125,7 +125,8 @@
     "piwik",
     "socialshare",
     "defaultCommentsLength",
-    "maxCommentsLength"
+    "maxCommentsLength",
+    "showReplies"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -149,6 +150,7 @@
   "spamLimit": 5,
   "defaultCommentsLength": 4096,
   "maxCommentsLength": 10000,
+  "showReplies" : false,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,
