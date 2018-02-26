@@ -5,9 +5,9 @@
   vertical-align middle
   .reply
     padding: 0
-    color #4cae4c
-    &:hover
-      color #1c8045
+    color #337ab7
+    &.active, &:active, &:hover
+      color #286090
     span.fa-stack
       font-size 65%
       display: inline-block
@@ -26,18 +26,13 @@
   .replies-score, .share-links
     vertical-align middle
   .votes, .replies-score
-    .score
+    .counter
       margin-right: .5em
-      font-size: 1em
+      font-size: 0.8em
+      text-transform: lowercase
+      font-weight: bold
 
-      span
-        font-weight: bold
-
-      small
-        text-transform: lowercase
-        color: #999
     button
-      cursor: pointer
       border: 0
       background: transparent
     .share-links
@@ -53,12 +48,39 @@
           color #337ab7
 
   .votes
+    .btn-xs
+      margin 0 5px 0 0
+      padding 5px 10px
+      text-transform uppercase
+      border 1px solid transparent
+      background: transparent
+      font-weight bold
+      font-size 70%
+      .score
+        margin-left 1em
+      &.disabled
+        border 0
+        opacity 0.85
+      &.active, &:hover
+        box-shadow none
+        color white
+
     .upvote
-      &.active,
-      &:hover
-        color: #A4CB53
+      color #A4CB53
+      border-color #A4CB53
+      &.active, &:hover
+        background-color #A4CB53
+      &.disabled
+        &.active, &:hover
+          color #A4CB53
+          background-color inherit
 
     .downvote
-      &.active,
-      &:hover
-        color: #D95E59
+      color: #D95E59
+      border-color: #D95E59
+      &.active, &:hover
+        background-color: #D95E59
+      &.disabled
+        &.active, &:hover
+          color: #D95E59
+          background-color inherit
