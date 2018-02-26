@@ -91,6 +91,16 @@
           - if (!pollOpen)
             input.form-control(type='tags', name='action.options', value=pollOptions)
 
+        .form-group.poll-options.hide
+          .form-check
+          - var multiple = (topic.action && topic.action.multiple)
+            label= t('admin-topics-form.label.multiple')
+            .some-div
+              - if (!pollOpen)
+                input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined))
+              - if (pollOpen)
+                input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined), disabled)
+
         .form-group
           label= t('admin-topics-form.label.summary')
           - if (te('admin-topics-form.description.summary'))
