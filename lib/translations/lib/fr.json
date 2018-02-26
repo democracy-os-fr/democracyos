@@ -107,6 +107,7 @@
   "admin-topics-form.label.cover": "Image de couverture",
   "admin-topics-form.label.coverUrl": "URL de l'image",
   "admin-topics-form.label.mediaTitle": "Titre",
+  "admin-topics-form.label.multiple": "Autoriser les choix multiples",
   "admin-topics-form.label.poll-options": "Options du sondage",
   "admin-topics-form.label.resources": "Ressources",
   "admin-topics-form.label.source": "Source",
