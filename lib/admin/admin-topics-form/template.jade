@@ -96,7 +96,10 @@
           - var multiple = (topic.action && topic.action.multiple)
             label= t('admin-topics-form.label.multiple')
             .some-div
-              input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined))
+              - if (!pollOpen)
+                input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined))
+              - if (pollOpen)
+                input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined), disabled)
 
         .form-group
           label= t('admin-topics-form.label.summary')
