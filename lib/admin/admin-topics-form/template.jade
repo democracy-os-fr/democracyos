@@ -38,7 +38,7 @@
             span.help-text= t('admin-topics-form.description.tag')
           select.form-control(name='tag', validate='required')
             - var topicTag = typeof topic.tag === 'string' ? topic.tag : (topic.tag && topic.tag.id)
-            - each tag in tags
+            each tag in tags
               option(selected=tag.id === topicTag, value=tag.id)
                 = tag.name
         .form-group
@@ -48,7 +48,7 @@
           div.tags-autocomplete
           - if (forum.initialTags && forum.initialTags.length > 0)
             span.help-text= t('admin-topics-form.description.forum-tags')
-            - each tag in forum.initialTags
+            each tag in forum.initialTags
               button.btn.btn-default.btn-sm.forum-tag(data-value=tag, type='button', disabled=(topic.tags && !!~topic.tags.indexOf(tag)))= tag
 
         - if (forum.topicsAttrs.length > 0)
@@ -61,6 +61,7 @@
           input.form-control(type='text', maxlength='254', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.coverUrl'), value=topic.coverUrl, validate='url')
         .form-group
           - var pollOpen = !!(topic.action && topic.action.count > 0)
+          input(type='hidden', id='action.updatable', name='action.updatable', value=(!pollOpen))
           label= t('admin-topics-form.label.action')
           - if (pollOpen)
             p.alert.alert-warning
@@ -93,14 +94,11 @@
 
         .form-group.poll-options.hide
           .form-check
-          - var multiple = (topic.action && topic.action.multiple)
-            label= t('admin-topics-form.label.multiple')
-            .some-div
-              - if (!pollOpen)
-                input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined))
-              - if (pollOpen)
-                input.form-check-input(type='checkbox', name='action.multiple', checked=(multiple ? "checked" : undefined), disabled)
-
+          - var multiple = !!(topic.action && topic.action.multiple)
+            label.kind-boolean
+              input.form-check-input(type='checkbox', id='action.multiple', name='action.multiple', checked=multiple, disabled=pollOpen)
+              | &emsp;
+              span.title= t('admin-topics-form.label.multiple')
         .form-group
           label= t('admin-topics-form.label.summary')
           - if (te('admin-topics-form.description.summary'))
@@ -134,7 +132,7 @@
             input(type='hidden', name='links[][text]', disabled)
             input(type='hidden', name='links[][url]', disabled)
             - if (topic.links && topic.links.length)
-              - each link, index in topic.links
+              each link, index in topic.links
                 include link
           div
             button.add-link.btn.btn-link(type='button')
