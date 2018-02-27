@@ -123,7 +123,10 @@
     "euCookieCompliance",
     "sorts",
     "piwik",
-    "socialshare"
+    "socialshare",
+    "defaultCommentsLength",
+    "maxCommentsLength",
+    "showReplies"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -145,6 +148,9 @@
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
   "spamLimit": 5,
+  "defaultCommentsLength": 4096,
+  "maxCommentsLength": 10000,
+  "showReplies" : false,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,
