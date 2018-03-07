@@ -1,0 +1,79 @@
+.comment-ref
+  margin 0 2px 0 4px
+  .fa
+    vertical-align middle
+    &.fa-spin
+      font-size 80%
+      margin-left 1px
+  &.fetched
+    font-size inherit
+    font-weight bold
+    font-style italic
+    .fa
+      vertical-align baseline
+      margin-right: 2px
+
+
+.popover.popover-comment
+  max-width: 373px
+
+  .popover-content
+    .text
+      max-height 1.6em * 10
+      overflow-x: scroll
+
+      h1, h2, h3,
+      h4, h5, h6,
+      p, blockquote, ul, li
+        margin: 0
+        font-size inherit
+        line-height: 1.6
+      h1, h2
+        font-size 1.125em
+        font-weight bold
+      h2
+        color #666666
+      h3, h4, h5, h6
+        font-size 1em
+        font-weight bold
+      h4, h5, h6
+        color #666666
+      p, ul, li
+        margin 0.5em auto 0.7em
+
+  footer
+    display: flex
+    align-items: center
+    margin-top 5px
+
+    &.has-badge
+      align-items: flex-start
+
+    .avatar
+      margin-right: 10px
+      width: 1.875em
+      height: 1.875em
+
+    .name
+      flex: 1
+      margin: 0 10px 0 0
+      font-size: .8em
+      font-weight: bold
+      overflow: hidden
+
+    .created-at
+      font-size: 10px
+      font-weight: 100
+      color: #666
+      display: inline-block
+      margin: 3px 0 0 10px
+
+    .options
+      position: relative
+      align-self: flex-start
+
+      .comment-link
+        display: inline-block
+        margin: 8px 0 0 10px
+        font-size: 13px
+        color: rgba(0,0,0,0.8)
