@@ -175,6 +175,7 @@
   "comments.arguments": "Arguments",
   "comments.arguments.confirm-remove": "Do you want to remove this reply?",
   "comments.arguments.reply": "Reply to this argument",
+  "comments.arguments.replies": "view / hide all replies",
   "comments.arguments.view": "View this comment",
   "comments.cannot-be-empty": "Argument cannot be empty",
   "comments.cannot-remove": "Comment has replies, cannot be removed!",
