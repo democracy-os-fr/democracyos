@@ -1,14 +1,30 @@
 #content-401
-  flex 1
-  background #35263a
+  position: absolute
+  background-color: #51394a
+  width: 100%
+  min-height: 100%
+
   .container-401
-    margin 100px auto 0
-    max-width 400px
-    width 90%
-    text-align center
+    width: 100%
+    overflow: hidden
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    padding-top: 10%
+
     h1
       font-size 20px
       color #fff
+      margin 20px auto
+      text-align center
     span
       color #fff
       font-size 50px
+
+@media only screen and (max-width: 700px)
+  #content-401
+    .container-401
+      width: 90% !important
+      margin 0 auto
+      padding-top: 20%
