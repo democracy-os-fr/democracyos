@@ -19,6 +19,11 @@
           input.form-control(type='text', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.cover'), value=forum.coverUrl, validate='url')
       .form-group.topicsAttrs
         div.col-sm-2.text-right
+          input(type='checkbox', id='hideResultsBeforeClosing', name='hideResultsBeforeClosing', checked=forum.topicsAttrs.hideResultsBeforeClosing)
+        label.col-sm-10.control-label.text-left(for='hideResultsBeforeClosing')
+          = t('forum.form.topicsAttrs.hideResultsBeforeClosing')
+      .form-group.topicsAttrs
+        div.col-sm-2.text-right
           input(type='checkbox', id='disableComments', name='disableComments', checked=forum.topicsAttrs.disableComments)
         label.col-sm-10.control-label.text-left(for='disableComments')
           = t('forum.form.topicsAttrs.disableComments')
