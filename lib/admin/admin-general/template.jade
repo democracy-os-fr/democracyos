@@ -31,7 +31,12 @@
         div.col-sm-2.text-right
           input(type='checkbox', id='commentsLength', name='commentsLength', checked=forum.topicsAttrs.commentsLength)
         label.col-sm-10.control-label.text-left(for='commentsLength')
-          = t('forum.form.topicsAttrs.commentsLength')      
+          = t('forum.form.topicsAttrs.commentsLength')
+      .form-group.topicsAttrs
+        div.col-sm-2.text-right
+          input(type='checkbox', id='nextTopic', name='nextTopic', checked=forum.topicsAttrs.nextTopic)
+        label.col-sm-10.control-label.text-left(for='nextTopic')
+          = t('forum.form.topicsAttrs.nextTopic')       
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success
