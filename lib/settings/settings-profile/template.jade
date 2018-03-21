@@ -58,5 +58,12 @@
       - if (config.extra.user.org || config.extra.user.age || config.extra.user.job || config.extra.user.postal)
         hr
 
+      - if (user.hasExtProfile)
+        .form-group
+          .checkbox
+            label(for='updateOnNextLogin')
+              input(type='checkbox', id='updateOnNextLogin', name='updateOnNextLogin', checked=(user.updateOnNextLogin))
+              b= t('settings.updateOnNextLogin')
+          
       .form-group: button.btn.btn-success.btn-block.btn-lg
         =t('settings.save')
