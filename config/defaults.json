@@ -126,7 +126,8 @@
     "socialshare",
     "defaultCommentsLength",
     "maxCommentsLength",
-    "showReplies"
+    "showReplies",
+    "showStats"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -151,6 +152,7 @@
   "defaultCommentsLength": 4096,
   "maxCommentsLength": 10000,
   "showReplies" : false,
+  "showStats" : false,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,
