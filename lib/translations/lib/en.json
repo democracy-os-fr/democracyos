@@ -364,6 +364,7 @@
   "proposal-article.participant.plural": "Participants",
   "proposal-article.participant.singular": "Participant",
   "proposal-article.view-original-text": "View the original text",
+  "proposal-article.warning.leaving-without-vote": "You are about to leave this page without validating your vote. Are you sure?",
   "proposal-options.abstain": "Abstain",
   "proposal-options.change-vote": "I want to change my vote",
   "proposal-options.error.voting": "An error occurred while processing your vote. Please try again",

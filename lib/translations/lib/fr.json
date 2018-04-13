@@ -358,6 +358,7 @@
   "proposal-article.participant.plural": "Participants",
   "proposal-article.participant.singular": "Participant",
   "proposal-article.view-original-text": "Voir la référence externe",
+  "proposal-article.warning.leaving-without-vote": "Vous êtes sur le point de quitter la page sans avoir valider votre vote.<br/><br/>Êtes-vous sûr de votre choix?",
   "proposal-options.abstain": "Abstention",
   "proposal-options.change-vote": "Je veux changer mon vote",
   "proposal-options.error.voting": "Une erreur s'est produite lors du traitement de votre vote. Veuillez essayer à nouveau",
