@@ -148,6 +148,7 @@
   "admin-topics-form.topicsAttrs.hideResultsBeforeClosing": "Hide results before closing",
   "admin-topics-form.topicsAttrs.nextTopic": "Next topic",
   "admin-topics-form.topicsAttrs.nextTopic.description": "Full link to next topic (http://...)",
+  "admin-topics-form.topicsAttrs.nextTopicLabel": "Link text",
   "admin-topics-form.url": "URL",
   "admin-topics.list.add-topic": "New",
   "admin-topics.list.close.future": "Closing",

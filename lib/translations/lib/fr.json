@@ -140,6 +140,7 @@
   "admin-topics-form.topicsAttrs.hideResultsBeforeClosing": "Cacher les résultats avant la clôture",
   "admin-topics-form.topicsAttrs.nextTopic": "Débat suivant",
   "admin-topics-form.topicsAttrs.nextTopic.description": "Lien complet vers le débat suivant (http://...)",
+  "admin-topics-form.topicsAttrs.nextTopicLabel": "Texte du lien",
   "admin-topics-form.url": "URL",
   "admin-topics.list.add-topic": "Nouveau",
   "admin-topics.list.close.future": "Clôture",
