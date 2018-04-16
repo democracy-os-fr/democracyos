@@ -1,0 +1,20 @@
+.form-group.topicsAttrs
+  div.col-sm-2.text-right
+    input(type='checkbox', id='hideResultsBeforeClosing', name='hideResultsBeforeClosing', checked=forum ? forum.topicsAttrs.hideResultsBeforeClosing : false)
+  label.col-sm-10.control-label.text-left(for='hideResultsBeforeClosing')
+    = t('forum.form.topicsAttrs.hideResultsBeforeClosing')
+.form-group.topicsAttrs
+  div.col-sm-2.text-right
+    input(type='checkbox', id='disableComments', name='disableComments', checked=forum ? forum.topicsAttrs.disableComments : false)
+  label.col-sm-10.control-label.text-left(for='disableComments')
+    = t('forum.form.topicsAttrs.disableComments')
+.form-group.topicsAttrs
+  div.col-sm-2.text-right
+    input(type='checkbox', id='commentsLength', name='commentsLength', checked=forum ? forum.topicsAttrs.commentsLength : false)
+  label.col-sm-10.control-label.text-left(for='commentsLength')
+    = t('forum.form.topicsAttrs.commentsLength')
+.form-group.topicsAttrs
+  div.col-sm-2.text-right
+    input(type='checkbox', id='nextTopic', name='nextTopic', checked=forum ? forum.topicsAttrs.nextTopic : false)
+  label.col-sm-10.control-label.text-left(for='nextTopic')
+    = t('forum.form.topicsAttrs.nextTopic')  
