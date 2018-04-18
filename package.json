@@ -1,6 +1,6 @@
 {
   "name": "democracyos",
-  "version": "2.9.13",
+  "version": "2.11.3",
   "description": "An online space for deliberation and voting on political proposals. The software aims to stimulate better arguments and come to better rulings.",
   "homepage": "http://www.democracyos.org/",
   "license": "GPL-3.0",
@@ -131,6 +131,7 @@
     "inserted": "0.0.4",
     "is-absolute-url": "~2.1.0",
     "is-express-schema-valid": "1.0.2",
+    "is-my-schema-valid": "^1.0.3",
     "jade": "^1.11.0",
     "jadeify": "~4.6.0",
     "jsdom": "~9.12.0",
