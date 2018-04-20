@@ -1,0 +1,18 @@
+#users-wrapper
+  form.form(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
+    .form-group
+      .input-group
+        span.input-group-addon
+          i.glyphicon.glyphicon-search
+        input.form-control.search(type='text', maxlength='50' placeholder='#{t("admin-tags.list.search.placeholder")}', autofocus)
+        //- span.input-group-btn
+        //-   a.btn.btn-success(href=urlBuilder.for('system.users.create'),title=t('system.add'))
+        //-     i.glyphicon.glyphicon-plus
+        //-   - if (config.generatorEnabled)
+        //-     button.btn.btn-info(type='submit',name='ipsum')
+        //-       i.glyphicon.glyphicon-flash
+    ul.form-messages
+  .list.list-group
+    - each user in users
+      include item.jade
+  

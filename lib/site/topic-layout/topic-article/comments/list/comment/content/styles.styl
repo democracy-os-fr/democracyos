@@ -1,0 +1,75 @@
+.edit-form
+  text-align: right;
+  margin: 0
+  .comments-edit, input.form-control.comment-title
+    margin 0.5em auto 0.7em
+    border 0
+    padding 0
+    line-height 1.6
+    color inherit
+    outline none
+    box-shadow none
+    background-color transparent
+
+  .comments-edit
+    width 100%
+    flex-grow: 2
+    resize: none
+    font-size .875em
+    font-weight inherit
+
+  input.form-control.comment-title
+    line-height: 1.6
+    font-size 1.125em
+    font-weight bold
+    font-style italic
+
+  button
+    margin: 0 0 10px 10px
+
+h1.title
+  margin 0.5em auto 0.7em
+  font-size 1.2em
+.text
+  margin-bottom 15px
+  font-size 0.875em
+  word-wrap break-word
+
+  h1, h2, h3,
+  h4, h5, h6,
+  p, blockquote, ul, li
+    margin: 0
+    font-size inherit
+    line-height: 1.6
+  h1, h2
+    font-size 1.125em
+    font-weight bold
+  h2
+    color #666666
+  h3, h4, h5, h6
+    font-size 1em
+    font-weight bold
+  h4, h5, h6
+    color #666666
+  p, ul, li
+    margin 0.5em auto 0.7em
+
+.read-more
+  .text
+    overflow-y hidden
+  .action
+    margin-top -15px
+    text-transform lowercase
+    text-align center
+    .btn
+      display none
+      &:hover
+        text-decoration none
+  &.off
+    .text
+      max-height 1.6em * 5
+    .more
+      display inline-block
+  &.on
+    .less
+      display inline-block

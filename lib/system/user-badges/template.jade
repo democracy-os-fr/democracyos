@@ -1,0 +1,26 @@
+#user-badges-wrapper.content-wrapper(data-section=urlBuilder.for('system.user-badges'))
+  h3= t('system.user-badges.title')
+  div
+    ul.form-messages
+    .form-group
+      .user-search
+    .form-group
+      .user-card
+        .picture
+        p.name
+    .form-group
+      label.control-label.sr-only(for='badge') #{t('settings.badge')}
+      .input-group
+        span.input-group-addon
+          i.fa.fa-fw.fa-tag
+        input.form-control(type='text', name='badge', tabindex=2, validate='required max-length:300', maxlength=50, placeholder=t('settings.badge.placeholder'))
+        //- span.input-group-btn
+        //-   button#submit-badge.btn.btn-success(tabindex=4)
+        //-     i.fa.fa-download
+        //-     | &emsp;
+        //-     = t('settings.save')
+    .form-group
+      button#submit-badge.btn.btn-success(tabindex=4)
+        i.fa.fa-download
+        | &emsp;
+        = t('settings.save')

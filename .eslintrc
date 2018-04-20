@@ -1,0 +1,18 @@
+{
+  "extends": ["democracyos"],
+  "rules": {
+    "no-undef": [1]
+  },
+  "globals": {
+    "location"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "."
+        ]
+      }
+    }
+  }
+}

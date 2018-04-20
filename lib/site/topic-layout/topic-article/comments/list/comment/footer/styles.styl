@@ -1,0 +1,87 @@
+.actions
+  display: flex
+  justify-content: space-between
+  padding-bottom 5px
+  vertical-align middle
+  .reply
+    padding: 0
+    margin-left 2px
+    color #337ab7
+    &.active, &:active, &:hover
+      color #286090
+    span.fa-stack
+      font-size 65%
+      display: inline-block
+      .fa-inverse
+        color white
+
+  .btn
+    &.btn-xs
+      padding 3px
+      margin 0
+      text-transform lowercase
+      font-size 90%
+      &:hover
+        color #337ab7
+
+  .replies-score, .share-links
+    vertical-align middle
+  .votes, .replies-score
+    .counter
+      margin-right: .5em
+      font-size: 0.8em
+      text-transform: lowercase
+      font-weight: bold
+
+    button
+      border: 0
+      background: transparent
+    .share-links
+      display: inline-block
+
+      a
+        color: black
+        padding-left: 5px
+        padding-right: 5px
+
+        &:hover
+          text-decoration: none
+          color #337ab7
+
+  .votes
+    .btn-xs
+      margin 0 5px 0 0
+      padding 5px 10px
+      text-transform uppercase
+      border 1px solid transparent
+      background: transparent
+      font-weight bold
+      font-size 70%
+      .score
+        margin-left 1em
+      &.disabled
+        border 0
+        opacity 0.85
+      &.active, &:hover
+        box-shadow none
+        color white
+
+    .upvote
+      color #A4CB53
+      border-color #A4CB53
+      &.active, &:hover
+        background-color #A4CB53
+      &.disabled
+        &.active, &:hover
+          color #A4CB53
+          background-color inherit
+
+    .downvote
+      color: #D95E59
+      border-color: #D95E59
+      &.active, &:hover
+        background-color: #D95E59
+      &.disabled
+        &.active, &:hover
+          color: #D95E59
+          background-color inherit

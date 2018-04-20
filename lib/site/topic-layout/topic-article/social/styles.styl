@@ -1,0 +1,56 @@
+.topic-social
+  display: flex
+  justify-content: space-between
+  margin-bottom: 40px
+
+  .participants-box
+    padding-top: 3px
+
+    .view-more
+      display: inline-block
+      cursor: pointer
+
+  .participants-item
+    display: inline-block
+    font-weight: bold
+    margin-right: 1em
+    .fa
+      margin-right: 2px
+      font-size 18px
+    .icon-ratings
+      font-weight 300
+      font-size 13px
+      font-style: normal
+      .fa
+        font-size 15px
+      .fa-thumbs-up
+        vertical-align: super
+        position: relative
+        left: 2px
+      .fa-thumbs-down
+        vertical-align: sub
+        position: relative
+        left: 2px
+
+
+  .share-links
+    min-width: 72px
+
+    a
+      background: #666
+      padding: 8px 5px
+      margin-left: 10px
+      border-radius: 2px
+      color: white
+      display: inline-block
+      line-height: 10px
+      transition: all .3s ease-in-out
+
+      &:hover
+        text-decoration: none
+
+      &.icon-social-facebook:hover
+        background-color: #3b5998
+
+      &.icon-social-twitter:hover
+        background-color: #3498db
