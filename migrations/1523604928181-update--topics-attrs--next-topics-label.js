@@ -1,7 +1,7 @@
 require('lib/models')()
 
 const t = require('t-component')
-const find = require('mout/array/find')
+const { find, findIndex, unique } = require('mout/array')
 const has = require('mout/object/has')
 const pluck = require('mout/array/pluck')
 const Forum = require('lib/models').Forum
@@ -20,18 +20,21 @@ exports.up = function up (done) {
             'name': 'nextTopicLabel',
             'title': t('admin-topics-form.topicsAttrs.nextTopicLabel'),
             'kind': 'String',
-            'min': 10,
+            'min': 0,
             'max': 1024,
             'defaultValue': t('proposal-article.next')
           })
-          return Forum.collection.findOneAndUpdate({ _id: forum._id }, {
-            $set: {
-              topicsAttrs: forum.topicsAttrs
-            }
-          })
         } else {
-          return false
+          forum.topicsAttrs = unique(forum.topicsAttrs, function (a, b) {
+            return a.name === b.name
+          })
+          forum.topicsAttrs[findIndex(forum.topicsAttrs, { name: 'nextTopicLabel' })].min = 0
         }
+        return Forum.collection.findOneAndUpdate({ _id: forum._id }, {
+          $set: {
+            topicsAttrs: forum.topicsAttrs
+          }
+        })
       }))
       .then(function (results) {
         const forums = results.filter((v) => !!v)
