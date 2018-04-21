@@ -553,5 +553,5 @@
   "forum.visibility.public.description": "Toute personne peut voir le contenu de ce forum et pourra participer.",
   "forum.visibility.public.title": "Ouvert à tous",
   "forum.visibility.title": "Visibilité",
-  "admin.uplaod.file": "upload image"
+  "admin.upload.file": "Envoyer"
 }

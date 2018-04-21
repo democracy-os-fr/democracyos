@@ -559,5 +559,6 @@
   "forum.visibility.private.title": "Secret",
   "forum.visibility.public.description": "Anyone can see the content and will be able to participate.",
   "forum.visibility.public.title": "Open for All",
-  "forum.visibility.title": "Visibility"
+  "forum.visibility.title": "Visibility",
+  "admin.upload.file": "Upload"
 }
