@@ -1,0 +1,27 @@
+.list-actions
+  text-align: right
+  margin-bottom 5px
+  .btn-xs
+    font-size 13px
+    padding 3px
+    .fa
+      margin-left 3px
+
+.comments-list
+  position: relative
+  padding-bottom: 30px
+
+  &.loading
+    opacity: .1
+    pointer-events: none
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+  @import './comment/styles'

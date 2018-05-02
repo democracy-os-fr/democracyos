@@ -1,0 +1,18 @@
+#tags-wrapper
+  form.form(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
+    .form-group
+      .input-group
+        span.input-group-addon
+          i.glyphicon.glyphicon-search
+        input.form-control.search(type='text', maxlength='50' placeholder='#{t("admin-tags.list.search.placeholder")}', autofocus)
+        span.input-group-btn
+          a.btn.btn-success(href=urlBuilder.for('admin.tags.create', {forum: forum.name}),title=t('admin-tags.list.add-tag'))
+            i.glyphicon.glyphicon-plus
+          - if(user.staff && config.generatorEnabled)
+            button.btn.btn-info(type='submit',name='ipsum')
+              i.glyphicon.glyphicon-flash
+    ul.form-messages
+  .list.list-group
+    - each tag in tags
+      include item.jade
+  

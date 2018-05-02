@@ -1,0 +1,26 @@
+#tag-wrapper
+  .tag-admin
+    .heading
+      .circle
+        i.icon-user
+      h1= t(form.title)
+    form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
+      ul.form-messages
+      .form-group
+        label.col-sm-2.control-label(for='name')= t('admin-tags-form.label.name')
+        div.col-sm-10
+          input.form-control(type='text', maxlength='50', id="name", name='name', placeholder=t('admin-tags-form.placeholder.name'), value=tag.name, validate='required')
+      .form-group
+        label.col-sm-2.control-label(for='color')= t('admin-tags-form.label.color')
+        div.col-sm-10
+          input.form-control(type='text', maxlength='7', id='color', name='color', placeholder='#337ab7', value=tag.color, validate='hexColor')
+      .form-group
+        label.col-sm-2.control-label(for='icon')= t('admin-tags-form.label.icon')
+        div.col-sm-10
+          input.form-control(type='text', maxlength='50', id='icon', name='icon', placeholder=t('admin-tags-form.placeholder.css'), value=tag.icon)
+      .form-group
+        div.col-sm-offset-2.col-sm-10
+          button.btn.btn-success
+            i.glyphicon.glyphicon-save
+            | &emsp;
+            = t('admin-tags-form.button.submit')

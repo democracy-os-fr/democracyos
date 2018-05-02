@@ -1,0 +1,69 @@
+#profile-wrapper.hide(data-section=urlBuilder.for('settings.profile'))
+  .profile-settings
+    .heading
+      .circle
+        i.icon-user
+      h1= t('settings.profile')
+    form.form(action='/api/settings/profile', method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
+      ul.form-messages
+      .form-group
+        label= t('settings.user-name')
+        input.form-control(type='text', id='username', name='username', maxlength=100, placeholder=t('settings.user-name'), value='#{user.username}', validate='required username')
+      .form-group
+        label= t('signup.email')
+        input.form-control(type='text', disabled='disabled', name='email', maxlength=200, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
+      .form-group
+        label= t('settings.locale')
+        select.form-control(id='locale', name='locale')
+      .form-group.profile-picture
+        label= t('settings.profile-picture')
+        .profile-picture-form
+          .image-container
+            img(src=user.profilePicture(), width=65)
+          .controls
+            //- a(href='https://gravatar.com', target='_blank')
+            //-   = t('settings.change-at-gravatar') + ' '
+            //-   i.icon-share-alt
+            input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url')
+
+      hr
+      
+      .form-group
+        label= t('settings.first-name')
+        input.form-control(type='text', id='firstName', name='firstName', maxlength=100, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='firstname')
+      .form-group
+        label= t('settings.last-name')
+        input.form-control(type='text', id='lastName', name='lastName', maxlength=100, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='lastname')
+
+      - if (config.extra.user.org)
+        .form-group
+          label= t('user.extra.org.label')
+          - var org = user.extra ? user.extra.org : ''
+          input.form-control(type='text', id='org', name='org', maxlength=300, value='#{org}', validate='max-length:300')
+      - if (config.extra.user.age)
+        .form-group
+          label= t('user.extra.age.label')
+          select.form-control(id='age', name='age')
+      - if (config.extra.user.postal)
+        .form-group
+          label= t('user.extra.postal.label')
+          //value='#{user.extra.postal}'
+          - var postal = user.extra ? user.extra.postal : ''
+          input.form-control(type='text', id='postal', name='postal', maxlength=5, value='#{postal}', validate='postalFR')
+      - if (config.extra.user.job)
+        .form-group
+          label= t('user.extra.job.label')
+          select.form-control(id='job', name='job')
+
+      - if (config.extra.user.org || config.extra.user.age || config.extra.user.job || config.extra.user.postal)
+        hr
+
+      - if (user.hasExtProfile)
+        .form-group
+          .checkbox
+            label(for='updateOnNextLogin')
+              input(type='checkbox', id='updateOnNextLogin', name='updateOnNextLogin', checked=(user.updateOnNextLogin))
+              b= t('settings.updateOnNextLogin')
+          
+      .form-group: button.btn.btn-success.btn-block.btn-lg
+        =t('settings.save')

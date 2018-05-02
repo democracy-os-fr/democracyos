@@ -1,0 +1,51 @@
+link(href='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css', rel='stylesheet', type='text/css')
+script(src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js')
+//- Config Color
+- var fontFamily = config.fontFamily;
+style.
+  .cc-revoke, .cc-window {
+    font-family: !{fontFamily} ;
+  }
+  .cc-window .btn-link:hover,
+  .cc-window .btn-link:focus {
+    text-decoration: none;
+    outline: none;
+  }
+script.
+  window.addEventListener('load', function(){
+  // see https://cookieconsent.insites.com/documentation/javascript-api/
+  // for all options
+  
+  var morelink = 'https://en.wikipedia.org/wiki/Cookie';
+  if( config.privacyPolicy ) {
+    morelink = '/help/privacy-policy';
+  } else if( config.legalTerms ) {
+    morelink = '/help/legal';
+  }
+  window.cookieconsent.initialise({
+    cookie: {
+      domain: config.host,
+      name: 'euCookieCompliance'
+    },
+    content: {
+      message: window.translations['cookie.message'],
+      dismiss: window.translations['common.accept'],
+      allow: window.translations['cookie.allow'],
+      deny: window.translations['cookie.decline'],
+      link: window.translations['common.more-information'],
+      href: morelink
+    },
+    elements: {
+      dismiss: '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss btn btn-link">{{dismiss}}</a>'
+    },
+    palette: {
+      popup: {
+        background: '#333333'
+      },
+      button: {
+        background: '#fff',
+        text: '#333333'
+      }
+    },
+    showLink: config.privacyPolicy || config.legalTerms
+  })});

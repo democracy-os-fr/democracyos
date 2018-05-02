@@ -1,0 +1,214 @@
+{
+  "locale": "fr",
+  "protocol": "http",
+  "warnHTTP": true,
+  "host": "localhost",
+  "publicPort": 3000,
+  "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
+  "mongoUsersUrl": "",
+  "jwtSecret": "Generate a secret token and paste it here.",
+  "corsDomains": [],
+  "signinUrl": "",
+  "signupUrl": "",
+  "settingsUrl": "",
+  "staff": [],
+  "allowEmailAliases": true,
+  "facebookSignin": false,
+  "googleSignin": false,
+  "ldapSignin": false,
+  "publicEmails": false,
+  "moderatorEnabled": false,
+  "generatorEnabled": false,
+  "checkNodeVersion": true,
+  "auth": {
+    "basic": {
+      "username": "",
+      "password": ""
+    },
+    "facebook": {
+      "clientID": "",
+      "clientSecret": "",
+      "permissions": [ "email" ]
+    },
+    "google": {
+      "clientID": "",
+      "clientSecret": ""
+    },
+    "ldap": {
+      "options": {
+        "server": {
+          "url": "",
+          "bindDN": "",
+          "bindCredentials": "",
+          "searchBase": "",
+          "searchFilter": ""
+        }
+      },
+      "domainWhiteList": []
+    }
+  },
+  "https": {
+    "serverKey": "server.key",
+    "serverCert": "server.crt",
+    "port": 443,
+    "redirect": "normal"
+  },
+  "certbot": {
+    "key": "",
+    "token": ""
+  },
+  "notifications": {
+    "url": "",
+    "token": "",
+    "mailer": {
+      "name": "",
+      "email": "",
+      "service": "",
+      "auth": {
+        "user": "",
+        "pass": ""
+      }
+    },
+    "nodemailer": {}
+  },
+  "slack": {
+    "apiErrorWebhookUri": ""
+  },
+  "recaptchaSite": "",
+  "recaptchaSecret": "",
+  "blackListEmails": [],
+  "client": [
+    "protocol",
+    "host",
+    "publicPort",
+    "env",
+    "locale",
+    "logo",
+    "logoMobile",
+    "favicon",
+    "organizationName",
+    "organizationUrl",
+    "fontFamily",
+    "fontFamilyLink",
+    "learnMoreUrl",
+    "googleAnalyticsTrackingId",
+    "frequentlyAskedQuestions",
+    "termsOfService",
+    "moderatorEnabled",
+    "generatorEnabled",
+    "privacyPolicy",
+    "legalTerms",
+    "glossary",
+    "signinUrl",
+    "signupUrl",
+    "settingsUrl",
+    "homeLink",
+    "headerContrast",
+    "headerBackgroundColor",
+    "headerFontColor",
+    "facebookSignin",
+    "googleSignin",
+    "visibility",
+    "usersWhitelist",
+    "domainWhiteList",
+    "multiForum",
+    "restrictForumCreation",
+    "tweetText",
+    "segmentKey",
+    "spamLimit",
+    "availableLocales",
+    "warnHTTP",
+    "recaptchaSite",
+    "extra",
+    "euCookieCompliance",
+    "sorts",
+    "piwik",
+    "socialshare",
+    "defaultCommentsLength",
+    "maxCommentsLength",
+    "showReplies"
+  ],
+  "socialshare": {
+    "siteName": "DemocracyOS",
+    "siteDescription": "DemocracyOS voting system",
+    "image": "https://2.gravatar.com/avatar/a8b9176bd0d042db078bf38500727671?d=https%3A%2F%2Fidenticons.github.com%2F14bae9f2564556f8eb23cc263a779f59.png&s=400",
+    "domain": "democracyos.org",
+    "twitter": {
+      "username": "@democracyos"
+    }
+  },
+  "logo": "/lib/boot/logo.png",
+  "logoMobile": "/lib/boot/logo-mobile.png",
+  "favicon": "/lib/boot/favicon.ico",
+  "fontFamily": "'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  "fontFamilyLink": "https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic,cyrillic-ext,latin,greek-ext,greek,latin-ext",
+  "organizationName": "Titre de la consultation",
+  "organizationEmail": "email@domain.net",
+  "organizationUrl": "https://domaine.net",
+  "learnMoreUrl": "",
+  "googleAnalyticsTrackingId": "",
+  "spamLimit": 5,
+  "defaultCommentsLength": 4096,
+  "maxCommentsLength": 10000,
+  "showReplies" : false,
+  "frequentlyAskedQuestions": false,
+  "termsOfService": false,
+  "privacyPolicy": false,
+  "legalTerms": false,
+  "glossary": false,
+  "homeLink": "/",
+  "headerBackgroundColor": "#fff",
+  "headerFontColor": "#000",
+  "headerContrast": true,
+  "googleAPIKey": "",
+  "visibility": "visible",
+  "usersWhitelist": false,
+  "strictWhitelist": false,
+  "domainWhiteList": [],
+  "multiForum": false,
+  "restrictForumCreation": false,
+  "defaultForum": "",
+  "tweetText": "",
+  "forceSafeImageURLs": true,
+  "segmentKey": "",
+  "availableLocales": ["en","fr"],
+  "enforceLocale": true,
+  "extra": {
+    "user" : {
+      "age" : false,
+      "job" : false,
+      "org": false,
+      "postal": false
+    }
+  },
+  "euCookieCompliance": false,
+  "sorts": {
+    "home": {
+      "default": "by-title-asc",
+      "random": false
+    },
+    "multi": {
+      "default": "newest-first",
+      "random": false
+    },
+    "sidebar": {
+      "default": "closing-soon",
+      "random": false
+    },
+    "comment": {
+      "default": "score",
+      "random": false
+    },
+    "admin": {
+      "default": "recently-updated",
+      "random": false
+    }
+  },
+  "piwik": {
+    "url": "",
+    "id": ""
+  },
+  "upload": {
+  "dir": ""
+   }
+}

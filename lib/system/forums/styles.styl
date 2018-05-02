@@ -1,0 +1,28 @@
+#forums-wrapper
+  .well
+    > *
+      margin-top 4px
+      margin-bottom 4px
+  .forum-name
+    color #666666
+
+#forum-wrapper
+  .form-horizontal
+    label.control-label.text-left
+      text-align left
+    .form-group.actions
+      margin-top 15px
+
+  @import '../../forum/topicsAttrs/styles'
+
+.subdomain
+  .input-group-addon
+    .mobile
+      display none
+
+    @media screen and (max-width: 450px)
+      .desktop
+        display none
+
+      .mobile
+        display inline

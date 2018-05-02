@@ -1,0 +1,24 @@
+.git
+.gitignore
+.env
+.DS_Store
+.dockerignore
+.eslint*
+.stylintrc
+app.json
+docker
+docker-compose.yml
+docs
+Makefile
+node_modules
+public
+Procfile
+
+config/*.json
+!config/defaults.json
+
+# Docs
+*.md
+
+# Never leave out the license
+!LICENSE
