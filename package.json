@@ -173,6 +173,7 @@
     "react-chartjs": "^0.8.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^15.3.0",
+    "react-flip-move": "^3.0.1",
     "react-google-recaptcha": "^0.9.7",
     "react-helmet": "^5.2.0",
     "react-outside-event": "~1.2.4",
