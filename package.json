@@ -109,6 +109,7 @@
     "express-certbot-endpoint": "~1.0.0",
     "express-error-slack": "~0.3.1",
     "express-sslify": "1.2.0",
+    "faker": "https://github.com/Marak/faker.js",
     "fb-signed-parser": "0.0.3",
     "form-parse": "0.1.0",
     "fs-extra": "~2.1.2",
