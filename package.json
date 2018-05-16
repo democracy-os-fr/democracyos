@@ -153,6 +153,7 @@
     "mongoose": "~4.10.8",
     "mongoose-connection-ready": "^1.0.1",
     "mongoose-gravatar": "0.3.0",
+    "mongoose-simple-random": "^0.4.1",
     "mongoose-validators": "^0.1.0",
     "mout": "~1.0.0",
     "nanomodal": "5.1.1",

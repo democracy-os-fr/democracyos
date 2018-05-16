@@ -1,21 +1,59 @@
 section.featured
+
   display flex
   flex-wrap wrap
   justify-content center
+
+  max-width 790px
+  margin 0 auto
+
+  .nav-tabs, .nav-pills
+    &>li>a
+      font-size: .8em
+      font-weight normal
+      // padding: 0 10px 0 0
+      text-transform: capitalize
+
+  .nav-pills
+    &>li>a
+      color #666
+    &>li.active>a
+      background-color white
+      color rgba(0,0,0,0.8)
+      font-weight bold
+      box-shadow:
+        0 1px 3px rgba(0,0,0,.12),
+        0 1px 2px rgba(0,0,0,.24)
 
   &.loading
     min-height 60px
     .loader-wrapper .topic-loader
       top: 15px
 
+  .description
+    padding-top 25px
+    padding-bottom 0
+    text-align center
+    font-size 80%
+    font-style italic
+    p:last-child
+      margin-bottom 0
+
   .featured-card
     display block
     position relative
-    margin 15px
+    margin 5px
     padding 15px 35px
-    width 45vw
-    height 20vw
-    overflow hidden
+
+    .topic-header
+      margin 5px
+      padding 7px 15px
+      background-color white
+      color rgba(0,0,0,0.8)
+      font-weight bold
+      box-shadow:
+        0 1px 3px rgba(0,0,0,.12),
+        0 1px 2px rgba(0,0,0,.24)
 
     .carousel
       padding 15px 90px
@@ -33,5 +71,19 @@ section.featured
 
     @import '../../topic-layout/topic-article/comments/list/comment/styles'
 
-    .carousel .comments-list-item
-      margin 5px
+    .carousel
+      height: auto
+      transition: height .6s ease-in-out
+
+      .comments-list-item
+        margin 5px
+
+      .carousel-inner
+        & > .item
+          transition: all .6s ease-in-out
+
+          &.active
+            opacity: 1
+
+          &.next, &.prev
+            opacity: 0
