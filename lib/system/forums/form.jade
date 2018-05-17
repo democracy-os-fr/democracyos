@@ -25,6 +25,7 @@
         label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
         div.col-sm-10
           input.form-control(type='text', id='cover', name='cover', value=forum ? forum.coverUrl : '', validate='url', placeholder=t('admin-topics-form.placeholder.cover'))
+       div.uploadImg 
       include ../../forum/topicsAttrs/form.jade    
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
