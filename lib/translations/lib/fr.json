@@ -302,7 +302,7 @@
   "homepage.featured.voted.title": "Les plus votés",
   "homepage.featured.voted.description": "",
   "homepage.featured.help.title": "À évaluer",
-  "homepage.featured.help.description": "Aidez-nous à évaluer les contributions suivantes",
+  "homepage.featured.help.description": "Voici quelques contributions sur lesquelles vous pouvez donner votre avis.",
   "invalid.password": "Mot de passe invalide",
   "ldap.error.default" : "Erreur LDAP : ",
   "markdown.cheatsheet.title": "Mise en forme des textes",
