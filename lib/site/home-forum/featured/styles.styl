@@ -1,24 +1,128 @@
 section.featured
+
   display flex
   flex-wrap wrap
   justify-content center
+
+  max-width 790px
+  margin 0 auto
+
+  .nav-tabs, .nav-pills
+    &>li>a
+      font-size: .8em
+      font-weight normal
+      // padding: 0 10px 0 0
+      text-transform: capitalize
+
+  .nav-pills
+    &>li>a
+      color #666
+    &>li.active>a
+      background-color white
+      color rgba(0,0,0,0.8)
+      font-weight bold
+      box-shadow:
+        0 1px 3px rgba(0,0,0,.12),
+        0 1px 2px rgba(0,0,0,.24)
 
   &.loading
     min-height 60px
     .loader-wrapper .topic-loader
       top: 15px
 
+  .description
+    padding-top 25px
+    padding-bottom 0
+    text-align center
+    font-size 80%
+    font-style italic
+    p:last-child
+      margin-bottom 0
+
   .featured-card
     display block
-    margin 15px
-    width 40vw
-    height 20vw
-    box-shadow 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24)
-    overflow hidden
-    color inherit
-    // transition all .3s unquote('cubic-bezier(.25,.8,.25,1)')
-    background-color #fff
     position relative
+    margin 5px
+    padding 15px 35px
 
-    // &:hover
-    //   box-shadow 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23)
+    .topic-header
+      margin 5px
+      padding 7px 15px
+      background-color white
+      color rgba(0,0,0,0.8)
+      font-weight bold
+      box-shadow:
+        0 1px 3px rgba(0,0,0,.12),
+        0 1px 2px rgba(0,0,0,.24)
+
+      .indicators
+        display none
+        float right
+        margin-top 3px
+        color #337ab7
+
+      &:hover, &:focus, &:active
+        .indicators
+          display inline-block
+
+    .comments-dropdown
+      position: absolute
+      top: 13px
+      right: 0
+      background: #fff
+      border-radius: 2px
+      border: 1px solid #ccc
+      box-shadow: 0 1px 3px rgba(0,0,0,.12)
+      padding: 5px 0
+      font-size: .8em
+      z-index: 1
+
+      button
+        cursor: pointer
+        border: 0
+        background: transparent
+        font-size: 13px
+        display: block
+        margin: 0 auto
+        padding: 5px 10px
+        width: 100%
+        color: #666
+        text-align: right
+        white-space: nowrap
+        font-weight: 100
+
+        &:hover
+          background-color: #f0f0f0
+
+    .carousel
+      padding 15px 90px
+      .carousel-control
+        background transparent
+        color black
+      .carousel-indicators
+        bottom -30px
+        li
+          color rgba(0,0,0,.6)
+          border-color rgba(0,0,0,.6)
+          &.active
+            border-color rgba(0,0,0,.2)
+            background-color rgba(0,0,0,.6)
+
+    @import '../../topic-layout/topic-article/comments/list/comment/styles'
+
+    .carousel
+      height: auto
+      transition: height .6s ease-in-out
+
+      .comments-list-item
+        margin 5px
+
+      .carousel-inner
+        & > .item
+          transition: all .6s ease-in-out
+
+          &.active
+            opacity: 1
+
+          &.next, &.prev
+            opacity: 0
