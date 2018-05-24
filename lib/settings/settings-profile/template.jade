@@ -21,11 +21,12 @@
           .image-container
             img(src=user.profilePicture(), width=65)
           .controls
-            div.uploadImg  
+            
             //- a(href='https://gravatar.com', target='_blank')
             //-   = t('settings.change-at-gravatar') + ' '
             //-   i.icon-share-alt
-            input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url')
+            input.form-control(type='text', id='profilePic' name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url' readonly)
+            div.uploadImg  
       hr
       
       .form-group
