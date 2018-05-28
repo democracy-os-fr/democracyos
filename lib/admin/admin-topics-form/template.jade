@@ -58,8 +58,8 @@
           label= t('admin-topics-form.label.coverUrl')
           - if (te('admin-topics-form.description.coverUrl'))
             span.help-text= t('admin-topics-form.description.coverUrl')
-          input.form-control(type='text', maxlength='254', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.coverUrl'), value=topic.coverUrl, validate='url' readonly)
-         div.uploadImg 
+          div.uploadImg 
+          input.form-control(type='hidden', maxlength='254', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.coverUrl'), value=topic.coverUrl, validate='url' readonly)
         .form-group
           - var pollOpen = !!(topic.action && topic.action.count > 0)
           input(type='hidden', id='action.updatable', name='action.updatable', value=(!pollOpen))
