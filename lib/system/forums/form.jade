@@ -24,7 +24,7 @@
       .form-group
         label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
         div.col-sm-10
-            div.uploadImg 
+          div.uploadImg 
           input.form-control(type='hidden', id='cover', name='cover', value=forum ? forum.coverUrl : '', validate='url', placeholder=t('admin-topics-form.placeholder.cover') readonly)
       include ../../forum/topicsAttrs/form.jade    
       .form-group.actions
