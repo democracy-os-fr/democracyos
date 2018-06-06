@@ -22,11 +22,11 @@
         div.col-sm-10
           input.form-control(type='text', id='summary', name='summary', value=forum ? forum.summary : '', maxlength=300, validate='max-length:300', placeholder=t('forum.form.summary.placeholder'))
       .form-group
-        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
+        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}  
         div.col-sm-10
+          input.form-control(type='text', id='cover', name='cover', value=forum ? forum.coverUrl : '', validate='url', placeholder=t('admin-topics-form.placeholder.cover'), readonly)
           div.uploadImg 
-          input.form-control(type='hidden', id='cover', name='cover', value=forum ? forum.coverUrl : '', validate='url', placeholder=t('admin-topics-form.placeholder.cover') readonly)
-      include ../../forum/topicsAttrs/form.jade    
+      include ../../forum/topicsAttrs/form.jade  
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success
