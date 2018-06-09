@@ -3,9 +3,10 @@ section.featured
   display flex
   flex-wrap wrap
   justify-content center
-
   max-width 790px
   margin 0 auto
+  margin-bottom:  50px
+  background-color: #f9f9f9
 
   .nav-tabs, .nav-pills
     &>li>a
@@ -15,11 +16,16 @@ section.featured
       text-transform: capitalize
 
   .nav-pills
+    &>li
+      margin-left:  0px
     &>li>a
-      color #666
-    &>li.active>a
+      color #3879B5
       background-color white
-      color rgba(0,0,0,0.8)
+      border 1px solid #3879B5
+
+    &>li.active>a
+      background-color #3879B5
+      color white
       font-weight bold
       box-shadow:
         0 1px 3px rgba(0,0,0,.12),
@@ -31,19 +37,25 @@ section.featured
       top: 15px
 
   .description
-    padding-top 25px
     padding-bottom 0
     text-align center
-    font-size 80%
-    font-style italic
-    p:last-child
-      margin-bottom 0
+
+    p
+      font-size:  1.1em
+
+      &:last-child
+        margin-bottom 0
+
+    h2 
+      font-style:   normal
+      font-size:    1.4em
 
   .featured-card
     display block
     position relative
     margin 5px
-    padding 15px 35px
+    padding 15px 15px
+    padding-top 0px
 
     .topic-header
       margin 5px
@@ -100,12 +112,13 @@ section.featured
       .carousel-control
         background transparent
         color black
+        width:  20px
 
         &.left 
-          left: -35px;          
+          left: -16px
 
         &.right 
-          right: -35px;          
+          right: -16px
 
       .carousel-indicators
         bottom -30px
