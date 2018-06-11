@@ -315,6 +315,7 @@
   "homepage.featured.help.title": "Help us to evaluate the new propositions",
   "homepage.featured.help.description": "Contribute to the identification of the best contributions by expressing your opinion on the propositions of other participants which are randomly presented to you.",
   "homepage.featured.others.title": "Discover other propositions",
+  "homepage.featured.button.topic": "View topic",
   "invalid.password": "Invalid password",
   "ldap.error.default" : "LDAP error : ",
   "markdown.cheatsheet.title": "Formatting help",
