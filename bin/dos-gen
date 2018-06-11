@@ -17,6 +17,7 @@ var parse = JSON.parse
 var mongoose = require('mongoose')
 var prompt = require('co-prompt')
 var confirm = prompt.confirm
+var notifier = require('democracyos-notifier')
 
 const ObjectID = require('mongoose').Types.ObjectId
 
@@ -27,6 +28,7 @@ const clone = require('mout/lang/clone')
 const pick = require('mout/array/pick')
 const pluck = require('mout/array/pluck')
 const faker = require('faker')
+const utils = require('lib/utils')
 const Model = require('lib/models')
 const dbReady = require('lib/models').ready
 const calcResult = require('lib/api-v2/db-api/topics/utils').calcResult
@@ -41,6 +43,29 @@ const mapPromises = (fn) => (array) => Promise.all(array.map(fn))
 const defaults = {
   badge: 'dos-gen'
 }
+
+notifier.config.set({
+  mongoUrl: config.mongoUrl,
+  organizationName: config.notifications.mailer.name || config.organizationName,
+  organizationEmail: config.notifications.mailer.email || config.organizationEmail,
+  organizationUrl: config.organizationUrl,
+  logo: utils.buildUrl(config, { pathname: config.logoMobile }),
+  logoFooter: utils.buildUrl(config, { pathname: config.logo }),
+  headerBackgroundColor: config.headerBackgroundColor,
+  headerFontColor: config.headerFontColor,
+  mailer: config.notifications.mailer,
+  nodemailer: config.notifications.nodemailer,
+  defaultLocale: config.locale,
+  availableLocales: config.availableLocales
+})
+
+Promise.resolve(notifier[config.notifications.url ? 'init' : 'start']())
+.then(() => {
+  console.log('notifier started')
+})
+.catch((e) => {
+  console.error(e)
+})
 
 program
   .option('-b, --badge <name>', 'User badge')

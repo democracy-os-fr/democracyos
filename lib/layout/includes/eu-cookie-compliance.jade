@@ -13,39 +13,58 @@ style.
   }
 script.
   window.addEventListener('load', function(){
-  // see https://cookieconsent.insites.com/documentation/javascript-api/
-  // for all options
-  
-  var morelink = 'https://en.wikipedia.org/wiki/Cookie';
-  if( config.privacyPolicy ) {
-    morelink = '/help/privacy-policy';
-  } else if( config.legalTerms ) {
-    morelink = '/help/legal';
-  }
-  window.cookieconsent.initialise({
-    cookie: {
-      domain: config.host,
-      name: 'euCookieCompliance'
-    },
-    content: {
-      message: window.translations['cookie.message'],
-      dismiss: window.translations['common.accept'],
-      allow: window.translations['cookie.allow'],
-      deny: window.translations['cookie.decline'],
-      link: window.translations['common.more-information'],
-      href: morelink
-    },
-    elements: {
-      dismiss: '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss btn btn-link">{{dismiss}}</a>'
-    },
-    palette: {
-      popup: {
-        background: '#333333'
+    // see https://cookieconsent.insites.com/documentation/javascript-api/
+    // for all options
+    
+    var morelink = 'https://en.wikipedia.org/wiki/Cookie';
+    if( config.privacyPolicy ) {
+      morelink = '/help/privacy-policy';
+    } else if( config.legalTerms ) {
+      morelink = '/help/legal';
+    }
+    var conf = {
+      cookie: {
+        domain: config.host,
+        name: 'euCookieCompliance'
       },
-      button: {
-        background: '#fff',
-        text: '#333333'
+      content: {
+        message: window.translations['cookie.message'],
+        dismiss: window.translations['common.accept'],
+        allow: window.translations['cookie.allow'],
+        deny: window.translations['cookie.decline'],
+        link: window.translations['common.more-information'],
+        href: morelink
+      },
+      elements: {
+        dismiss: '<a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss btn btn-link">{{dismiss}}</a>'
+      },
+      palette: {
+        popup: {
+          background: '#333333'
+        },
+        button: {
+          background: '#fff',
+          text: '#333333'
+        }
+      },
+      onStatusChange : function() {
+        var date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+        document.cookie = "cookie-consent=true; expires=" + date.toGMTString() + "; path=/";
+      },
+      showLink: config.privacyPolicy || config.legalTerms
+    };
+
+    function isCookieSet(name) {
+      if (document.cookie.split(';').filter(function(item) { return item.indexOf(name) >= 0 }).length) {
+        return true;
       }
-    },
-    showLink: config.privacyPolicy || config.legalTerms
-  })});
+      else {
+        return false;
+      }
+    };
+
+    if (!isCookieSet("cookie-consent")) {
+      window.cookieconsent.initialise(conf);
+    }
+  });

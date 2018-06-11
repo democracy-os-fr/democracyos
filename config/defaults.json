@@ -127,6 +127,7 @@
     "defaultCommentsLength",
     "maxCommentsLength",
     "showReplies",
+    "featuredSection"
     "showStats"
   ],
   "socialshare": {
@@ -152,7 +153,8 @@
   "defaultCommentsLength": 4096,
   "maxCommentsLength": 10000,
   "showReplies" : false,
-  "showStats" : false,
+  "featuredSection": false,
+  "showStats" : true,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,

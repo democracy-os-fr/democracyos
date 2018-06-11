@@ -8,9 +8,9 @@
         span.input-group-btn
           a.btn.btn-success(href=urlBuilder.for('system.tags.create'),title=t('admin-tags.list.add-tag'))
             i.glyphicon.glyphicon-plus
-          - if (config.generatorEnabled)
-            button.btn.btn-info(type='submit',name='ipsum')
-              i.glyphicon.glyphicon-flash
+          //- - if (config.generatorEnabled)
+          //-   button.btn.btn-info(type='submit',name='ipsum')
+          //-     i.glyphicon.glyphicon-flash
     ul.form-messages
   .list.list-group
     - each tag in tags
