@@ -29,7 +29,7 @@ div.list-group-item.clearfix
           p= t('settings-forums.delete.confirmation.body')
           p!= t('settings-forums.delete.confirmation.instructions', {domain: forum.name})
           .form-group
-            input.forum-name.form-control(type='text', name='forum-delete-input', data-forum=forum, validate='equals:'+forum.name)
+            input.forum-name.form-control(type='text', name='forum-delete-input', data-id=forum.id, data-name=forum.name, validate='equals:'+forum.name)
             input(type='hidden',name='forum-delete-name',value=forum.name)
         .modal-footer
           button.btn.btn-default(type='button', data-dismiss='modal')
