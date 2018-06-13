@@ -16,7 +16,7 @@
         label.col-sm-2.control-label(for='coverUrl')
           = t('forum.form.cover')
         div.col-sm-10
-          input.form-control(type='text', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.cover'), value=forum.coverUrl, validate='url')
+          input.form-control(type='hidden', id='coverUrl', name='coverUrl', value=forum.coverUrl)
           div.uploadImg
       include ../../forum/topicsAttrs/form.jade     
       .form-group.actions

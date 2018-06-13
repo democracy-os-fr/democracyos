@@ -1,124 +1,133 @@
-.fileUploader {
-	width: 100%;
-}
+.fileUploader
+  width 100%
+  .input-group-btn > .btn
+    padding 9px 12px
+  .input-group-btn:last-child > .btn
+    border-top-right-radius 4px
+    border-bottom-right-radius 4px
 
-.fileContainer {
-	background: #fff;
-	box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.05);
-	position: relative;
-	border-radius: 10px;
-	padding: 20px 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	margin: 10px auto;
-	transition: all 0.3s ease-in;
-}
+.coverWrapper
+  .deleteImage
+    position absolute
+    top 9px
+    right 24px
+    font-size 15px
+    color #F44336
+    width 15px
+    height 15px
+    text-align center
+    line-height 15px
+    cursor pointer
+    &:hover
+      color: white
+      box-shadow 2px 2px 3px 0 rgba(0, 0, 0, 0.05)
 
-.fileContainer input {
-	opacity: 0;
-	position: absolute;
-	z-index: -1;
-}
 
-.fileContainer p {
-	font-size: 12px;
-	margin: 8px 0 4px;
-}
+  .coverContainer
+    background-size cover
+    border-radius 4px
+    border 1px solid #ccc
+    height 100px
+    margin-bottom 10px
+    box-shadow 2px 2px 3px 0 rgba(0, 0, 0, 0.05)
 
-.fileContainer .errorsContainer {
-	max-width: 300px;
-	font-size: 12px;
-	color: red;
-	text-align: left;
-}
+.fileContainer
+  background #fff
+  box-shadow 2px 2px 3px 0 rgba(0, 0, 0, 0.05)
+  position relative
+  border-radius 10px
+  padding 20px 0
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  margin 10px auto
+  transition all 0.3s ease-in
+  &.singleImage
+    box-shadow none
+    padding 0
+    margin 0 auto
 
-.fileContainer .chooseFileButton {
-	padding: 6px 23px;
-	background: #3f4257;
-	border-radius: 30px;
-	color: white;
-	font-weight: 300;
-	font-size: 14px;
-	margin: 10px 0;
-	transition: all 0.2s ease-in;
-	cursor: pointer;
-	outline: none;
-	border: none;
-}
+  input
+    opacity 0
+    position absolute
+    z-index -1
+  p
+    font-size 12px
+    margin 8px 0 4px
+  .errorsContainer
+    max-width 300px
+    font-size 12px
+    color red
+    text-align left
+  .chooseFileButton
+    padding 6px 23px
+    background #3f4257
+    border-radius 30px
+    color white
+    font-weight 300
+    font-size 14px
+    margin 10px 0
+    transition all 0.2s ease-in
+    cursor pointer
+    outline none
+    border none
+    &:hover
+      background #545972
+  .uploadFilesButton
+    padding 5px 43px
+    background transparent
+    border-radius 30px
+    color #3f4257
+    font-weight 300
+    font-size 14px
+    margin 10px 0
+    transition all 0.2s ease-in
+    cursor pointer
+    outline none
+    border 1px solid #3f4257
+    &:hover
+      background #3f4257
+      color #fff
+  .uploadIcon
+    font-size 50px
+  .uploadPicturesWrapper
+    display flex
+    flex-wrap wrap
+    justify-content center
+    width 100%
+  .uploadPictureContainer
+    width 25%
+    margin 5%
+    padding 10px
+    background #edf2f6
+    display flex
+    align-items center
+    justify-content center
+    height 90px
+    box-shadow 0 0 8px 2px rgba(0, 0, 0, 0.1)
+    border 1px solid #d0dbe4
+    position relative
+    img
+      &.uploadPicture
+        width 40%
+  .deleteImage
+    position absolute
+    top -9px
+    right -9px
+    font-size 8px
+    color #fff
+    background #ff4081
+    border-radius 50%
+    width 15px
+    height 15px
+    text-align center
+    line-height 15px
+    cursor pointer
 
-.fileContainer .chooseFileButton:hover {
-	background: #545972;
-}
-
-.fileContainer .uploadFilesButton {
-	padding: 5px 43px;
-	background: transparent;
-	border-radius: 30px;
-	color: #3f4257;
-	font-weight: 300;
-	font-size: 14px;
-	margin: 10px 0;
-	transition: all 0.2s ease-in;
-	cursor: pointer;
-	outline: none;
-	border: 1px solid #3f4257;
-}
-
-.fileContainer .uploadFilesButton:hover {
-	background: #3f4257;
-	color: #fff;
-}
-
-.fileContainer .uploadIcon {
-	font-size: 50px;
-}
-
-.fileContainer .uploadPicturesWrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-}
-
-.fileContainer .uploadPictureContainer {
-	width: 25%;
-	margin: 5%;
-	padding: 10px;
-	background: #edf2f6;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 90px;
-	box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
-	border: 1px solid #d0dbe4;
-	position: relative;
-}
-
-.fileContainer .uploadPictureContainer img.uploadPicture {
-	width: 40%;
-}
-
-.fileContainer .deleteImage {
-	position: absolute;
-	top: -9px;
-	right: -9px;
-	font-size: 8px;
-	color: #fff;
-	background: #ff4081;
-	border-radius: 50%;
-	width: 15px;
-	height: 15px;
-	text-align: center;
-	line-height: 15px;
-	cursor: pointer;
-}
-
-.flipMove {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
+.flipMove
+  display flex
+  align-items center
+  justify-content center
+  flex-wrap wrap
+  width 100%
