@@ -253,8 +253,10 @@
   "common.ratings.down": "désapprobation",
   "common.upload.one": "Envoyer un fichier",
   "common.upload.many": "Envoyer plusieurs fichiers",
+  "common.upload.images.many": "Envoyer plusieurs images",
   "common.upload.delete.one": "Supprimer",
   "common.upload.delete.many": "Supprimer tous les fichiers",
+  "common.upload.images.delete.many": "Supprimer toutes les images",
   "common.upload.select.one": "Choisir un fichier",
   "common.upload.select.many": "Choisir plusieurs fichiers",
   "cookie.allow": "Autoriser les cookies",
@@ -560,5 +562,10 @@
   "forum.visibility.public.description": "Toute personne peut voir le contenu de ce forum et pourra participer.",
   "forum.visibility.public.title": "Ouvert à tous",
   "forum.visibility.title": "Visibilité",
-  "admin.upload.file": "Envoyer"
+  "admin.upload.file": "Envoyer",
+  "delete.images.onServer": "Vous êtes sur le point de supprimer toutes les images.<br/><br/>Êtes-vous sûr de votre choix?",
+  "delete.files.onServer": "Vous êtes sur le point de supprimer tous les fichiers.<br/><br/>Êtes-vous sûr de votre choix?",
+  "onglet.images":"Images",
+  "onglet.files":"Fichiers"
+ 
 }
