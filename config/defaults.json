@@ -28,7 +28,7 @@
     "facebook": {
       "clientID": "",
       "clientSecret": "",
-      "permissions": [ "email" ]
+      "permissions": ["email"]
     },
     "google": {
       "clientID": "",
@@ -126,7 +126,8 @@
     "socialshare",
     "defaultCommentsLength",
     "maxCommentsLength",
-    "showReplies"
+    "showReplies",
+    "upload"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -150,7 +151,7 @@
   "spamLimit": 5,
   "defaultCommentsLength": 4096,
   "maxCommentsLength": 10000,
-  "showReplies" : false,
+  "showReplies": false,
   "frequentlyAskedQuestions": false,
   "termsOfService": false,
   "privacyPolicy": false,
@@ -171,12 +172,12 @@
   "tweetText": "",
   "forceSafeImageURLs": true,
   "segmentKey": "",
-  "availableLocales": ["en","fr"],
+  "availableLocales": ["en", "fr"],
   "enforceLocale": true,
   "extra": {
-    "user" : {
-      "age" : false,
-      "job" : false,
+    "user": {
+      "age": false,
+      "job": false,
       "org": false,
       "postal": false
     }
@@ -209,6 +210,13 @@
     "id": ""
   },
   "upload": {
-  "dir": ""
-   }
+    "enabled": false,
+    "images": ["jpg","jpeg","png","gif"],
+    "documents": ["txt","md","pdf","doc","docx","odt","zip"]
+  },
+  "uploader": {
+    "type": "local",
+    "path": "",
+    "route":"/uploads/"
+  }
 }
