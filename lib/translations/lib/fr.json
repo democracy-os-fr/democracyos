@@ -310,6 +310,7 @@
   "homepage.featured.help.description": "Contribuez à l'analyse des meilleures contributions en exprimant votre avis sur les propositions d'autres participants qui vous sont présentées de manière aléatoire.",
   "homepage.featured.others.title": "Découvrez d'autres propositions",
   "homepage.featured.button.topic": "Accéder au débat",
+  "homepage.featured.button.refresh": "Évaluer d'autres propositions",
   "invalid.password": "Mot de passe invalide",
   "ldap.error.default" : "Erreur LDAP : ",
   "markdown.cheatsheet.title": "Mise en forme des textes",
