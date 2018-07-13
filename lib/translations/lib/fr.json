@@ -291,6 +291,7 @@
   "forum.form.topicsAttrs.disableComments": "Autoriser la désactivation des commentaires",
   "forum.form.topicsAttrs.hideResultsBeforeClosing": "Autoriser le masquage des résultats avant la clôture",
   "forum.form.topicsAttrs.nextTopic": "Activer le lien \"Débat suivant\"",
+  "forum.form.FeaturedSection":"Afficher les commentaires mis en avant",
   "forum.form.url.label": "Chemin",
   "forum.form.url.unavailable": "L'URL n'est pas disponible",
   "forum.list.search.placeholder": "Rechercher une consultation ...",

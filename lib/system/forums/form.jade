@@ -25,7 +25,12 @@
         label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
         div.col-sm-10
           input.form-control(type='text', id='cover', name='cover', value=forum ? forum.coverUrl : '', validate='url', placeholder=t('admin-topics-form.placeholder.cover'))
-      include ../../forum/topicsAttrs/form.jade    
+      include ../../forum/topicsAttrs/form.jade  
+      .form-group
+        div.col-sm-2.text-right
+          input(type='checkbox', id='featuredSection', name='featuredSection', value=forum ? forum.featuredSection : false)
+        label.col-sm-10.control-label.text-left(for='featuredSection')
+           = t('forum.form.FeaturedSection')   
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success

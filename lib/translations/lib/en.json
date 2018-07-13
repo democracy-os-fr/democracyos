@@ -291,6 +291,7 @@
   "forum.form.topicsAttrs.disableComments": "Enable comments disabling",
   "forum.form.topicsAttrs.hideResultsBeforeClosing": "Enable hidding results before closing",
   "forum.form.topicsAttrs.nextTopic": "Enable link \"Next topic\"",
+  "forum.form.FeaturedSection":"Show the put forward comments",
   "forum.form.url.label": "Democracy URL",
   "forum.form.url.unavailable": "URL is not available",
   "forum.list.search.placeholder": "Search a forum",
