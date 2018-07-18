@@ -20,17 +20,18 @@
       .form-group
         label.col-sm-2.control-label(for='summary') #{t('forum.form.summary.label')}
         div.col-sm-10
-          input.form-control(type='text', id='summary', name='summary', value=forum ? forum.summary : '', maxlength=300, validate='max-length:300', placeholder=t('forum.form.summary.placeholder'))
+          input.form-control(type='text', id='summary', name='summary', value=(forum ? forum.summary : ''), maxlength=300, validate='max-length:300', placeholder=t('forum.form.summary.placeholder'))
       .form-group
-        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
+        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}  
         div.col-sm-10
-          input.form-control(type='text', id='cover', name='cover', value=forum ? forum.coverUrl : '', validate='url', placeholder=t('admin-topics-form.placeholder.cover'))
+          input.form-control(type='hidden', id='cover', name='cover', value=(forum ? forum.coverUrl : ''))
+          div.uploadImg 
       include ../../forum/topicsAttrs/form.jade  
       .form-group
         div.col-sm-2.text-right
           input(type='checkbox', id='featuredSection', name='featuredSection', value=forum ? forum.featuredSection : false)
         label.col-sm-10.control-label.text-left(for='featuredSection')
-           = t('forum.form.FeaturedSection')   
+           = t('forum.form.FeaturedSection')  
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success

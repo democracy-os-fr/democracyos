@@ -127,6 +127,7 @@
     "defaultCommentsLength",
     "maxCommentsLength",
     "showReplies",
+    "upload",
     "featuredSection"
   ],
   "socialshare": {
@@ -209,5 +210,15 @@
   "piwik": {
     "url": "",
     "id": ""
+  },
+  "upload": {
+    "enabled": false,
+    "images": ["jpg","jpeg","png","gif"],
+    "documents": ["txt","md","pdf","doc","docx","odt","zip"]
+  },
+  "uploader": {
+    "type": "local",
+    "path": "",
+    "route":"/uploads/"
   }
 }

@@ -17,15 +17,9 @@
         select.form-control(id='locale', name='locale')
       .form-group.profile-picture
         label= t('settings.profile-picture')
-        .profile-picture-form
-          .image-container
-            img(src=user.profilePicture(), width=65)
-          .controls
-            //- a(href='https://gravatar.com', target='_blank')
-            //-   = t('settings.change-at-gravatar') + ' '
-            //-   i.icon-share-alt
-            input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url')
-
+        input.form-control(type='hidden', id='profilePic' name='profilePictureUrl', value='#{user.avatar}')
+        div.uploadImg  
+      
       hr
       
       .form-group
