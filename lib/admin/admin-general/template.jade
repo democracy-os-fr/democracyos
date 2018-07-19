@@ -1,7 +1,22 @@
+
 #general-wrapper
+  - if (user.staff)
+    .commands
+      a.btn.btn-primary.btn-block.make-private(class=forum.publishedAt ? '' : 'hide')
+          span=t('admin-topics-form.button.make-private')
+      a.btn.btn-primary.btn-block.make-public(class=!forum.publishedAt ? '' : 'hide')
+          span=t('admin-topics-form.button.make-public')
   .general-admin
     form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
+      .form-group
+        label.col-sm-2.control-label(for='associationName') #{t('forum.form.associationName.label')}
+        div.col-sm-10
+          input.form-control(type='text', id='associationName', name='associationName', value=forum.associationName, placeholder=t('forum.form.associationName.placeholder'), validate='required')
+      .form-group
+        label.col-sm-2.control-label(for='creationReason') #{t('forum.form.creationReason.label')}
+        div.col-sm-10
+          textarea.form-control( id='creationReason', name='creationReason', placeholder=t('forum.form.creationReason.placeholder'), validate='required')=forum.creationReason
       .form-group
         label.col-sm-2.control-label(for='title')
           = t('forum.form.title.label')
