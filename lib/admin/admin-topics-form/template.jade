@@ -95,6 +95,8 @@
             input.form-control(type='text', value=pollOptions.join(', '), disabled)
           - if (!pollOpen)
             input.form-control(type='tags', name='action.options', value=pollOptions)
+            p.alert.alert-warning
+              =t('admin-topics-form.clarification.poll-options')
         .form-group.hierarchy-options.hide
           - var hierarchyOpen = !!(topic.action && topic.action.count > 0)
           - var hierarchyOptions = topic.action && topic.action.results && topic.action.results.map(function(o){ return o.value })
@@ -105,6 +107,8 @@
             input.form-control(type='text', value=hierarchyOptions.join(', '), disabled)
           - if (!hierarchyOpen)
             input.form-control(type='tags', name='action.options', value=hierarchyOptions)
+            p.alert.alert-warning
+              = t('admin-topics-form.clarification.hierarchy-options')
 
         .form-group.poll-options.hide
           .form-check
