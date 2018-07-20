@@ -11,7 +11,7 @@
       .form-group
         label.col-sm-2.control-label(for='creationReason') #{t('forum.form.creationReason.label')}
         div.col-sm-10
-          textarea.form-control( id='creationReason', name='creationReason', placeholder=t('forum.form.creationReason.placeholder'), validate='required')
+          textarea.form-control( id='creationReason', name='creationReason', placeholder=t('forum.form.creationReason.placeholder'), validate='required')=forum.creationReason
       .form-group
         label.col-sm-2.control-label(for='title') #{t('forum.form.title.label')}
         div.col-sm-10
