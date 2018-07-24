@@ -9,7 +9,7 @@
         li: a(href=urlBuilder.for('system.tags')) #{t('admin-sidebar.tags.title')}
       - if (user.privileges && user.privileges.canManage)
         li: a(href=urlBuilder.for('system.user-badges')) #{t('system.user-badges')}
-      - if (user.privileges && user.privileges.canManage)
+      - if (user.privileges && user.staff && user.privileges.canManage)
         li: a(href=urlBuilder.for('system.upload')) #{t('system.upload')}
   .content.col-md-10
     #system-content
