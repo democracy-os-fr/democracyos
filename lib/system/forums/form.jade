@@ -40,11 +40,16 @@
           input.form-control(type='hidden', id='cover', name='cover', value=(forum ? forum.coverUrl : ''))
           div.uploadImg 
       include ../../forum/topicsAttrs/form.jade  
-      .form-group
+      .form-group.topicsAttrs
         div.col-sm-2.text-right
           input(type='checkbox', id='featuredSection', name='featuredSection', value=forum ? forum.featuredSection : false)
         label.col-sm-10.control-label.text-left(for='featuredSection')
-           = t('forum.form.FeaturedSection')  
+           = t('forum.form.FeaturedSection')
+      .form-group.topicsAttrs
+        div.col-sm-2.text-right
+          input(type='checkbox', id='featured', name='featured', value=forum ? forum.featured : false)
+        label.col-sm-10.control-label.text-left(for='featured')
+           = t('forum.form.Featured')   
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success
