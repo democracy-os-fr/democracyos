@@ -324,6 +324,7 @@
   "group.form.logoUrl.label": "Logo URL",
   "group.form.members.label":"Members",
   "group.list.users.title": "List of Saved Users",
+  "group.creation.message.onsuccess": "Group successfuly saved",
   "header.admin": "Manage",
   "header.forums": "My Communities",
   "header.insecure-warning": "Warning: You are using an insecure version of DemocracyOS. See the docs for details on implementing SSL.",
