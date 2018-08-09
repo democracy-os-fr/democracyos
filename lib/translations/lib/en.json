@@ -326,6 +326,8 @@
   "group.list.users.title": "List of Saved Users",
   "group.creation.message.onsuccess": "Group successfuly saved",
   "group.form.create.submit": "Create Group",
+  "group.list.search.placeholder": "Search a group",
+  "group.list.forums.title": "Forums List",
   "header.admin": "Manage",
   "header.forums": "My Communities",
   "header.insecure-warning": "Warning: You are using an insecure version of DemocracyOS. See the docs for details on implementing SSL.",

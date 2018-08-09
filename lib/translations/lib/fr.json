@@ -336,6 +336,8 @@
   "group.list.users.title": "Liste des utilisateurs enregistrés",
   "group.creation.message.onsuccess": "Le groupe a été sauvegardé avec succès",
   "group.form.create.submit": "Créer un groupe",
+  "group.list.search.placeholder": "Rechercher un groupe ...",
+  "group.list.forums.title": "Liste des consultations",
   "header.admin": "Gérer",
   "header.forums": "Mes consultations",
   "header.insecure-warning": "Avertissement: Vous utilisez une version non sécurisée de DemocracyOS. Consultez la documentation pour plus de détails sur la mise en place du SSL.",

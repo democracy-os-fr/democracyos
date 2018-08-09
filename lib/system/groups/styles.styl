@@ -40,6 +40,7 @@
     cursor default
 .Groupactions
   float right!important
+  margin 10px
 .deleteButton
   background-color transparent
   box-shadow none
@@ -105,4 +106,70 @@
     padding-left: 0px
   }
   }
-    
+  .logoImage
+    width 50px
+    height 50px
+    margin-left 10px
+    border-radius 100px
+    forum_card_font_color = #fff
+forum_card_border = 1px solid rgba(255, 255, 255, 0.5)
+
+.forum-card
+  margin-bottom 20px
+  font-size 14px
+  overflow hidden
+  color forum_card_font_color
+  cursor pointer
+  display flex
+  flex-direction column
+
+  .author
+    display flex
+    align-items center
+    align-self flex-end
+    .avatar
+      width 35px
+      height 35px
+      border-radius 100%
+      margin-left 10px
+
+  header
+    color forum_card_font_color
+    padding 20px 20px 10px
+    h1
+      margin 20px 0 10px 0
+    p.desc
+      margin 0
+
+  .info-bar
+    margin 10px 10px 5px
+    table
+      width 100%
+      color forum_card_font_color
+
+      thead
+        // border-top forum_card_border
+
+      th, td
+        font-size 16px
+        text-transform lowercase
+        padding 10px 15px
+        // border-right forum_card_border
+        &:last-child
+          border none
+
+      i.fa
+        font-size 18px
+.forum-card .info-bar table {
+    width 100%
+    color #fff
+}
+.forum-card header {
+    color #fff
+    padding 20px 20px 10px
+}
+.group-image {
+  width 300px
+  height 250px
+  text-align center
+  }
