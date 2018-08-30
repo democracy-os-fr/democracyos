@@ -128,7 +128,8 @@
     "maxCommentsLength",
     "showReplies",
     "upload",
-    "featuredSection"
+    "featuredSection",
+    "forumsPageLimit"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -149,6 +150,7 @@
   "organizationUrl": "https://domaine.net",
   "learnMoreUrl": "",
   "googleAnalyticsTrackingId": "",
+  "forumsPageLimit": 5,
   "spamLimit": 5,
   "defaultCommentsLength": 4096,
   "maxCommentsLength": 10000,
