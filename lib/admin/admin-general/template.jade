@@ -1,11 +1,5 @@
 
 #general-wrapper
-  - if (user.staff)
-    .commands
-      a.btn.btn-primary.btn-block.make-private(class=forum.publishedAt ? '' : 'hide')
-          span=t('admin-topics-form.button.make-private')
-      a.btn.btn-primary.btn-block.make-public(class=!forum.publishedAt ? '' : 'hide')
-          span=t('admin-topics-form.button.make-public')
   .general-admin
     form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
@@ -21,7 +15,7 @@
         label.col-sm-2.control-label(for='creationReason') #{t('forum.form.creationReason.label')}
         div.col-sm-10
           textarea.form-control( id='creationReason', name='creationReason', placeholder=t('forum.form.creationReason.placeholder'), validate='required')=forum.creationReason
-          input.form-control(type='hidden', id='justificatory', name='justificatory') 
+          input.form-control(type='hidden', id='justificatory', name='justificatory')
       .form-group
         label.col-sm-2.control-label(for='title')
           = t('forum.form.title.label')
@@ -37,21 +31,26 @@
           = t('forum.form.cover')
         div.col-sm-10
           input.form-control(type='hidden', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.cover'), value=forum.coverUrl, validate='url')
-          div.uploadImg 
-      include ../../forum/topicsAttrs/form.jade   
+          div.uploadImg
+      include ../../forum/topicsAttrs/form.jade
       .form-group.topicsAttrs
         div.col-sm-2.text-right
           input(type='checkbox', id='featuredSection', name='featuredSection', checked=forum ? forum.featuredSection : false)
         label.col-sm-10.control-label.text-left(for='featuredSection')
-          = t('forum.form.FeaturedSection') 
+          = t('forum.form.FeaturedSection')
       .form-group.topicsAttrs
         div.col-sm-2.text-right
           input(type='checkbox', id='featured', name='featured', checked=forum.featured)
         label.col-sm-10.control-label.text-left(for='featured')
-           = t('forum.form.Featured')     
+           = t('forum.form.Featured')
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success
             i.glyphicon.glyphicon-save
             | &emsp;
             = t('admin-tags-form.button.submit')
+          | &emsp;
+          a.btn.btn-warning.make-private(class=forum.publishedAt ? '' : 'hide')
+              span=t('admin-topics-form.button.make-private')
+          a.btn.btn-primary.make-public(class=!forum.publishedAt ? '' : 'hide')
+              span=t('admin-topics-form.button.make-public')
