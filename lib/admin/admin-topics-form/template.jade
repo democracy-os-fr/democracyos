@@ -53,7 +53,7 @@
 
         - if (forum.topicsAttrs.length > 0)
           div.attrs-wrapper(data-attrs)
-            
+
         .form-group
           label= t('admin-topics-form.label.coverUrl')
           - if (te('admin-topics-form.description.coverUrl'))
@@ -123,7 +123,7 @@
           - if (te('admin-topics-form.description.summary'))
             span.help-text= t('admin-topics-form.description.summary')
           textarea.form-control(name='body')= topic.body
-        
+
         .form-group.closingAt
           label= t('admin-topics-form.label.closingAt')
           - if (te('admin-topics-form.description.closingAt'))
