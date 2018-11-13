@@ -26,3 +26,4 @@ public
 results
 ssl
 yarn.lock
+npm-debug*

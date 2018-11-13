@@ -15,18 +15,18 @@ ul.admin-menu.nav.nav-pills.nav-stacked(class=forum.privileges.canChangeTopics ?
   //-   li: a(href=urlBuilder.for('admin.tags-moderation', {forum: forum.name}) data-section='tags-moderation')=t('admin-sidebar.tags-moderation.title')
   - if (config.usersWhitelist && forum.privileges.canEdit)
       li: a(href=urlBuilder.for('admin.users', {forum: forum.name}) data-section='users')=t('admin-sidebar.whitelists.title')
-  li.featured: a(href=forum.url) 
+  li.featured: a(href=forum.url)
     i.fa.fa-fw.fa-eye
     | &nbsp;
     span=t('common.view')
   - if (user.privileges && user.privileges.canManage)
     - if (config.multiForum)
-      li: a(href=urlBuilder.for('system.forums')) 
+      li: a(href=urlBuilder.for('system.forums'))
         i.fa.fa-fw.fa-chevron-left
         | &nbsp;
         i=t('system.sidebar.forums')
     - else
-      li: a(href=urlBuilder.for('system.tags')) 
+      li: a(href=urlBuilder.for('system.tags'))
         i.fa.fa-fw.fa-chevron-left
         | &nbsp;
         i=t('system.sidebar.others')
