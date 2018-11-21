@@ -1,0 +1,91 @@
+section.cover
+  margin-top 25px
+
+  .media-object
+    margin 15px
+    max-width 250px
+
+    @media screen and (max-width 768px)
+      display none
+
+  .media-body
+    padding 15px 5px
+
+    .group-infos
+      padding-left .5em
+
+  .media-heading
+    padding-top 5px
+    font-size 2em
+    margin-bottom .5em
+
+    .admin
+      display inline-block
+      text-align center
+      background-color #d9534f
+      color #f9f9f9
+      font-size 18px
+      vertical-align top
+      margin-left 8px
+      height 32px
+      width 32px
+      border-radius 16px
+      padding-top 7px
+      i.fa, span.icon
+        vertical-align middle
+
+.navigation
+  .nav-tabs, .nav-pills
+    &>li>a
+      font-size: .8em
+      font-weight normal
+
+  .nav-pills
+    &>li
+      margin-left:  0px
+    &>li>a
+      color #666
+
+    &>li.active>a
+      background-color white
+      color rgba(0,0,0,0.8)
+      font-weight bold
+      box-shadow:
+        0 1px 3px rgba(0,0,0,.12),
+        0 1px 2px rgba(0,0,0,.24)
+
+#group-tabs .nav[role="tablist"]
+  height auto
+  @media (min-width: 1272px)
+    height 4.8rem
+  @media (min-width: 1400px)
+    height 3.2rem
+
+section.users
+
+  .list
+    display flex
+    justify-content space-evenly
+
+    .displayedUsers
+      display flex
+      align-items center
+      align-content center
+      white-space nowrap
+      margin-bottom .5em
+      padding .5em
+      font-size 1em
+      border-radius 2px
+      transition background-color .05s .05s
+
+      img
+        width 48px
+        border-radius 2px
+
+      p
+        flex-grow 2
+        margin 0 .5em
+        font-weight bold
+        text-overflow ellipsis
+        overflow hidden
+        cursor default
