@@ -1,17 +1,21 @@
-Bienvenue sur le HUB!
+Bienvenue sur la plateforme de gouvernance et de concertation pour les associations parisiennes
 ===
 
-### Lorem ipsum dolor
+DemocracyOS France ouvre à toutes les associations parisiennes cette plateforme "open source", facile à prendre en main permettant à chaque association de lancer différents types de consultations (débat, vote, pétition, sondage) ouvertes ou internes afin de mieux interagir avec leur communauté de bénévoles et les parisien.ne.s. !
 
-Nullam sit amet magna ligula. Proin eu pellentesque nunc. Fusce aliquet sollicitudin purus in consequat. Cras consectetur iaculis ante. Nunc vitae dictum risus. Vivamus non nisi quis sem venenatis lacinia. Cras ipsum diam, iaculis id consequat vitae, venenatis quis est.
+### Vous êtes une association ?
+Créez votre espace et commencez à créer des débats, internes ou ouverts.
 
-### Nunc dui elit
+### Vous êtes membre d'une association ?
+Proposez vos idées, débattez, et prenez part aux décisions qui vous concernent.
 
-Nunc dui elit, tempor vitae ipsum eget, blandit sodales lorem. Suspendisse potenti. Aliquam eu nisl feugiat, commodo quam consectetur, facilisis leo. Vestibulum scelerisque nec orci sit amet aliquam. Suspendisse vel dignissim lacus. Proin ultrices mi nec mi lobortis ultricies. In eget consequat lorem.
+### Vous êtes un.e citoyen.ne curieux.se ?
+Informez-vous sur les projets des associations et participez aux débats ouverts au public.
 
-[En savoir plus](/hub/info)
+#### [Rejoindre le hub](/system/forums/create)
 
-[Découvrez les consultations ouvertes & participez!](#hub-forums)
-
-### Vous êtes une association & vous souhaitez ouvrir un espace de consultation ?
-[Rejoindre le hub](/system/forums/create)
+## Pour vous accompagner dans la découverte de la plateforme :
+- #### [Notice pour les administrateurs (associations)](https://pad.f0rk.fr/s/B1qO_lyRQ)
+- #### [Notice pour les utilisateurs](https://pad.f0rk.fr/s/S1oGul1CQ)
+- #### [Charte d'utilisation](https://pad.f0rk.fr/s/rk8TWAZRX)
+- #### [Bonnes pratiques pour une consultation réussie](/lib/site/boot/docs/GuidelinesParticipation.pdf)
