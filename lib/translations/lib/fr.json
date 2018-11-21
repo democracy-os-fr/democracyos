@@ -329,7 +329,7 @@
   "forum.visibility.public.title": "Ouvert à tous",
   "forum.visibility.title": "Visibilité",
   "footer-info": "Vous êtes :",
-  "footer-info-particular": " Un particulier",
+  "footer-info-solo": " Un particulier",
   "footer-info-group": "Une association",
   "footer-info-faq": "Lire notre FAQ",
   "group.form.add.title": "Créer un groupe",

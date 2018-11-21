@@ -1,9 +1,54 @@
+.hub
+  .cover
+    padding-top 30px
+    min-height 300px
+    font-size 16px
+    color #f9f9f9
+    background-size cover
+    background-repeat no-repeat
+    background-position center top
+    background-image unquote("url('https://democracyosorg.s3.amazonaws.com/cover-hands.jpg')")
+
+    h1
+     font-size 2.9em
+    p
+      font-weight 500
+
 .hub-info-button
     margin-left 40%
     margin-bottom 5px
 .hub-description
-  h1
-    text-align center
+  font-size 1.1rem
+  padding-bottom 1em
+
+  h3
+    margin 1em 0 5px
+    & + p
+      padding-left 1em
+  ul
+    display flex
+    justify-content space-evenly
+
+    list-style-type none
+    margin-block-start 1em
+    margin-block-end 0
+    margin-inline-start 0
+    margin-inline-end 0px
+    padding-inline-start 0
+    h3, h4
+      margin 5px auto
+    li
+      display inline-block
+      margin 0 5px
+      & > * > a
+        font-size 90%
+        display inline-block
+        margin 5px auto
+        padding 5px 1em
+        color #f9f9f9
+        background-color #3d699e
+        border-radius 4px
+
 .hub-forums-button
     margin 30px
 .hub-associations-button
