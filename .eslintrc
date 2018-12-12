@@ -4,7 +4,8 @@
     "no-undef": [1]
   },
   "globals": {
-    "location"
+    "location",
+    "FileReader"
   },
   "settings": {
     "import/resolver": {

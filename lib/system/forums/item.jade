@@ -9,7 +9,7 @@ div.list-group-item.clearfix
       a.btn.btn-link(href=urlBuilder.for('system.forums.copy', {forum: forum.name}))
         i.fa.fa-lg.fa-clone
     - if (forum.privileges.canDelete)
-      button.btn.btn-link(type='button',data-toggle='modal',data-target='#forum-delete-modal-#{forum.id}')
+      button.btn.btn-link.text-danger(type='button',data-toggle='modal',data-target='#forum-delete-modal-#{forum.id}')
         i.fa.fa-lg.fa-trash.text-danger
   h4.list-group-item-heading
      a(href=(forum.privileges.canChangeTopics ? forum.url + '/admin' : forum.url)).forum-title #{forum.title}

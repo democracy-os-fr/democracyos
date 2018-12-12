@@ -215,6 +215,7 @@
   },
   "upload": {
     "enabled": false,
+    "maxSize": 2097152,
     "images": [".jpg",".jpeg",".png",".gif"],
     "documents": [".txt",".md",".pdf",".doc",".docx",".odt",".zip"]
   },

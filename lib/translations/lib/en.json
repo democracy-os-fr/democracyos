@@ -2,7 +2,7 @@
   "404.back-to-democracyos": "Go back to DemocracyOS",
   "404.go-back-to": "go back to",
   "404.not-exists": "This page does not exist",
-  "add-user-input.placeholder": "Add a person",
+  "common.users.placeholder": "Add a person",
   "admin-comments.dowload-as-csv": "Download all as .csv",
   "admin-forums-form.message.onsuccess": "Consultation sauvegardée avec succès",
   "admin-general.form.title": "General properties",

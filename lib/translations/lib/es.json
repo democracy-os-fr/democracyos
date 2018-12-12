@@ -2,7 +2,7 @@
   "404.back-to-democracyos": "vuelve a DemocracyOS",
   "404.go-back-to": "vuelve a",
   "404.not-exists": "Esta página no existe",
-  "add-user-input.placeholder": "Agregar usuario",
+  "common.users.placeholder": "Agregar usuario",
   "admin-comments.dowload-as-csv": "Descargar como .csv",
   "admin-comments.filter-by": "Filtrar por:",
   "admin-comments.filter-by.less-replies": "Menos respuestas",
