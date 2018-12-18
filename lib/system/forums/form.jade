@@ -4,19 +4,20 @@
     form.form-horizontal(action=form.action, method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
       input(type='hidden', id='source', name='source', value=(forum ? forum.id : ''))
       ul.form-messages
-      .form-group
-        label.col-sm-2.control-label(for='associationName') #{t('forum.form.associationName.label')}
-        div.col-sm-10
-          input.form-control(type='text', id='associationName', name='associationName', placeholder=t('forum.form.associationName.placeholder'), validate='required')
+      .well
+        .form-group
+          label.col-sm-2.control-label(for='associationName') #{t('forum.form.associationName.label')}
           div.col-sm-10
-          div.search
-          input.form-control(type='hidden', id='associationId', name='associationId', value=forum ? forum.associationId : '', placeholder=t('forum.form.associationId.placeholder'), validate='required')
-      div.uploadJustificatory   
+            input.form-control(type='text', id='associationName', name='associationName', placeholder=t('forum.form.associationName.placeholder'), validate='required')
+            div.col-sm-10
+            div.search
+            input.form-control(type='hidden', id='associationId', name='associationId', value=forum ? forum.associationId : '', placeholder=t('forum.form.associationId.placeholder'), validate='required')
+        div.uploadJustificatory   
       .form-group
         label.col-sm-2.control-label(for='creationReason') #{t('forum.form.creationReason.label')}
         div.col-sm-10
-          textarea.form-control( id='creationReason', name='creationReason', placeholder=t('forum.form.creationReason.placeholder'), validate='required')= forum ? forum.creationReason : ''   
-          input.form-control(type='hidden', id='justificatory', name='justificatory') 
+          textarea.form-control( id='creationReason', name='creationReason', placeholder=t('forum.form.creationReason.placeholder'), validate='required')= forum ? forum.creationReason : ''
+          input.form-control(type='hidden', id='justificatory', name='justificatory')
       .form-group
         label.col-sm-2.control-label(for='title') #{t('forum.form.title.label')}
         div.col-sm-10
@@ -35,11 +36,11 @@
         div.col-sm-10
           input.form-control(type='text', id='summary', name='summary', value=(forum ? forum.summary : ''), maxlength=300, validate='max-length:300', placeholder=t('forum.form.summary.placeholder'))
       .form-group
-        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}  
+        label.col-sm-2.control-label(for='cover') #{t('forum.form.cover')}
         div.col-sm-10
           input.form-control(type='hidden', id='cover', name='cover', value=(forum ? forum.coverUrl : ''))
-          div.uploadImg 
-      include ../../forum/topicsAttrs/form.jade  
+          div.uploadImg
+      include ../../forum/topicsAttrs/form.jade
       .form-group.topicsAttrs
         div.col-sm-2.text-right
           input(type='checkbox', id='featuredSection', name='featuredSection', value=forum ? forum.featuredSection : false)
@@ -49,7 +50,7 @@
         div.col-sm-2.text-right
           input(type='checkbox', id='featured', name='featured', value=forum ? forum.featured : false)
         label.col-sm-10.control-label.text-left(for='featured')
-           = t('forum.form.Featured')   
+           = t('forum.form.Featured')
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success

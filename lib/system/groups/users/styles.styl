@@ -1,46 +1,9 @@
-#forums-wrapper
-  .well
-    > *
-      margin-top 4px
-      margin-bottom 4px
-  .forum-name
-    color #666666
+.users-form-control
+  max-height 34px
+  overflow-y visible
+  z-index 2
 
-#forum-wrapper
-  .form-horizontal
-    label.control-label.text-left
-      text-align left
-    .form-group.actions
-      margin-top 15px
-
-  @import '../../forum/topicsAttrs/styles'
-
-.subdomain
-  .input-group-addon
-    .mobile
-      display none
-
-    @media screen and (max-width: 450px)
-      .desktop
-        display none
-
-      .mobile
-        display inline
-.form-messages
-  .msg
-    color darken(#27ae60, 50%)
-    border-color #27ae60
-    background-color lighten(#27ae60, 70%)
-    padding: 20px 0px 20px 35px
-    width: 40%
-    border-radius: 8px
-    list-style-type: none
-    margin: auto
-#creationReason
-  height 100px
-  resize none
-
-.group-search-results
+.search-results
   z-index 2
   margin-bottom 0
 
@@ -69,7 +32,7 @@
     max-width 43px
     height 43px
 
-.searching .group-search-results
+.searching
   .input-group .form-control:first-child,
   .input-group-addon:first-child,
   .input-group-btn:first-child>.btn,
