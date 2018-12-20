@@ -9,10 +9,10 @@ Proposez vos idées, débattez, et prenez part aux décisions qui vous concernen
 ### Vous êtes un.e citoyen.ne curieux.se ?
 Informez-vous sur les projets des associations et participez aux débats ouverts au public.
 
-- ### [Rejoindre le hub](/system/forums/create)
+- ### [Rejoindre la plateforme](/system/forums/create)
 
-### Pour vous accompagner dans la découverte de la plateforme :
+### Pour vous accompagner dans la découverte de la plateforme:
 - #### [Charte d'utilisation](https://pad.f0rk.fr/s/rk8TWAZRX)
 - #### [Notice pour les utilisateurs](https://pad.f0rk.fr/s/S1oGul1CQ)
 - #### [Notice pour les administrateurs (associations)](https://pad.f0rk.fr/s/B1qO_lyRQ)
-- #### [Bonnes pratiques pour une consultation réussie](/lib/site/boot/docs/GuidelinesParticipation.pdf)
+- #### [Bonnes pratiques pour une consultation réussie](/lib/site/help/GuidelinesParticipation.pdf)
