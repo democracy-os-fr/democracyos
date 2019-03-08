@@ -312,7 +312,7 @@
   "homepage.featured.button.topic": "Accéder au débat",
   "homepage.featured.button.refresh": "Évaluer d'autres propositions",
   "invalid.password": "Mot de passe invalide",
-  "ldap.error.default" : "Erreur LDAP : ",
+  "ldap.error.default" : "Echec de connexion – Si le problème persiste, merci de contacter le 3.87.43",
   "markdown.cheatsheet.title": "Mise en forme des textes",
   "markdown.comments.formatting-help": "Aide à la mise en forme des textes",
   "markdown.emphasis.example.1": "Emphase faible (italique) avec des *astérisques* ou des _tirets bas_.",
