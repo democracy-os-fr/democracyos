@@ -7,11 +7,8 @@
     form.form(action='/api/settings/profile', method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
       ul.form-messages
       .form-group
-        label= t('settings.first-name')
-        input.form-control(type='text', id='firstName', name='firstName', maxlength=100, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='required firstname')
-      .form-group
-        label= t('settings.last-name')
-        input.form-control(type='text', id='lastName', name='lastName', maxlength=100, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='required lastname')
+        label= t('settings.user-name')
+        input.form-control(type='text', id='username', name='username', maxlength=100, placeholder=t('settings.user-name'), value='#{user.username}', validate='required username')
       .form-group
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled', name='email', maxlength=200, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
@@ -29,8 +26,14 @@
             //-   i.icon-share-alt
             input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value='#{user.avatar}', validate='url')
 
-      - if (config.extra.user.org || config.extra.user.age || config.extra.user.job || config.extra.user.postal)
-        hr
+      hr
+      
+      .form-group
+        label= t('settings.first-name')
+        input.form-control(type='text', id='firstName', name='firstName', maxlength=100, placeholder=t('settings.first-name'), value='#{user.firstName}', validate='firstname')
+      .form-group
+        label= t('settings.last-name')
+        input.form-control(type='text', id='lastName', name='lastName', maxlength=100, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='lastname')
 
       - if (config.extra.user.org)
         .form-group
@@ -55,5 +58,12 @@
       - if (config.extra.user.org || config.extra.user.age || config.extra.user.job || config.extra.user.postal)
         hr
 
+      - if (user.hasExtProfile)
+        .form-group
+          .checkbox
+            label(for='updateOnNextLogin')
+              input(type='checkbox', id='updateOnNextLogin', name='updateOnNextLogin', checked=(user.updateOnNextLogin))
+              b= t('settings.updateOnNextLogin')
+          
       .form-group: button.btn.btn-success.btn-block.btn-lg
         =t('settings.save')

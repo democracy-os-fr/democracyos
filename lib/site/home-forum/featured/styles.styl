@@ -1,0 +1,241 @@
+#home-featured
+
+  background-color: #f9f9f9
+
+  section.featured
+
+    display flex
+    // flex-wrap wrap
+    flex-direction column
+    justify-content flex-start
+
+    margin 0 auto 50px
+    padding 5px 25px
+
+    .description, .featured-mono, #featured-tabs
+      width 100%
+      display flex
+      flex-wrap wrap
+      justify-content center
+
+    .nav-tabs, .nav-pills
+      &>li>a
+        font-size: .8em
+        font-weight normal
+
+    .nav-pills
+      &>li
+        margin-left:  0px
+      &>li>a
+        color #666
+
+      &>li.active>a
+        background-color white
+        color rgba(0,0,0,0.8)
+        font-weight bold
+        box-shadow:
+          0 1px 3px rgba(0,0,0,.12),
+          0 1px 2px rgba(0,0,0,.24)
+
+    &.loading
+      min-height 60px
+      .loader-wrapper .topic-loader
+        top: 15px
+
+    .description
+      padding 5px 42px 0
+      font-size: 90%
+      text-align center
+      width 100%
+      vertical-align top
+      flex-shrink 1
+
+      p
+        font-size:  1.1em
+
+        &:last-child
+          margin-bottom 0
+
+      h2
+        font-style:   normal
+        font-size:    1.4em
+
+    .fixed-height
+      height auto
+      @media (min-width: 560px)
+        height 4.8rem
+      @media (min-width: 1400px)
+        height 3.2rem
+
+    #featured-tabs .nav[role="tablist"]
+      height auto
+      @media (min-width: 1272px)
+        height 4.8rem
+      @media (min-width: 1400px)
+        height 3.2rem
+
+    .featured-mono, .tab-content
+      width 100%
+      flex-grow 1
+
+
+    .featured-card
+      display block
+      position relative
+      width 100%
+      padding 15px 15px
+      padding-top 0px
+      flex-grow 1
+
+      & > .alert
+        margin 15px auto 0
+        max-width 250px
+        text-align center
+
+      .topic-header
+        margin 5px
+        padding 7px 15px
+        background-color white
+        color rgba(0,0,0,0.8)
+        font-weight bold
+        box-shadow:
+          0 1px 3px rgba(0,0,0,.12),
+          0 1px 2px rgba(0,0,0,.24)
+
+        .indicators
+          display inline-block
+          float right
+          color #337ab7
+          .btn-sm
+            font-size 0.8rem
+            vertical-align middle
+
+        &:hover, &:focus, &:active
+          .indicators
+            color #286090
+            .btn-link
+              text-decoration none
+
+      .comments-dropdown
+        position: absolute
+        top: 13px
+        right: 0
+        background: #fff
+        border-radius: 2px
+        border: 1px solid #ccc
+        box-shadow: 0 1px 3px rgba(0,0,0,.12)
+        padding: 5px 0
+        font-size: .8em
+        z-index: 1
+
+        button
+          cursor: pointer
+          border: 0
+          background: transparent
+          font-size: 13px
+          display: block
+          margin: 0 auto
+          padding: 5px 10px
+          width: 100%
+          color: #666
+          text-align: right
+          white-space: nowrap
+          font-weight: 100
+
+          &:hover
+            background-color: #f0f0f0
+
+      .bottom-actions
+        margin-top 12px
+        padding 0 25px
+
+        .btn-link.highlight
+          color rgba(0,0,0,0.65)
+          border 1px solid rgba(0,0,0,0.65)
+          background-color white
+          box-shadow:
+            0 1px 3px rgba(0,0,0,.12),
+            0 1px 2px rgba(0,0,0,.24)
+
+          &.btn-sm
+            font-size 0.8rem
+
+          &:hover, &:focus, &:active
+            border-color rgba(0,0,0,0.8)
+            color rgba(0,0,0,0.8)
+            text-decoration none
+
+      .carousel
+        padding 15px 0px
+
+        .carousel-control
+          background transparent
+          color black
+          width:  20px
+
+          &.left
+            left: -16px
+
+          &.right
+            right: -16px
+
+          .glyphicon-chevron-left, .glyphicon-chevron-right,
+          .icon-next, .icon-prev
+            top 125px
+
+          @media (min-width: 760px)
+            &.left
+              left: -30px
+
+            &.right
+              right: -30px
+
+        .carousel-indicators
+          bottom -30px
+          li
+            color rgba(0,0,0,.6)
+            border-color rgba(0,0,0,.6)
+            &.active
+              border-color rgba(0,0,0,.2)
+              background-color rgba(0,0,0,.6)
+
+      @import '../../topic-layout/topic-article/comments/list/comment/styles'
+
+      .carousel
+        height: auto
+        transition: height .6s ease-in-out
+
+        .comments-list-item
+          margin 5px
+
+        .carousel-inner
+          & > .item
+            transition: all .6s ease-in-out
+
+            &.active
+              opacity: 1
+
+            &.next, &.prev
+              opacity: 0
+
+  @media (min-width: 1272px)
+    display flex
+    // justify-content: center
+
+    section.featured
+      width:  calc(50% - 30px);
+      padding 5px 0
+
+      .featured-card
+
+        .carousel
+          padding 15px 20px
+
+          .carousel-control
+            width: 30px
+
+            &.left
+              left: -16px
+
+            &.right
+              right: -16px

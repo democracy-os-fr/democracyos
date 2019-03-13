@@ -7,17 +7,18 @@
       .form-group
         label.col-sm-2.control-label=t('admin-whitelist.type')
         div.col-sm-10
-          - each type in [ 'email' ]
-            label.radio-inline
-              input(type='radio',name='type',value='email',checked=(whitelist.new || (whitelist.type == type)))
-              span=type
+          select.form-control(name='type')
+            each type in [ 'email', 'domain' ]
+              option(value=type, selected=( (whitelist.new && type == 'email') || (whitelist.type == type)))
+                = t('admin-whitelist.type.' + type)
       .form-group
         label.col-sm-2.control-label=t('admin-whitelist.value')
         div.col-sm-10
+          // Validators are set in ./form-view.js#onsubmit
           - if (whitelist.id)
-            input.form-control(type='text', name='value', value=whitelist.value, validate='required email')
+            input.form-control(type='text', name = 'value', value = whitelist.value)
           - else
-            textarea.form-control(type='text', name='value', validate='required emails' placeholder=t('admin-whitelists-form.value.placeholder'))
+            textarea.form-control(type='text', name = 'value', placeholder = t('admin-whitelists-form.value.placeholder'))
       .form-group
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success=t('admin-whitelists-form.button.submit')

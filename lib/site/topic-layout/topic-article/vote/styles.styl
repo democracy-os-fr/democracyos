@@ -99,8 +99,8 @@ border_radius = 3px
     background white
     padding 20px 0
     h5
-      text-transform uppercase
-      margin-top 0
+      margin: 0 0 20px;
+      font-size: 1.25em;
     .delegation-box
       display inline-block
   .vote-box
@@ -121,6 +121,7 @@ border_radius = 3px
     box-sizing border-box
     width 100%
     margin 0
+    padding-top 10
     h5
       margin-bottom 0
     .percent
@@ -137,3 +138,26 @@ border_radius = 3px
       color #666666
     .vote-no, .vote-no h5
       color #d95e59
+
+  .voted-box
+    .alert-voted
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .bold
+        font-weight: bold
+
+      .black
+        color: #000
+
+      .thanks
+        margin: 0 10px
+
+    .chosen-answer
+      text-align: center
+
+  .result-wrapper
+    .chosen-answer
+      text-align: center
+      margin-bottom: 0

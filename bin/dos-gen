@@ -1,0 +1,414 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+require('lib/models')()
+
+var fs = require('fs')
+var dir = fs.readdirSync
+var read = fs.readFileSync
+var exists = fs.existsSync
+var path = require('path')
+var program = require('commander')
+var resolve = path.resolve
+var parse = JSON.parse
+var mongoose = require('mongoose')
+var prompt = require('co-prompt')
+var confirm = prompt.confirm
+var notifier = require('democracyos-notifier')
+
+const ObjectID = require('mongoose').Types.ObjectId
+
+const t = require('t-component')
+const { find, findIndex, unique } = require('mout/array')
+const has = require('mout/object/has')
+const clone = require('mout/lang/clone')
+const pick = require('mout/array/pick')
+const pluck = require('mout/array/pluck')
+const faker = require('faker')
+const utils = require('lib/utils')
+const Model = require('lib/models')
+const dbReady = require('lib/models').ready
+const calcResult = require('lib/api-v2/db-api/topics/utils').calcResult
+const calcTopicStats = require('lib/api-v2/db-api/topics/utils').calcStats
+const calcCommentStats = require('lib/api-v2/db-api/comments/utils').calcStats
+
+const config = require('lib/config')
+faker.locale = config.locale
+
+const mapPromises = (fn) => (array) => Promise.all(array.map(fn))
+
+const defaults = {
+  badge: 'dos-gen'
+}
+
+notifier.config.set({
+  mongoUrl: config.mongoUrl,
+  organizationName: config.notifications.mailer.name || config.organizationName,
+  organizationEmail: config.notifications.mailer.email || config.organizationEmail,
+  organizationUrl: config.organizationUrl,
+  logo: utils.buildUrl(config, { pathname: config.logoMobile }),
+  logoFooter: utils.buildUrl(config, { pathname: config.logo }),
+  headerBackgroundColor: config.headerBackgroundColor,
+  headerFontColor: config.headerFontColor,
+  mailer: config.notifications.mailer,
+  nodemailer: config.notifications.nodemailer,
+  defaultLocale: config.locale,
+  availableLocales: config.availableLocales
+})
+
+Promise.resolve(notifier[config.notifications.url ? 'init' : 'start']())
+.then(() => {
+  console.log('notifier started')
+})
+.catch((e) => {
+  console.error(e)
+})
+
+program
+  .option('-b, --badge <name>', 'User badge')
+
+program
+  .command('users [n]')
+  .description('Generate users.')
+  .action(function (n = 1) {
+    dbReady()
+      .then(() => {
+        let users = []
+        for (var i = 0; i < n; i++) {
+          let extra = {}
+          if (config.extra.user.age) {
+            extra.age = faker.random.number({ min: 2, max: 5 })
+          }
+          if (config.extra.user.job) {
+            extra.job = faker.name.title()
+          }
+          if (config.extra.user.org) {
+            extra.org = faker.company.companyName()
+          }
+          if (config.extra.user.postal) {
+            extra.postal = faker.random.number()
+          }
+          users.push(new Model.User({
+            firstName: faker.name.firstName(),
+            lastName: faker.name.lastName(),
+            username: faker.unique(faker.internet.userName),
+            email: faker.unique(faker.internet.exampleEmail),
+            // profilePictureUrl: faker.internet.avatar(),
+            locale: config.locale,
+            notifications: {
+              replies: false,
+              'new-topic': false,
+              'new-comment': false
+            },
+            badge: program.badge ? program.badge : defaults.badge,
+            extra: extra,
+            emailValidated: true
+          }))
+        }
+        return users
+      })
+      .then(mapPromises((user) => {
+        return user.save()
+      }))
+      .then(function (users) {
+        const total = users.filter((v) => !!v).length
+        console.log(`${total} users created with badge "${program.badge ? program.badge : defaults.badge}".`)
+        exit()
+      })
+      .catch(function (err) {
+        console.error('generating users failed at ', err)
+        error()
+      })
+  })
+
+program
+  .command('drop-users')
+  .description('Remove users.')
+  .action(function () {
+    confirm('This will delete users. Continue? (Y)\n')(function (err, ok) {
+      if (err) return error('Whoops, %s', err)
+      if (!ok) return write('There you go! =)')
+
+      dbReady().then(() => {
+        return Model.User.deleteMany({
+          badge: program.badge ? program.badge : defaults.badge
+        })
+      })
+      .then(function (res) {
+        const total = res.result.n
+        console.log(`${total} users deleted with badge "${program.badge ? program.badge : defaults.badge}".`)
+        exit()
+      })
+      .catch(function (err) {
+        console.error('removing users failed at ', err)
+        error()
+      })
+    })
+  })
+
+program
+  .command('topics <forum-name> [n]')
+  .description('Generate topics.')
+  .option('-c, --comments', 'with comments')
+  .option('-v, --votes', 'with votes')
+  .parse(process.argv)
+  .action(function (slug, n = 1, cmd) {
+    let data = {}
+    dbReady()
+      .then(() => Model.Forum.collection.findOne({ name: slug }))
+      .then((forum) => {
+        data.forum = forum
+      })
+      .then(() => Model.Tag.collection.findOne())
+      .then((tag) => {
+        data.tag = tag
+      })
+      .then(() => Model.User.collection.find({
+        badge: program.badge ? program.badge : defaults.badge
+      }).toArray())
+      .then((users) => {
+        data.authors = users
+      })
+      .then(() => {
+        const template = (v) => { return { value: v, percentage: 0, count: 0 } }
+        let actions = [
+          {
+            method: ''
+          },
+          {
+            method: 'vote',
+            results: [template('positive'), template('neutral'), template('negative')]
+          },
+          {
+            method: 'cause',
+            results: [template('support')]
+          },
+          {
+            method: 'poll',
+            results: [template(faker.random.word()), template(faker.random.word()), template(faker.random.word())],
+            multiple: false
+          },
+          {
+            method: 'poll',
+            results: [template(faker.random.word()), template(faker.random.word()), template(faker.random.word()), template(faker.random.word()), template(faker.random.word())],
+            multiple: true
+          }
+        ]
+
+        let topics = []
+        for (var i = 0; i < n; i++) {
+          let topic = new Model.Topic({
+            forum: data.forum._id,
+            owner: data.forum.owner,
+            mediaTitle: faker.random.word(5),
+            tag: data.tag._id,
+            publishedAt: faker.date.past(),
+            action: faker.random.arrayElement(actions)
+          })
+
+          let nbClauses = faker.random.number(5)
+          topic.clauses = []
+          for (var pos = 0; pos < nbClauses; pos++) {
+            topic.clauses.push({
+              markup: faker.fake('<div>{{lorem.paragraph}}</div>'),
+              position: pos
+            })
+          }
+
+          topics.push(topic)
+        }
+        return topics
+      })
+      .then(mapPromises((topic) => {
+        return topic.save()
+      }))
+      .then(function (topics) {
+        const total = topics.filter((v) => !!v).length
+        console.log(`${total} topics created.`)
+        data.topics = topics
+        return data.topics
+      })
+      .then((topics) => {
+        if (!cmd.votes) exit()
+        write('with votes')
+
+        if (data.authors.length <= 0) {
+          error('not enought authors for votes')
+        }
+
+        let nbVotes = faker.random.number(data.authors.length)
+        let votes = []
+        for (var topic of topics) {
+          let values = pluck(topic.action.results, 'value')
+          if (values.length) {
+            let quorum = clone(data.authors)
+
+            for (var i = 0; i < nbVotes; i++) {
+              votes.push(new Model.Vote({
+                topic: topic._id,
+                author: pick(quorum)._id,
+                value: faker.random.arrayElement(values)
+              }))
+            }
+          }
+        }
+        return votes
+      })
+      .then(mapPromises((vote) => {
+        return vote.save()
+      }))
+      .then(function (votes) {
+        const total = votes.filter((v) => !!v).length
+        console.log(`${total} votes cast.`)
+        data.votes = votes
+        return data.topics
+      })
+      .then(mapPromises(function (topic) {
+        return calcResult(topic)
+          .then((results) => {
+            const action = {
+              count: results.count,
+              results: results.results,
+              method: topic.action.method,
+              multiple: topic.action.multiple || false
+            }
+            return Model.Topic.collection.findOneAndUpdate({ _id: topic._id }, { $set: { 'action': action } })
+          })
+      }))
+      .then(function (topics) {
+        const total = topics.filter((v) => !!v).length
+        console.log(`${total} topics updated.`)
+        data.topics = pluck(topics, 'value')
+        return data.topics
+      })
+      .then((topics) => {
+        if (!cmd.comments) exit()
+        write('with comments')
+
+        if (data.authors.length <= 0) {
+          error('not enought authors for comments')
+        }
+
+        let nbComments = faker.random.number(Math.min(Math.round(data.authors.length * 0.30), 100))
+        write(`nbComments ${nbComments}`)
+        let comments = []
+        for (var topic of topics) {
+          let quorum = clone(data.authors)
+
+          for (var i = 0; i < nbComments; i++) {
+            let comment = new Model.Comment({
+              author: pick(quorum)._id,
+              title: faker.random.word(5),
+              text: faker.lorem.lines(2),
+              context: 'topic',
+              reference: topic._id.toString()
+            })
+
+            let nbRatings = faker.random.number(Math.min(Math.round(data.authors.length * 0.30), 250))
+            write(`nbRatings ${nbRatings}`)
+            let ratings = []
+            let _quorum = clone(data.authors)
+            for (var _i = 0; _i < nbRatings; _i++) {
+              let author = pick(_quorum)
+              if (author._id !== comment.author._id) {
+                ratings.push(comment.votes.create({
+                  author: author._id,
+                  value: faker.random.arrayElement([ 'positive', 'negative' ]),
+                  createdAt: faker.date.past()
+                }))
+              }
+            }
+
+            comment.votes = ratings
+
+            let nbReplies = faker.random.number(5)
+            let replies = []
+
+            for (var _j = 0; _j < nbReplies; _j++) {
+              replies.push(comment.replies.create({
+                text: faker.lorem.lines(2),
+                author: faker.random.arrayElement(data.authors),
+                createdAt: faker.date.past()
+              }))
+            }
+
+            comment.replies = replies
+
+            comment.count = calcCommentStats(comment)
+            // console.log(comment.count)
+            comments.push(comment)
+          }
+        }
+        return comments
+      })
+      .then(mapPromises((comment) => {
+        return comment.save()
+      }))
+      .then(function (comments) {
+        const total = comments.filter((v) => !!v).length
+        console.log(`${total} comments created.`)
+        data.comments = comments
+        return data.topics
+      })
+      .then(mapPromises(function (topic) {
+        return calcTopicStats(topic)
+        .then((results) => {
+          console.dir(results)
+          return Model.Topic.collection.findOneAndUpdate({ _id: topic._id }, { $set: { 'count': results } })
+        })
+      }))
+      .then(function (topics) {
+        const total = topics.filter((v) => !!v).length
+        console.log(`${total} topics updated.`)
+        data.topics = pluck(topics, 'value')
+        // return data.topics
+        exit()
+      })
+      .catch(function (err) {
+        console.error('generating topics failed at ', err)
+        error()
+      })
+  })
+
+program
+  .parse(process.argv)
+
+/**
+ * Write `msg` to stdout
+ *
+ * @param {String} msg
+ * @requires process
+ * @api private
+ */
+
+function write (msg) {
+  process.stdout.write(msg)
+  process.stdout.write('\n')
+}
+
+/**
+ * Write err `msg` to console
+ *
+ * @param {String} msg
+ * @requires process
+ * @api private
+ */
+
+function error () {
+  console.log.apply(console, arguments)
+  process.exit(1)
+}
+
+/**
+ * Exit from process
+ *
+ * @requires process
+ * @api private
+ */
+
+function exit () {
+  process.exit(0)
+}

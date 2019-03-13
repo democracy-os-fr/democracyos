@@ -2,7 +2,7 @@
   position: relative
   display: flex
   flex-wrap: wrap
-  margin-bottom: 30px
+  margin-bottom: 15px
   padding: 15px
   z-index: 0
   box-shadow:
@@ -37,19 +37,33 @@
     font-weight: bold
     transition: all .3s
 
+  .comments-create, input.form-control.comment-title
+    margin 0
+    border 0
+    padding .2em 0
+    line-height 1.6
+    color inherit
+    outline none
+    box-shadow none
+    background-color transparent
+
+  .form-group
+    display: flex
+    flex-wrap: wrap
+    flex-grow: 2
+    resize: none
+
   .comments-create
     flex-grow: 2
     resize: none
-    margin: 0
-    padding: .2em 0
-    border: 0
+    font-size .875em
+    font-weight inherit
+
+  input.form-control.comment-title
     line-height: 1.6
-    font-size: .875em
-    font-weight: inherit
-    color: inherit
-    outline: none
-    box-shadow: none
-    background-color: transparent
+    font-size 1.125em
+    font-weight bold
+    font-style italic
 
   .actions
     margin-top: 1em
