@@ -17,10 +17,20 @@
           = t('forum.form.cover')
         div.col-sm-10
           input.form-control(type='text', id='coverUrl', name='coverUrl', placeholder=t('admin-topics-form.placeholder.cover'), value=forum.coverUrl, validate='url')
-      include ../../forum/topicsAttrs/form.jade     
+      include ../../forum/topicsAttrs/form.jade
       .form-group.actions
         div.col-sm-offset-2.col-sm-10
           button.btn.btn-success
             i.glyphicon.glyphicon-save
             | &emsp;
             = t('admin-tags-form.button.submit')
+          - if (user.staff)
+            | &emsp;
+            button.btn.btn-warning.make-private(class=forum.publishedAt ? '' : 'hide')
+              i.glyphicon.glyphicon-eye-close
+              | &emsp;
+              = t('admin-topics-form.button.make-private')
+            button.btn.btn-primary.make-public(class=!forum.publishedAt ? '' : 'hide')
+              i.glyphicon.glyphicon-ok
+              | &emsp;
+              = t('admin-topics-form.button.make-public')
