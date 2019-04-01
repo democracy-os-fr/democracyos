@@ -185,6 +185,7 @@
   "comments.argument-limited": "Argument is limited to 4096 characters",
   "comments.arguments": "Arguments",
   "comments.arguments.confirm-remove": "Do you want to remove this reply?",
+  "comments.arguments.show-reply": "View / Hide replies",
   "comments.arguments.reply": "Reply to this argument",
   "comments.arguments.replies": "view / hide all replies",
   "comments.arguments.view": "View this comment",

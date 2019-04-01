@@ -177,6 +177,7 @@
   "comments.argument-limited": "Le commentaire ne peut pas excéder 4096 caractères",
   "comments.arguments": "Commentaires",
   "comments.arguments.confirm-remove": "Voulez-vous supprimer ce commentaire ?",
+  "comments.arguments.show-reply": "Afficher / Masquer les réponses",
   "comments.arguments.reply": "Répondre à ce commentaire",
   "comments.arguments.replies": "afficher / masquer toutes les réponses",
   "comments.arguments.view": "Voir ce commentaire",
